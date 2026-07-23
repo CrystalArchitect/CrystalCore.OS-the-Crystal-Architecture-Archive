@@ -22,15 +22,16 @@ Executes, or can be opened and used by someone other than me.
   2026-07-24 — see the per-repo ledgers.
 
 ## Built, not currently running
-Code exists and ran previously. No machine to run it on at present.
+Code exists and ran previously. No machine to run it on.
 
-- CrystalCore Python package (Clementine on Ollama) — in the
-  archived The-Crystal-Vision repo (crystalcore-app/). Ran on my
-  previous laptop; that hardware is gone. Not a code fault.
+- CrystalCore Python package (Clementine on Ollama) — confirmed
+  on GitHub in the archived The-Crystal-Vision repo at
+  crystalcore-app/crystalcore/. Has tests, requirements.txt,
+  .env.example. Ran on my previous laptop; that hardware is
+  gone. Code is safe. Needs a machine with Python + Ollama.
 
 ## Exists as a document
-Written, readable, no execution involved. Real work — just not
-software.
+Written, readable, no execution involved.
 
 - Symbolic Lexicon v0.1
 - Master Structure v0.2 (registers, document tree)
@@ -38,7 +39,7 @@ software.
 - Sovereign Node Mesh framework v1.1
 
 ## Designed, not built
-Specified in enough detail that someone could build it. Nobody has.
+Specified enough that someone could build it. Nobody has.
 
 - Archive workflows
 - Knowledge graph
@@ -79,22 +80,24 @@ each repo's own STATUS.md where one exists.
 
 ## Known unknowns
 
-- What technical form should CrystalCore.OS take, if any?
-- Which parts need software rather than documents?
+- Which repo is canonical? Six have overlapping names. The
+  Per-repo ledger above now maps what each one holds; naming the
+  canonical one is a decision still to be made, not a fact to
+  verify.
+- What's in local-snapshot-2026-07-17/? Resolved 2026-07-24: the
+  last capture from the lost laptop, preserved in
+  The-Crystal-Vision — updated docs, clementine.py and
+  clementine_web.py, two generations of the crystalcore/ package
+  including the complete v0.13.4 bytecode rescue (see its
+  RECOVERY-STATUS.md), the teraustralis.com.au site files, the
+  seven-sisters pack, .env.example, and Windows launchers.
+  Credentials and chat history were deliberately excluded.
+- Does the package still run on a fresh machine? Partly verified
+  2026-07-24: on a fresh Linux machine it imports cleanly and 19
+  of 20 offline tests pass (the one failure is a stale version
+  string in a test, not the code). A full Clementine session
+  with Ollama is still untested.
 - Which workflows produce measurable value? Untested.
-- Did the working crystalcore/ package actually get pushed before
-  the laptop was lost? Resolved 2026-07-24: yes. crystalcore
-  v0.13.4 (all 12 modules, ollama.py included) is in the archived
-  The-Crystal-Vision repo at crystalcore-app/crystalcore/, last
-  pushed 2026-07-17. Seven modules were rescued from .pyc
-  bytecode before the machine was reset; the raw snapshot and its
-  RECOVERY-STATUS.md sit alongside in local-snapshot-2026-07-17/.
-  Re-verified 2026-07-24 on fresh hardware: the package imports
-  cleanly and 19 of 20 offline tests pass (the one failure is a
-  stale "0.13.3" version assertion, not a code fault). Not
-  pushed: Clementine's local memory and profiles, gitignored by
-  design. There is no repo named CrystalcoreOS; the crystalcore
-  repo (Songline pack) never contained the package.
 - Where teraustralis-final.html actually lives. Not in either
   TerAustralis repo (2026-07-24 search, archives included); the
   archived repos were not attached to that session to check. Until
