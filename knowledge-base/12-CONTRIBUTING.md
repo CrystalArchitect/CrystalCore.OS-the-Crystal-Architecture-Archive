@@ -83,9 +83,10 @@ archive without direct repository evidence forcing that reclassification
 — running code, a passing test, a merged commit. The reverse direction
 (discovering that something documented as Built no longer runs, or
 never did) is exactly what this reconstruction found in several places
-(`06-COMPONENTS.md`: CrystalBridge's undeclared dependency; the Crystal
-Runtime episode in `07-HISTORY.md`) and should be corrected the same
-way when found again — with evidence, not assumption.
+(`06-COMPONENTS.md`: CrystalBridge's then-undeclared dependency, since
+fixed — see `11-CORRECTIONS.md` Part 3; the Crystal Runtime episode in
+`07-HISTORY.md`) and should be corrected the same way when found again
+— with evidence, not assumption.
 
 **Status: Implemented** (as a stated rule this archive itself follows
 throughout).
