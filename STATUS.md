@@ -2,18 +2,15 @@
 
 Last updated: 2026-07-24
 
+Full portfolio knowledge-base reconstruction this pass:
+`knowledge-base/00-INDEX.md` (this repo).
+
 This file describes the state of the system, not the ambition of
 the system.
 
 ## Running
 Executes, or can be opened and used by someone other than me.
 
-- teraustralis-final.html — renders in a browser. Deployment
-  unconfirmed. 2026-07-24 (multi-repo pass): the file is not in either
-  TerAustralis repo, the umbrella's archive/ included — if it survives
-  anywhere it is in an archived repo, none of which were attached to
-  that session. Its location is now a known unknown; the render claim
-  stands on the original verification.
 - Crystal Core self-tests (four suites, 51/51) and Lumina core tests
   (16/16) — pass on a fresh clone of TerAustralis-Incognita-Code,
   verified 2026-07-24. Detail in that repo's STATUS.md.
@@ -25,10 +22,10 @@ Executes, or can be opened and used by someone other than me.
 Code exists and ran previously. No machine to run it on.
 
 - CrystalCore Python package (Clementine on Ollama) — confirmed
-  on GitHub in the archived The-Crystal-Vision repo at
-  crystalcore-app/crystalcore/. Has tests, requirements.txt,
-  .env.example. Ran on my previous laptop; that hardware is
-  gone. Code is safe. Needs a machine with Python + Ollama.
+  on GitHub in The-Crystal-Vision repo (not archived — see per-repo
+  ledger below) at crystalcore-app/crystalcore/. Has tests,
+  requirements.txt, .env.example. Ran on my previous laptop; that
+  hardware is gone. Code is safe. Needs a machine with Python + Ollama.
 
 ## Exists as a document
 Written, readable, no execution involved.
@@ -62,21 +59,32 @@ each repo's own STATUS.md where one exists.
   nothing since src/site moved out; the dbt warehouse is built, not
   running. Has its own STATUS.md.
 - TerAustralis-Incognita-Code — the engine and the vision app. All
-  four core suites and Lumina's core tests pass on a fresh clone; no
-  CI; the site source builds but nothing deploys it. Has its own
-  STATUS.md.
+  four core suites and Lumina's core tests pass on a fresh clone; CI
+  (ci.yml) runs those suites on push — corrected 2026-07-24, this line
+  previously said "no CI." deploy.yml targets the site but GitHub
+  Pages isn't switched on for that repo yet (manual admin step, still
+  pending). Has its own STATUS.md.
 - CrystalCore.OS-the-Crystal-Architecture-Archive — the system
-  ledger. This file.
-- The-Crystal-Vision (archived 2026-07-18, read-only) — holds
-  crystalcore v0.13.4 at crystalcore-app/crystalcore/ (verified
-  2026-07-24: imports cleanly, 19/20 offline tests) and the raw
-  laptop snapshot with RECOVERY-STATUS.md. Mirrors of that material
-  also sit in the umbrella's archive/.
-- crystalcore (Songline pack; archived 2026-07-18, read-only) —
-  never contained the package in any commit (full-history search,
-  2026-07-24).
-- crystal-vision (archived 2026-07-18, read-only, private) — contents
-  never audited by any ledger pass. The one true blank on this list.
+  ledger. This file. Also now holds the full knowledge-base/
+  reconstruction (see pointer above).
+- The-Crystal-Vision (not archived — corrected 2026-07-24; live GitHub
+  metadata shows archived:false, contradicting this line's prior
+  "archived 2026-07-18, read-only." The umbrella's own 2026-07-24
+  charter records whether to archive the three repos below as a
+  deliberately open decision, not a settled fact) — holds crystalcore
+  v0.13.4 at crystalcore-app/crystalcore/ (verified 2026-07-24: imports
+  cleanly, 19/20 offline tests) and the raw laptop snapshot with
+  RECOVERY-STATUS.md. Mirrors of that material also sit in the
+  umbrella's archive/.
+- crystalcore (Songline pack; not archived — same correction as above,
+  was wrongly marked "archived 2026-07-18, read-only") — never
+  contained the package in any commit (full-history search, 2026-07-24).
+- crystal-vision (not archived — same correction, private) — audited
+  2026-07-24: functional static Vercel demo, v0.5.1, Apache-2.0, zero
+  network calls, zero secrets. Two minor cosmetic defects (a dead
+  element-id reference, one footer link that 404s past the deploy
+  tree). No longer the blank on this list — detail in
+  knowledge-base/02-REPOSITORY-MAP.md.
 
 ## Known unknowns
 
@@ -98,8 +106,10 @@ each repo's own STATUS.md where one exists.
   string in a test, not the code). A full Clementine session
   with Ollama is still untested.
 - Which workflows produce measurable value? Untested.
-- Where teraustralis-final.html actually lives. Not in either
-  TerAustralis repo (2026-07-24 search, archives included); the
-  archived repos were not attached to that session to check. Until
-  someone looks there, the ledger's oldest "Running" line rests on
-  the original render alone.
+- teraustralis-final.html — no longer listed under Running (moved
+  here 2026-07-24). Full six-repo search this session — filename and
+  content-grep, including archive/, local-snapshot directories, and
+  git history — found zero copies anywhere in the portfolio.
+  Confirmed absent, not merely unconfirmed-location; the original
+  render observation isn't disproven, but nobody today can open or
+  use this file. Detail in knowledge-base/07-HISTORY.md.
