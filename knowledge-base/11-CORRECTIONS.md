@@ -145,14 +145,14 @@ Each with a one-line reason it's left for a future, separate pass.
 | `bridge.py`'s Lumina-path resolves to a nonexistent directory (`core/apps/` instead of `vision/apps/`); `recall`/`teach`/`message` crash at runtime | `TerAustralis-Incognita-Code/core/crystalcore/bridge.py` | Code-behavior fix, not a documentation fix — out of scope for a documentation-only reconstruction. **→ Since resolved, see Part 3.** |
 | `gate.py`'s docstring claims four consent checks; only two (approval, permission) are implemented | Same file, `gate.py` | Same as above — fixing this "right" means either building the missing checks or downgrading a security claim, both real engineering decisions, not doc edits. **→ Since resolved, see Part 3.** |
 | No requirements/toml/cfg file declares the `mcp` package `bridge.py` imports | `TerAustralis-Incognita-Code` (repo-wide) | Packaging/dependency fix, not documentation. **→ Since resolved, see Part 3.** |
-| 96 files carry `SPDX-License-Identifier: Apache-2.0` headers under a CC BY-NC-ND 4.0 root `LICENSE` | `TerAustralis-Incognita-Code`, 96 files | Mechanically identical to a fix ADR-0008 already executed once, in the umbrella (97 files) — but sized for its own dedicated, scripted pass, not folded into this session's line-edit budget. |
+| 96 files carry `SPDX-License-Identifier: Apache-2.0` headers under a CC BY-NC-ND 4.0 root `LICENSE` | `TerAustralis-Incognita-Code`, 96 files | Mechanically identical to a fix ADR-0009 already executed once — its own text records batch-correcting 97 `src/*` files to `CC-BY-NC-ND-4.0`, later relocated to `core/`+`vision/` by the repo split — but sized for its own dedicated, scripted pass, not folded into this session's line-edit budget. **→ Since resolved, see Part 4.** |
 | ADR-0007 and ADR-0011's own "Consequences" sections describe states later resolved same-day | `docs/adr/ADR-0007.md`, `ADR-0011.md` | Protected by the project's own precedent: accepted ADRs are left as unedited historical record (explicitly stated for ADR-0001/0002 in `ADR-0007.md`'s own text). |
-| The PR template's Belt-Three checkboxes don't match `CONTRIBUTING.md`'s canonical three-label table (merges Story+Vision, adds an undocumented fourth category) | `.github/PULL_REQUEST_TEMPLATE.md` | Process/template redesign, not a factual correction. |
-| `docs/governance/Review-Process.md`'s CI checklist describes a Python-based CI (`compileall`, four self-tests, `pytest`) that no longer exists — actual `ci.yml` runs only markdown lint and a link check | `TerAustralis-Incognita/docs/governance/Review-Process.md` | Not in this pass's directly-scoped file list; flagged here for a future pass. |
-| `CONTRIBUTING.md`'s "Reality note" says CI currently fails for path reasons — CI was retargeted, not left failing | `TerAustralis-Incognita/CONTRIBUTING.md` | Same as above. |
+| The PR template's Belt-Three checkboxes don't match `CONTRIBUTING.md`'s canonical three-label table (merges Story+Vision, adds an undocumented fourth category) | `.github/PULL_REQUEST_TEMPLATE.md` | Process/template redesign, not a factual correction. **→ Since resolved, see Part 4.** |
+| `docs/governance/Review-Process.md`'s CI checklist describes a Python-based CI (`compileall`, four self-tests, `pytest`) that no longer exists — actual `ci.yml` runs only markdown lint and a link check | `TerAustralis-Incognita/docs/governance/Review-Process.md` | Not in this pass's directly-scoped file list; flagged here for a future pass. **→ Since resolved, see Part 4.** |
+| `CONTRIBUTING.md`'s "Reality note" says CI currently fails for path reasons — CI was retargeted, not left failing | `TerAustralis-Incognita/CONTRIBUTING.md` | Same as above. **→ Since resolved, see Part 4.** |
 | `vision/README.md` itself still claims four Lumina test suites | `TerAustralis-Incognita-Code/vision/README.md` | STATUS.md now correctly flags this as a confirmed overclaim; the overclaiming file itself was deliberately left for a separate pass, stated explicitly in the STATUS.md correction. **→ Since resolved, see Part 3.** |
-| `crystal-interface/README.md` and `vision-web/README.md` carry the same stale sibling-repository lists as `core/crystal-core/README.md` (only that one file was corrected) | Both files | Out of this pass's specifically-scoped correction list; same fix pattern, future pass. |
-| `vision-web/README.md`'s "Related" section links `docs/architecture/Full-Stack-v0.5.md` — a path that doesn't exist locally in this repository (docs live in the umbrella) | Same file | A cross-repository reference-format question, not a simple prefix swap like the other paths in this file. |
+| `crystal-interface/README.md` and `vision-web/README.md` carry the same stale sibling-repository lists as `core/crystal-core/README.md` (only that one file was corrected) | Both files | Out of this pass's specifically-scoped correction list; same fix pattern, future pass. **→ Partially resolved, see Part 4 — re-verification found `vision-web/README.md` did not actually have this defect; this row was itself imprecise.** |
+| `vision-web/README.md`'s "Related" section links `docs/architecture/Full-Stack-v0.5.md` — a path that doesn't exist locally in this repository (docs live in the umbrella) | Same file | A cross-repository reference-format question, not a simple prefix swap like the other paths in this file. **→ Since resolved, see Part 4.** |
 | The Crystal Runtime specification trio disagrees with itself about implementation readiness across three documents | `Crystal-Runtime-Specification-v0.3.md`, `Runtime-Module-Interfaces.md`, `Runtime-Testing-Specifications.md` | A judgment call about which of three progressively-differing claims is "true" — not a mechanical correction; documented in `03-ARCHITECTURE.md` instead. |
 | Whether PR #1 (Code repo) should be formally closed, and whether its orphaned `src/runtime/` is worth salvaging | `TerAustralis-Incognita-Code`, PR #1 | Not a documentation question at all — a maintainer decision. Recorded in `07-HISTORY.md`. |
 | Whether `mythos/crystalcore-os`'s ~2,300 lines of ML code should be reclassified out of "Vision-layer" | `TerAustralis-Incognita/mythos/crystalcore-os/`, and everywhere it's described | A classification decision, not a factual correction — this archive preserves the project's own stated classification while flagging the tension (`05-KNOWLEDGE-MODEL.md`). |
@@ -196,4 +196,109 @@ convention.
   as not-yet-existing. Attributed accurately — this was the
   maintainer's own pass, not this archive's session.
 
-Everything else in Part 2 remains open as written.
+---
+
+## Part 4 — Applied in this pass (2026-07-24, later still)
+
+Six more Part 2 rows resolved, plus one new, unscoped discovery this
+pass made and resolved: a second knowledge base found living in the
+umbrella's `docs/`, colliding with this archive's own canonical claim.
+
+- **The 96 (now 97 — see below) stale SPDX headers, `TerAustralis-
+  Incognita-Code` — fixed.** Reapplied the exact fix ADR-0009 already
+  documented once: `SPDX-License-Identifier: Apache-2.0` →
+  `SPDX-License-Identifier: CC-BY-NC-ND-4.0`, changing only the
+  identifier value, on every affected line, across all three comment
+  styles present (`#`, `//`, `<!-- -->`). Verified 97 → 0 stale
+  occurrences and spot-checked diffs across `.py`/`.js`/`.svelte` files
+  to confirm nothing else in any file changed. The 97th file was this
+  archive's own prior-session addition, `core/crystalcore/selftest.py`,
+  which had copied the stale pattern from its siblings without
+  question — caught and fixed in the same sweep, not exempted for
+  being this session's own work.
+  **Precision on the count:** ADR-0009's original 97-file batch was
+  scoped to `src/apps/`, `src/crystal-core/`, `src/crystalcore/`,
+  `src/crystalcore-os/`, `src/node/`, `src/sdk/`, `src/site/` — all
+  relocated to `core/`+`vision/` by the Stage 1/Stage 2 repo split.
+  The umbrella's own remaining straggler
+  (`mythos/crystalcore-os/crystalcore_os.py`, also fixed this pass) was
+  never part of that batch — a different path (`mythos/`, not
+  `src/crystalcore-os/`) — so it is an independent, never-remediated
+  instance of the same defect class, not "the one file ADR-0009
+  missed."
+- **PR template ↔ `CONTRIBUTING.md` Belt-Three mismatch — reconciled.**
+  `.github/PULL_REQUEST_TEMPLATE.md`'s merged "Story / Vision" checkbox
+  split into two, matching `CONTRIBUTING.md`'s three canonical rows
+  exactly. `CONTRIBUTING.md`'s table gained a fourth row, "Docs /
+  governance / process," matching what the template already treated as
+  a real, distinct category in practice — repository reality (the
+  template's actual use) overriding stale documentation (the table),
+  the same principle this whole reconstruction applies elsewhere.
+- **`docs/governance/Review-Process.md` and `CONTRIBUTING.md`'s stale
+  CI descriptions — corrected.** Both described a Python-based CI
+  (`compileall`, four self-tests, `pytest`) that no longer runs in the
+  umbrella at all — confirmed directly: `TerAustralis-Incognita`'s own
+  `ci.yml` runs markdown-lint and a link-check only. Both now state
+  this plainly and point at `TerAustralis-Incognita-Code`'s own
+  `ci.yml` for the actual Python suites (5 self-tests, 2 pytest suites),
+  since Stage 1/2 moved that code there. The dead
+  `scripts/maintenance/check.sh` reference (confirmed absent from the
+  umbrella entirely) was dropped from both in the same edit.
+- **`vision/apps/crystal-interface/README.md`'s sibling-repository
+  list — corrected.** Matched to the accurate six-repo block already
+  written into `core/crystal-core/README.md` in the original pass.
+  **`vision-web/README.md` needed no change** — re-verification found
+  it never carried this defect (it has no sibling-repo-identity block
+  at all, only a small in-repo app-surface table; its own path
+  references were already corrected in Part 1). Part 2's row grouping
+  these two files together was itself imprecise on this point — noted
+  there directly rather than silently fixing a file that wasn't
+  broken, per this archive's own standard for correcting itself.
+- **`vision-web/README.md`'s dead `Full-Stack-v0.5.md` link — fixed.**
+  Confirmed the file exists, but only in the umbrella repo. Converted
+  the same-repo-relative path to a working cross-repo GitHub URL,
+  matching the pattern `core/README.md` already established for the
+  same kind of reference.
+
+### The competing knowledge base — discovered and reconciled
+
+While scoping this pass, found that umbrella PRs #60/#61 (merged,
+branch `claude/repo-structure-boundaries-xddagp` — a different,
+uncoordinated session, not this one) had created **seven new files
+directly under `TerAustralis-Incognita/docs/`**: `ARCHITECTURE.md`,
+`GOVERNANCE.md`, `REPOSITORIES.md`, `TECHNICAL-FINDINGS.md`,
+`IP-LICENSING.md`, `OPEN-DECISIONS.md`, `TIMELINE.md`. These cover
+nearly the same ground as this archive's own `knowledge-base/` — same
+underlying evidence (the same ADRs, the Incognita Rule, the 2026-07-23
+architecture survey), a different per-section template, a different
+location — and `docs/README.md` (PR #61) indexed the set as "the
+canonical knowledge base," the same word this archive's own
+`00-INDEX.md` uses for itself. Two artifacts claiming the same role is
+not a new problem for this project: it is a third instance of the
+uncoordinated-parallel-session collision pattern this archive already
+documents twice (the licensing chaos in `08-DESIGN-DECISIONS.md`; the
+Crystal Runtime episode in `07-HISTORY.md`).
+
+**Resolution:** this archive's own `knowledge-base/` remains canonical
+when the two disagree — not a new judgment call, but this archive's
+own prior, explicit decision (recorded in `00-INDEX.md` from the outset)
+applied to a fact pattern that came later. Independent corroboration
+arrived from an unrelated third source the same day: `REPO-ARCHAEOLOGY-
+2026-07-24.md` (a git-object-level survey of all six repositories,
+committed to this repository's root by yet another uncoordinated
+session, branch `claude/repo-archaeology-prompt-b3niko`) states plainly
+that no single repository is canonical for everything, but for this
+specific role names this repository directly: *"System ledger /
+meta-record → `CrystalCore.OS-the-Crystal-Architecture-Archive`...
+documents the other five; no unique application content."* Both sets
+are preserved, neither deleted: a dated reconciliation note was added to
+`docs/README.md` and to the top of each of the 7 files, stating the
+relationship and pointing back here. Reconciling the two into one
+structure is future work, not done in this pass — recorded as a new
+Part 2-style open item below rather than silently left implicit.
+
+Everything else in Part 2 remains open as written, plus one addition:
+
+| Finding | File(s) | Why not applied here |
+|---|---|---|
+| Two independently-built knowledge bases now coexist (this archive's `knowledge-base/`, and `TerAustralis-Incognita/docs/`'s 7-file set) — reconciled with pointer notes this pass, but not merged into one structure | `TerAustralis-Incognita/docs/*.md` (7 files), this archive's `knowledge-base/` | A real information-architecture decision (which document owns which content long-term) — bigger than a documentation correction, and not something to settle unilaterally given this archive's own repeated deference to maintainer judgment on structural questions. |

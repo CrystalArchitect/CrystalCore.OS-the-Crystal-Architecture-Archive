@@ -85,6 +85,42 @@ original chronology.
 
 ---
 
+## Statement — Independent corroboration: the repository archaeology report
+
+A separate, uncoordinated session (branch `claude/repo-archaeology-
+prompt-b3niko`) ran a read-only, identical-command-battery git audit
+across all six repositories the same day as this reconstruction's
+follow-up passes, committing `REPO-ARCHAEOLOGY-2026-07-24.md` directly
+to this repository's root (merged via this repository's PR #5). It
+independently re-derives, from raw git objects rather than from this
+archive's own citations, several load-bearing facts this knowledge base
+states above: both provenance tags exist (confirmed live against each
+remote); the Stage 1/2 import source resolves to the exact sha
+(`32692fd9b103bd11875fc362a6fcac01b4b65258`) this archive cites;
+104 byte-identical blobs connect the umbrella and Code repositories,
+consistent with the documented import; the umbrella's root commit is
+not an initial commit, consistent with the documented same-day history
+rewrite. It also adds a precise, per-axis "which repository is
+canonical" verdict this archive had not itself stated in exactly this
+form — see `11-CORRECTIONS.md` Part 4 for how that verdict bears on the
+competing-knowledge-base question.
+
+**Status: Historical** (an independent, dated audit; its findings are
+treated here as corroborating evidence, not re-verified line-by-line by
+this archive).
+
+### Evidence
+`REPO-ARCHAEOLOGY-2026-07-24.md` (this repository's root, commit
+`4ec7412`, merged via PR #5).
+
+### Historical Notes
+None — this section itself is the record of the corroboration.
+
+### Cross References
+`11-CORRECTIONS.md` Part 4, `00-INDEX.md`.
+
+---
+
 ## Statement — This reconstruction's verification methodology
 
 Three parallel research agents performed full-text reads (ADRs and

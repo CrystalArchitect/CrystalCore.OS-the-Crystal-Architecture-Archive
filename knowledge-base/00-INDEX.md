@@ -119,6 +119,16 @@ Full detail: `02-REPOSITORY-MAP.md`. When this archive cites a claim, it
 cites the repository and file it came from — go there to verify it
 independently.
 
+**A second knowledge base exists** (added 2026-07-24, later same day):
+`TerAustralis-Incognita/docs/` now also holds a 7-file, independently
+built set covering overlapping ground, from an uncoordinated session
+unrelated to this one. This archive's `knowledge-base/` remains
+canonical when the two disagree — this was already this archive's own
+decision before that second set existed, not a new call made to
+resolve the collision. Full account, including independent
+corroboration from a separate git-archaeology pass: `11-CORRECTIONS.md`
+Part 4, and `REPO-ARCHAEOLOGY-2026-07-24.md` (this repository's root).
+
 ## 5. How corrections are made
 
 When this reconstruction found a documentation claim that contradicted
