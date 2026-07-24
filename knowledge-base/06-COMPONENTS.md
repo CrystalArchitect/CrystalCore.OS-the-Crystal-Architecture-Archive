@@ -154,47 +154,72 @@ A fail-closed MCP stdio server letting a guest AI (Claude, Grok,
 Cursor) meet Lumina with only explicitly granted access. Explicitly
 described, in its own module README, as reconstructed from an
 incomplete trace — the original design doc was lost with the machine
-this project was first built on.
+this project was first built on. As of 2026-07-24 (PR #8,
+`TerAustralis-Incognita-Code`): Lumina's package path resolves
+correctly to `vision/apps/lumina/crystalcore/` (all four tools work,
+not just `status`); the `mcp` dependency is declared
+(`core/crystalcore/requirements-bridge.txt`); the consent gate's
+docstring truthfully describes the two checks it implements (approval,
+tool-permission); and a 7-test `selftest.py` runs in CI on every push.
 
-**Status: Implemented** — with two confirmed, real defects.
+**Status: Implemented** (the three defects the first pass of this
+archive documented here were fixed the same day it published — see
+Historical Notes). Still open, unchanged: implementing real
+scope/provenance checks remains a future design task (**Designed**, at
+most — no spec for either survives anywhere in the repository), and
+the module's live dynamic import of Lumina's package remains in
+tension with the documented "Crystal Core never imports Crystal
+Vision" rule (**Unresolved** — flagged for a maintainer decision, not
+touched by the fix).
 
 ### Evidence
 - `core/crystalcore/README.md`: "config.py and bridge.py were rebuilt
   from scratch — the machine this project was originally written on is
   gone."
-- `core/crystalcore/bridge.py:35-36`: computes Lumina's package path as
-  `core/apps/lumina/crystalcore` — `core/apps/` **does not exist**
-  anywhere in the repository (confirmed directly: `core/` contains only
-  `crystal-core/, crystalcore/, node/, profiles/, sdk/, tests/`).
-  Lumina's real package is at `vision/apps/lumina/crystalcore/`
-  (confirmed present). `recall`, `teach`, and `message` — three of
-  CrystalBridge's four tools — crash at runtime as a result; only
-  `status` works.
-- `core/crystalcore/gate.py:31`: docstring claims "Four checks
-  fail-closed: approval, permission, scope, provenance." The `check()`
-  method (lines 36-73) implements exactly two: approval, and the tool
-  allowlist (permission). No scope or provenance logic exists anywhere
-  in the file — confirmed by direct read, and independently
-  corroborated: the module's own README (`core/crystalcore/README.md`)
-  headlines "Four checks, fail-closed" but its own prose names only two
-  plus an audit-log side effect, never itself substantiating "scope" or
-  "provenance" either.
-- No requirements/toml/cfg file in the repository declares the `mcp`
-  package (confirmed by direct grep); `bridge.py:30` imports
-  `mcp.server.fastmcp` — the module will not run on a fresh clone.
-- Zero test coverage for this module; absent from `ci.yml`.
+- PR #8, `TerAustralis-Incognita-Code`, merged 2026-07-24: the path
+  fix in `core/crystalcore/bridge.py` (anchors at the repo root,
+  reaches into `vision/`), the new
+  `core/crystalcore/requirements-bridge.txt` (declares `mcp>=1.2`,
+  matching the sibling `requirements-consenttransport.txt`
+  convention), the corrected `gate.py` class docstring, and
+  `core/crystalcore/selftest.py` — 7 tests covering the path (a
+  regression guard that fails loudly if `LUMINA_PKG_DIR` stops
+  resolving) and the gate's real two-check behavior.
+- `.github/workflows/ci.yml`: two steps added by PR #8 ("Install
+  CrystalBridge dependencies," "CrystalBridge self-test") — the module
+  is no longer absent from CI.
+- Verified before merge: 7/7 selftest pass under both dependency
+  conditions (with `requests` present, the full Lumina framework
+  import loads and exposes `Lumina`; without it, the import sub-check
+  skips gracefully while the path regression guard still runs).
 
 ### Historical Notes
-This is the least-tested, most security-relevant module in the
-portfolio, and it is also the one most explicitly self-described as
-"reconstructed from an incomplete trace." All three defects above are
-code-behavior issues, not documentation mismatches — none were
-corrected in this pass (documentation-only mandate); all three are
-carried into `11-CORRECTIONS.md` as identified-not-applied, ranked
-High.
+Dated record, per this archive's convention — found and fixed the same
+day, 2026-07-24:
+- **Found (this archive's first pass):** `bridge.py:35-36` computed
+  Lumina's package path as `core/apps/lumina/crystalcore` —
+  `core/apps/` never existed; the Stage 1/2 repo split had moved
+  Lumina to `vision/apps/` while CrystalBridge went to
+  `core/crystalcore/`, and the path math still assumed one shared
+  root. `recall`, `teach`, and `message` crashed at runtime; only
+  `status` worked. `gate.py:31`'s docstring claimed "Four checks
+  fail-closed: approval, permission, scope, provenance" while
+  `check()` implemented exactly two — no scope or provenance logic
+  existed anywhere in the module, and `GuestGrant` had no field to
+  build them on. No file anywhere declared the `mcp` package
+  `bridge.py:30` imports, so the module could not run on a fresh
+  clone. Zero test coverage; absent from `ci.yml`.
+- **Fixed (PR #8, same day):** all three, as described in the
+  Statement. The gate fix deliberately corrected the docstring to
+  match reality rather than inventing unspecified security semantics —
+  the fuller four-check gate is recorded in the docstring itself as a
+  separate, deliberate design task for the maintainer.
+This was the least-tested, most security-relevant module in the
+portfolio; it now has the same selftest-in-CI standing as the four
+`crystal-core` protocol-pack components.
 
 ### Cross References
-`11-CORRECTIONS.md`.
+`11-CORRECTIONS.md` (Part 3).
 
 ---
 

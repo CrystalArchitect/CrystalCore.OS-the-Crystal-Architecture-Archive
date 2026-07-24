@@ -142,17 +142,58 @@ Each with a one-line reason it's left for a future, separate pass.
 
 | Finding | File(s) | Why not applied here |
 |---|---|---|
-| `bridge.py`'s Lumina-path resolves to a nonexistent directory (`core/apps/` instead of `vision/apps/`); `recall`/`teach`/`message` crash at runtime | `TerAustralis-Incognita-Code/core/crystalcore/bridge.py` | Code-behavior fix, not a documentation fix — out of scope for a documentation-only reconstruction. |
-| `gate.py`'s docstring claims four consent checks; only two (approval, permission) are implemented | Same file, `gate.py` | Same as above — fixing this "right" means either building the missing checks or downgrading a security claim, both real engineering decisions, not doc edits. |
-| No requirements/toml/cfg file declares the `mcp` package `bridge.py` imports | `TerAustralis-Incognita-Code` (repo-wide) | Packaging/dependency fix, not documentation. |
+| `bridge.py`'s Lumina-path resolves to a nonexistent directory (`core/apps/` instead of `vision/apps/`); `recall`/`teach`/`message` crash at runtime | `TerAustralis-Incognita-Code/core/crystalcore/bridge.py` | Code-behavior fix, not a documentation fix — out of scope for a documentation-only reconstruction. **→ Since resolved, see Part 3.** |
+| `gate.py`'s docstring claims four consent checks; only two (approval, permission) are implemented | Same file, `gate.py` | Same as above — fixing this "right" means either building the missing checks or downgrading a security claim, both real engineering decisions, not doc edits. **→ Since resolved, see Part 3.** |
+| No requirements/toml/cfg file declares the `mcp` package `bridge.py` imports | `TerAustralis-Incognita-Code` (repo-wide) | Packaging/dependency fix, not documentation. **→ Since resolved, see Part 3.** |
 | 96 files carry `SPDX-License-Identifier: Apache-2.0` headers under a CC BY-NC-ND 4.0 root `LICENSE` | `TerAustralis-Incognita-Code`, 96 files | Mechanically identical to a fix ADR-0008 already executed once, in the umbrella (97 files) — but sized for its own dedicated, scripted pass, not folded into this session's line-edit budget. |
 | ADR-0007 and ADR-0011's own "Consequences" sections describe states later resolved same-day | `docs/adr/ADR-0007.md`, `ADR-0011.md` | Protected by the project's own precedent: accepted ADRs are left as unedited historical record (explicitly stated for ADR-0001/0002 in `ADR-0007.md`'s own text). |
 | The PR template's Belt-Three checkboxes don't match `CONTRIBUTING.md`'s canonical three-label table (merges Story+Vision, adds an undocumented fourth category) | `.github/PULL_REQUEST_TEMPLATE.md` | Process/template redesign, not a factual correction. |
 | `docs/governance/Review-Process.md`'s CI checklist describes a Python-based CI (`compileall`, four self-tests, `pytest`) that no longer exists — actual `ci.yml` runs only markdown lint and a link check | `TerAustralis-Incognita/docs/governance/Review-Process.md` | Not in this pass's directly-scoped file list; flagged here for a future pass. |
 | `CONTRIBUTING.md`'s "Reality note" says CI currently fails for path reasons — CI was retargeted, not left failing | `TerAustralis-Incognita/CONTRIBUTING.md` | Same as above. |
-| `vision/README.md` itself still claims four Lumina test suites | `TerAustralis-Incognita-Code/vision/README.md` | STATUS.md now correctly flags this as a confirmed overclaim; the overclaiming file itself was deliberately left for a separate pass, stated explicitly in the STATUS.md correction. |
+| `vision/README.md` itself still claims four Lumina test suites | `TerAustralis-Incognita-Code/vision/README.md` | STATUS.md now correctly flags this as a confirmed overclaim; the overclaiming file itself was deliberately left for a separate pass, stated explicitly in the STATUS.md correction. **→ Since resolved, see Part 3.** |
 | `crystal-interface/README.md` and `vision-web/README.md` carry the same stale sibling-repository lists as `core/crystal-core/README.md` (only that one file was corrected) | Both files | Out of this pass's specifically-scoped correction list; same fix pattern, future pass. |
 | `vision-web/README.md`'s "Related" section links `docs/architecture/Full-Stack-v0.5.md` — a path that doesn't exist locally in this repository (docs live in the umbrella) | Same file | A cross-repository reference-format question, not a simple prefix swap like the other paths in this file. |
 | The Crystal Runtime specification trio disagrees with itself about implementation readiness across three documents | `Crystal-Runtime-Specification-v0.3.md`, `Runtime-Module-Interfaces.md`, `Runtime-Testing-Specifications.md` | A judgment call about which of three progressively-differing claims is "true" — not a mechanical correction; documented in `03-ARCHITECTURE.md` instead. |
 | Whether PR #1 (Code repo) should be formally closed, and whether its orphaned `src/runtime/` is worth salvaging | `TerAustralis-Incognita-Code`, PR #1 | Not a documentation question at all — a maintainer decision. Recorded in `07-HISTORY.md`. |
 | Whether `mythos/crystalcore-os`'s ~2,300 lines of ML code should be reclassified out of "Vision-layer" | `TerAustralis-Incognita/mythos/crystalcore-os/`, and everywhere it's described | A classification decision, not a factual correction — this archive preserves the project's own stated classification while flagging the tension (`05-KNOWLEDGE-MODEL.md`). |
+
+---
+
+## Part 3 — Applied after this archive's first publication (2026-07-24)
+
+Four Part 2 items were resolved the same day this archive first
+published, and their rows above are annotated accordingly. The Part 2
+table itself is preserved unchanged as the record of what the first
+pass deliberately declined to do and why — this section records what
+happened next, with evidence, per `12-CONTRIBUTING.md`'s dated-note
+convention.
+
+- **`bridge.py`'s Lumina path — fixed.** PR #8
+  (`TerAustralis-Incognita-Code`, merged 2026-07-24) recomputes
+  `LUMINA_PKG_DIR` from the repo root into
+  `vision/apps/lumina/crystalcore/`. `recall`/`teach`/`message` no
+  longer crash. A regression guard in the new
+  `core/crystalcore/selftest.py` fails loudly if the path ever stops
+  resolving.
+- **`gate.py`'s docstring — corrected.** Same PR. The resolution
+  chosen was "make the docstring true": it now states the two checks
+  `check()` actually implements (approval, tool-permission) and
+  records, in the docstring itself, that scope/provenance were
+  documented as intended but never implemented — no surviving spec
+  defines either, so building them remains an open maintainer design
+  task, not something this fix invented. The one other file asserting
+  the four-check claim (`vision/site/src/content/ARCHITECTURE.md`,
+  "Reality (Built)" table) was corrected in the same PR.
+- **The `mcp` dependency — declared.** Same PR. New
+  `core/crystalcore/requirements-bridge.txt` (the filename the
+  module's own README already instructed users to install), matching
+  the sibling `requirements-consenttransport.txt` convention. CI now
+  installs it and runs the CrystalBridge selftest on every push.
+- **`vision/README.md`'s four-test-suite overclaim — fixed, by the
+  maintainer independently.** PR #7 (`TerAustralis-Incognita-Code`,
+  commit `08fa2cc`, merged 2026-07-24, shortly before PR #8): the
+  README now states the one real core suite and marks the other three
+  as not-yet-existing. Attributed accurately — this was the
+  maintainer's own pass, not this archive's session.
+
+Everything else in Part 2 remains open as written.

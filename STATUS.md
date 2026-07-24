@@ -63,7 +63,12 @@ each repo's own STATUS.md where one exists.
   (ci.yml) runs those suites on push — corrected 2026-07-24, this line
   previously said "no CI." deploy.yml targets the site but GitHub
   Pages isn't switched on for that repo yet (manual admin step, still
-  pending). Has its own STATUS.md.
+  pending). Later 2026-07-24 (PR #8): CI now runs a fifth suite —
+  CrystalBridge's new selftest, 7/7 — after fixing the bridge's broken
+  Lumina path (recall/teach/message no longer crash), declaring its
+  missing `mcp` dependency, and correcting the consent gate's
+  docstring to the two checks it actually implements. Has its own
+  STATUS.md.
 - CrystalCore.OS-the-Crystal-Architecture-Archive — the system
   ledger. This file. Also now holds the full knowledge-base/
   reconstruction (see pointer above).

@@ -18,6 +18,7 @@ in complete evidentiary detail.
 | 2026-07-23, ~14:27–18:24 UTC | Stage 1 (engine import from umbrella branch `claude/crystalcore-boot-visual-jau1bk` @ `32692fd`) and Stage 2 (vision-app import, CI + Pages migration) executed on `TerAustralis-Incognita-Code`'s `main` — the path that actually became this repository's history, distinct from the still-open PR #1. |
 | 2026-07-23/24 | `CrystalCore.OS-the-Crystal-Architecture-Archive` created; system ledger established. |
 | 2026-07-24 | This reconstruction. |
+| 2026-07-24 (later) | The reconstruction's three PRs merge (#4 — this knowledge base publishes; #59 — umbrella doc corrections; #8 — Code repo). PR #7 (the maintainer's own) and PR #8 together fix, the same day this archive first documented them, the three CrystalBridge defects and the `vision/README.md` overclaim — see `06-COMPONENTS.md` (CrystalBridge) and `11-CORRECTIONS.md` Part 3. |
 
 **Status: Implemented** (as a dated record — every row independently
 sourced from git history or live GitHub metadata, cross-checked, not
