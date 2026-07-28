@@ -1,7 +1,16 @@
 # Repository Map
 
-The canonical map of all six repositories: what each owns, how they
+The canonical map of all eleven repositories: what each owns, how they
 relate, and where the seams between them are.
+
+> **Scope correction (2026-07-28).** This document was written on
+> 2026-07-24 against six repositories and said "six" throughout. The
+> portfolio review of 2026-07-28 found **five more** that this archive
+> had never recorded — four of them created after this map was written,
+> and four of the five more recently active than anything it did cover.
+> They are added as their own Statement below rather than folded into
+> the original six, so the reconstruction of 2026-07-24 stays legible as
+> what was true on 2026-07-24. See `11-CORRECTIONS.md`.
 
 ## Statement
 
@@ -281,3 +290,86 @@ None — current as of 2026-07-24.
 
 ### Cross References
 `04-GOVERNANCE.md`, `07-HISTORY.md`.
+
+---
+
+## Statement
+
+Five further repositories exist that this archive did not record before
+2026-07-28. Four are single-page CrystalCore.OS terminal artefacts; one
+is a full React/TypeScript application with its own presentation deck.
+Together they are 5 of the portfolio's 11 repositories, and four of the
+five were the most recently active repositories in the portfolio at the
+time this section was written.
+
+**Status: Implemented** (all five exist, carry commits, and were read
+directly from local clones).
+
+| Repository | What it is | Root commit | Head | Commits / files |
+|---|---|---|---|---|
+| `CrystalCore.OS` | Single-page mythos terminal — the multiplanetary desktop: boot screen, draggable windows, Mars clock, Starship telemetry, news feed, command prompt. `index.html` + `README.md`, no build step. | `b9bcbd2` 2026-07-29 02:47 +1000 | `5af57a4` 2026-07-29 02:52 +1000 | 5 / 2 |
+| `CrystalCore-AERIS` | The AERIS Edition of the same terminal, plus `ALIGNMENT_PROTOCOL.md` (a multi-LLM unity charter) and a `website/` directory. | `fde9a56` 2026-07-29 03:04 +1000 | `c8f0d95` 2026-07-29 04:06 +1000 | 5 / 4 |
+| `crystalcore-os-aeris-vault12` | The AERIS / Vault 12 cut: `index.html`, `logo.jpg`, and a README carrying the Master Year-3000 Starline chart and First Gate status. | `1348a80` 2026-07-29 05:57 +1000 | `5b611f7` 2026-07-29 06:44 +1000 | 6 / 3 |
+| `teraustralis-incognita-v2` | The largest of the five: a React 19 + TypeScript + Vite + Tailwind application (65 `.tsx` files) with an Express static server, built on a Manus generator scaffold. Co-authored by `Manus` — the only non-maintainer author anywhere in the portfolio since `The-Crystal-Vision`'s bot commits. | `7fa231c` 2026-07-24 14:14 UTC | `3762968` 2026-07-28 20:22 UTC | 4 / 90 |
+| `teraustralis-v2-presentation` | The deck for the above: 13 standalone HTML slides plus a presentation script, slide notes, and slide state. | `f056b9c` 2026-07-28 20:22 UTC | `d4fae1e` 2026-07-28 20:29 UTC | 3 / 17 |
+
+### Evidence
+- Tier A (git object database), read from local clones 2026-07-28: root
+  and head commit hashes, author dates, commit counts, and
+  `git ls-files` counts exactly as tabulated.
+- Tier A: `git log --format='%an'` gives `Crystal Arena-Turner` as sole
+  author for the three terminal repositories, and
+  `CrystalArchitect` + `Manus` for `teraustralis-incognita-v2`.
+- Tier C: each repository's own `README.md`.
+
+### Historical Notes
+`00-INDEX.md` opens "from a full read of the six-repository
+CrystalArchitect portfolio," and this map's own heading said "all six
+repositories." Both were accurate on 2026-07-24: `CrystalCore.OS`,
+`CrystalCore-AERIS`, and `crystalcore-os-aeris-vault12` did not exist
+yet (their root commits are 2026-07-29 +1000, i.e. after the
+reconstruction), and `teraustralis-incognita-v2` had existed for ten
+days without being surveyed. `teraustralis-v2-presentation` was created
+2026-07-28. So this is one genuine omission at the time
+(`teraustralis-incognita-v2`) and four repositories that arrived after
+the archive was written — not a reconstruction error, but a ledger that
+had not been re-run.
+
+### Cross References
+`11-CORRECTIONS.md`, `01-SYSTEM-OVERVIEW.md`,
+`FULL-REVIEW-2026-07-28.md` (root of this repository).
+
+---
+
+## Statement
+
+The three single-page terminal repositories (`CrystalCore.OS`,
+`CrystalCore-AERIS`, `crystalcore-os-aeris-vault12`) are variants of one
+another, not independent works, and none of them is the mythos terminal
+the umbrella ships.
+
+**Status: Implemented** (read from the files themselves).
+
+The umbrella's `mythos/crystalcore-os/crystalcore_os.py` — the terminal
+`STATUS.md` lists under "Running" — is a Python program with save/resume
+that plays to the First Gate. These three are browser pages: an HTML
+boot screen, draggable windows, and a command prompt with a fixed
+command set (`help`, `clear`, `mars`, `starship`, `status`, `about`,
+`reboot`, and in the AERIS cuts `vault`, `aeris`, `activate`, `node`).
+They share the same command-dispatch structure and differ mainly in
+theming and in which commands exist. Same name, same fiction, different
+artefact and different lineage.
+
+### Evidence
+- Tier A: `CrystalCore.OS/index.html`, `CrystalCore-AERIS/index.html`,
+  and `crystalcore-os-aeris-vault12/index.html` read in full
+  2026-07-28; the first two carry near-identical terminal handlers
+  (`crystal@core:~$` vs `aeris@vault12:~$` prompts).
+- Tier C: `TerAustralis-Incognita/STATUS.md`, "Running" section,
+  describing the Python terminal as a separate artefact.
+
+### Historical Notes
+None — first recorded here.
+
+### Cross References
+`06-COMPONENTS.md`, `09-GLOSSARY.md`.

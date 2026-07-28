@@ -1,6 +1,11 @@
 # CrystalCore.OS Knowledge Base — Index
 
-Reconstructed 2026-07-24, from a full read of the six-repository
+> **Scope note (2026-07-28).** The reconstruction below covered six
+> repositories. The portfolio has eleven; the other five are recorded in
+> `02-REPOSITORY-MAP.md` and `11-CORRECTIONS.md`. Everything else in this
+> knowledge base still describes the six it was built from.
+
+Reconstructed 2026-07-24, from a full read of the (then) six-repository
 CrystalArchitect portfolio: every ADR, every governance document, the
 complete Seven Sisters corpus, every mythos vision/philosophy document,
 every formal architecture specification, every component README, full

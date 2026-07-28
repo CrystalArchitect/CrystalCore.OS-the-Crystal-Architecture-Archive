@@ -4,6 +4,41 @@ Every documentation correction this reconstruction made or identified,
 in two sections: applied directly to the source file, and identified
 but left for a future pass.
 
+## Part 0 — Applied 2026-07-28 (portfolio review pass)
+
+### The archive covered 6 of 11 repositories
+
+- **`knowledge-base/02-REPOSITORY-MAP.md` and `00-INDEX.md`** — before:
+  "all six repositories" / "the six-repository CrystalArchitect
+  portfolio." After: eleven. `CrystalCore.OS`, `CrystalCore-AERIS`,
+  `crystalcore-os-aeris-vault12`, `teraustralis-incognita-v2`, and
+  `teraustralis-v2-presentation` were absent from the map entirely.
+
+  This is only partly an omission. Four of the five did not exist when
+  the reconstruction ran on 2026-07-24 — the three terminal repos were
+  created 2026-07-29 (+1000) and `teraustralis-v2-presentation` on
+  2026-07-28. The genuine miss is `teraustralis-incognita-v2`, created
+  2026-07-24 14:14 UTC, which existed on the day and was not surveyed.
+
+  The original six-repository statements were left standing and the new
+  material added as its own Statement, so that what the archive asserted
+  on 2026-07-24 remains readable as a claim about 2026-07-24. Correcting
+  by accretion rather than by overwrite is the same discipline
+  `10-PROVENANCE.md` applies to everything else here.
+
+- **Standing risk this exposes.** The ledger has no trigger that fires
+  when a repository is created. It was re-run only because a review
+  happened to be commissioned. Whatever replaces that — a scheduled
+  re-survey, or a rule that a new repository is not real until the map
+  names it — is an open decision, recorded here rather than resolved.
+
+### `README.md` (this repository)
+
+- Before: 49 bytes — the repository name as an H1, no trailing newline,
+  no content, in the repository that holds the portfolio's knowledge
+  base and system ledger. After: a real front door pointing at
+  `knowledge-base/00-INDEX.md`, `STATUS.md`, and the review reports.
+
 ## Part 1 — Applied this pass (2026-07-24)
 
 Scope discipline: only small, mechanical, high-confidence corrections
