@@ -32,6 +32,36 @@ but left for a future pass.
   re-survey, or a rule that a new repository is not real until the map
   names it — is an open decision, recorded here rather than resolved.
 
+### `02-REPOSITORY-MAP.md` — vault12 described from a stale clone
+
+- Before: `crystalcore-os-aeris-vault12` listed as "`index.html`,
+  `logo.jpg`, and a README", and grouped with `CrystalCore.OS` and
+  `CrystalCore-AERIS` as one of "the three single-page terminal
+  repositories ... variants of one another." After: recorded as the
+  **specification home for Starline edge nodes and the Consent Token**,
+  carrying seven technical documents.
+
+  The clone this was measured from was taken at 20:45 UTC; the seven
+  specifications landed on that repository's `main` afterwards
+  (head `a09943c`). So the archive described a specification repository
+  as a web page — a claim outliving the evidence it was drawn from,
+  which is the precise failure this archive exists to prevent.
+
+  Corrected in place with the error left visible and the re-read dated,
+  rather than rewritten to look as though it had always been right.
+
+- **Added, not merely corrected:** a Statement comparing the vault12
+  specification against the running `consent_transport` implementation.
+  They are the same protocol at the transport layer and diverge at the
+  consent layer — Noise IK matches the spec exactly, while Consent
+  Tokens, expiry, scope, and propagatable revocation are specified and
+  not built. Filed on the maturity ladder accordingly.
+
+- **Standing risk, same shape as the eleven-repository miss above.** Both
+  errors have one cause: a clone read once and then trusted. Nothing in
+  this archive's method re-reads a source before a claim about it is
+  published. Recorded here rather than resolved.
+
 ### `README.md` (this repository)
 
 - Before: 49 bytes — the repository name as an H1, no trailing newline,
