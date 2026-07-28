@@ -302,3 +302,85 @@ Everything else in Part 2 remains open as written, plus one addition:
 | Finding | File(s) | Why not applied here |
 |---|---|---|
 | Two independently-built knowledge bases now coexist (this archive's `knowledge-base/`, and `TerAustralis-Incognita/docs/`'s 7-file set) — reconciled with pointer notes this pass, but not merged into one structure | `TerAustralis-Incognita/docs/*.md` (7 files), this archive's `knowledge-base/` | A real information-architecture decision (which document owns which content long-term) — bigger than a documentation correction, and not something to settle unilaterally given this archive's own repeated deference to maintainer judgment on structural questions. |
+
+---
+
+## Part 5 — Applied 2026-07-28
+
+One new defect, in a class this archive had not previously audited for:
+a **truth-label failure in shipped UI**, rather than in documentation.
+Found in `CrystalCore-AERIS`, which no prior pass had examined.
+
+### `CrystalCore-AERIS/index.html` and `website/index.html`
+
+- **"Starship telemetry" was not telemetry — relabelled.** The AERIS
+  desktop presented a `◈ STARSHIP` window of stat rows (`Flight 13 /
+  Intact`, `Ship 40 / Indian Ocean`, `Reusability / 62%`, `Mars Goal /
+  Active`) and a `◈ NEWS FEED` window of four items, both styled as
+  instrument readouts. Verified by search: the page contains **zero**
+  `fetch`, `XMLHttpRequest`, `WebSocket`, or `EventSource` calls. Every
+  value was a literal string in the markup. The word "telemetry" and the
+  "feed" framing asserted live instrumentation that does not exist.
+
+  After: window titles are `◈ STARSHIP — SNAPSHOT` and `◈ NEWS —
+  SNAPSHOT`; each body carries a visible `.snapshot-note` reading
+  "Static snapshot — not live telemetry / not a live feed. Reviewed
+  2026-07." The terminal's `starship` command gained the same
+  disclosure in place of its reusability figure. The marketing site's
+  hero line and feature card ("STARSHIP TELEMETRY / Flight status,
+  reusability odds, Mars commitment") became "STARSHIP MISSION BOARD /
+  ...a recorded snapshot, not a live feed."
+
+- **Prediction-market odds presented as instrumentation — removed.**
+  The `Reusability 62%` stat row, the news item `POLY — Reusability odds
+  62% (+4%)`, and the terminal's `Reusability: 62%` were three
+  renderings of one prediction-market figure. The `(+4%)` delta in
+  particular implies a tracked series. All three deleted rather than
+  relabelled: a snapshot label makes a stale fact honest, but it cannot
+  make an odds quote into a measurement.
+
+- **`#news` fixed height removed (incidental).** `height: 200px` under
+  `.window { overflow: hidden }` clipped the new snapshot note. Height
+  now follows content, matching `#telemetry`'s existing behaviour.
+  Confirmed by headless-Chromium render before and after.
+
+**Scope held deliberately.** Three things were *not* done:
+
+1. The real-world flight claims (`Flight 13 / Intact`, `Ship 40 /
+   Indian Ocean`, the 2028 window) were neither verified nor corrected.
+   This pass had no authority to check them and did not guess; marking
+   them dated and static is what makes them safe, not editing their
+   content.
+2. No live data source was added. The page's zero-network-calls
+   property is a feature — the same property a prior pass recorded
+   approvingly for `crystal-vision` — and importing a feed to justify
+   the old label would have been the wrong direction of fix.
+3. The `id="telemetry"` element identifier and its `showWin('telemetry')`
+   handler were left alone. Internal, not user-visible; renaming risked
+   the taskbar for no truth gain.
+
+**What was verified as sound, and bounded this correction.** The same
+sweep confirmed the *accurate* claims, so the defect is narrow and not
+a pattern: the Mars clock is genuinely live and arithmetically correct
+(`88775.244` s is the true sol length; epoch is Perseverance's
+2021-02-18 landing; it read Sol 1933 on 2026-07-28, matching
+independent calculation). The terminal's ten commands all exist. In
+`TerAustralis-Incognita-Code`, `core/crystal-core/consent_transport/`
+is a real `Noise_IK_25519_ChaChaPoly_SHA256` implementation on audited
+`cryptography` primitives with no hand-rolled cipher work, and its
+selftest passes 9/9 — including `test_denied_without_consent`,
+`test_revocation_takes_effect_next_request`, and
+`test_forged_fragment_is_rejected_by_receiver`. `discovery.py` is
+genuinely serverless (LAN UDP broadcast, no rendezvous host) and
+documents its own limits accurately.
+
+**Provenance — why this surfaced now.** The defect was found while
+checking an external AI-generated report ("CrystalCore.OS — AERIS /
+VAULT 12 Exploration Report," attributed to Manus AI, dated
+2026-07-28) that the maintainer supplied. That report repeated
+"Starship telemetry" as fact and presented shipped code, mythos, and
+aspiration in a single register with no layer distinction. This is the
+label defect propagating outward: an external reader, human or machine,
+inherits whatever confidence the artifact projects. The correction is
+therefore in the artifact, not the report — the report was accurate
+about what it saw.
