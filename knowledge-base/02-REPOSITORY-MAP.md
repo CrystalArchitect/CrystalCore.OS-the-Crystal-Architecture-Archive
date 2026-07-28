@@ -57,7 +57,7 @@ ancestors of the `-Code` tree:
 | Repository | Was | Lives on as |
 |---|---|---|
 | `The-Crystal-Vision` (tag `vision-safe-2026-07-17`) | Codex site + Clementine companion; holds the complete crystalcore v0.13.4 bytecode rescue and the laptop snapshot | Ancestor of Lumina's embedded framework (which forked the earlier 0.7.0 line — see "Open decisions") |
-| `crystalcore` (tag `crystalcore-safe-2026-07-17`) | The Lattice protocol pack | Direct ancestor of `core/crystal-core` (Lattice Bus → Starline Weaver) |
+| `crystalcore` (tag `crystalcore-safe-2026-07-17`) | The Songline protocol pack | Direct ancestor of `core/crystal-core` (Songline Bus → Starline Weaver) |
 | `crystal-vision` | Static demo shell (Grok build) | Direct ancestor of `vision/apps/crystal-interface` |
 
 **Status: Implemented** (this table's every row was independently
@@ -172,7 +172,7 @@ canonical, 0.13.4 bytecode-recovered, 0.12.0 reconstructed, 0.7.0
 oldest), (2) the CrystalBridge MCP consent-gate package at
 `TerAustralis-Incognita-Code/core/crystalcore/` (v0.1.0, unrelated
 codebase), and (3) the standalone `crystalcore` repository's Seven
-Sisters/ancient knowledge protocol-pack brand.
+Sisters/Songline protocol-pack brand.
 
 **"Clementine"** names two unrelated things: (1) the companion chat
 persona, born in `The-Crystal-Vision` on 2026-07-15, later renamed
@@ -191,11 +191,11 @@ un-updated, frozen-provenance repositories).
 ### Evidence
 - `TerAustralis-Incognita/mythos/NAMES.md`: the governing rename
   document — "Starlines are the map. Dreamlines are the traveller of
-  the map," and explicitly reserves "ancient knowledge" for Aboriginal culture
+  the map," and explicitly reserves "Songline" for Aboriginal culture
   only, not the software.
 - Git commit evidence (umbrella repo, 2026-07-21): "lore: complete the
   persona sweep — Clementine (companion) → Lumina"; "rename the
-  Lattice Bus → Starline Weaver + Dreamline Narrator."
+  Songline Bus → Starline Weaver + Dreamline Narrator."
 - `The-Crystal-Vision` commit (2026-07-15): "Refactor into the
   CrystalCore package; Clementine is its first persona" — confirms the
   framework was multi-persona-shaped from birth, with Clementine as
@@ -205,7 +205,7 @@ un-updated, frozen-provenance repositories).
 The standalone `crystalcore` repository, created 2026-07-17, was never
 updated past the pre-rename names — it is the only repository in the
 portfolio still natively using "Clementine Singularity Bridge" and
-"Lattice Bus" throughout its own docs and code. This is presented as a
+"Songline Bus" throughout its own docs and code. This is presented as a
 historical/provenance fact about a frozen repository, not a defect to
 fix — that repository is deliberately checkpointed and unedited per the
 umbrella's own charter.
@@ -223,12 +223,12 @@ non-identical by direct diff, not merely assumed to be duplicates:
 
 - The crystal-vision interface demo: `crystal-vision/app.js` (546
   lines, newer, standalone repo) vs. `crystalcore/interface/app.js`
-  (349 lines, older, inside the standalone ancient knowledge-pack repo).
+  (349 lines, older, inside the standalone Songline-pack repo).
 - The Seven Sisters corpus: `TerAustralis-Incognita/research/
   seven-sisters/` vs. the standalone `crystalcore` repository's root
   markdown pack — mostly byte-identical, but `README.md` and three
   core path files differ in a consistent way: the `crystalcore` repo's
-  copy keeps older, more grandiose framing ("Quantum Lattice Weaver
+  copy keeps older, more grandiose framing ("Quantum Songline Weaver
   v∞.Δ+"), while the umbrella's reorganized copy explicitly downgrades
   to "a Vision-layer motif, not a claim."
 

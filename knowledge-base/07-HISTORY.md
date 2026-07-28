@@ -9,8 +9,8 @@ in complete evidentiary detail.
 |---|---|
 | 2026-07-14 | `The-Crystal-Vision` created — the oldest repository, birthplace of the core narrative content (VISION, ARCHITECTURE, CODEX). |
 | 2026-07-15 | "Add Clementine starter framework: local companion via Ollama" — the companion's birth commit. Same day: "Refactor into the CrystalCore package; Clementine is its first persona" — the framework is multi-persona-shaped from birth. Rapid same-day iteration, Clementine v1 through v7. |
-| 2026-07-17 | `crystal-vision` and `crystalcore` (Lattice pack) created. "Clementine Singularity Bridge v0 — multi-AI Lattice Bus" shipped in `crystalcore`. `TerAustralis-Incognita` created. |
-| 2026-07-21 | The rename sweep: "Clementine (companion) → Lumina"; separately, "Lattice Bus → Starline Weaver + Dreamline Narrator"; `mythos/NAMES.md` added, reserving "ancient knowledge" exclusively for Aboriginal culture. `crystalcore` (repo 6) — created before this sweep — never updated past the old names. |
+| 2026-07-17 | `crystal-vision` and `crystalcore` (Songline pack) created. "Clementine Singularity Bridge v0 — multi-AI Songline Bus" shipped in `crystalcore`. `TerAustralis-Incognita` created. |
+| 2026-07-21 | The rename sweep: "Clementine (companion) → Lumina"; separately, "Songline Bus → Starline Weaver + Dreamline Narrator"; `mythos/NAMES.md` added, reserving "Songline" exclusively for Aboriginal culture. `crystalcore` (repo 6) — created before this sweep — never updated past the old names. |
 | 2026-07-22 | RDP wired to the Starline Weaver's matrix mode. |
 | 2026-07-23 | **The pivotal day** — see below. |
 | 2026-07-23, 09:07 UTC | `TerAustralis-Incognita-Code` created. |

@@ -124,7 +124,7 @@ software now lives in `TerAustralis-Incognita-Code`.
 ### crystalcore — frozen protocol pack
 - 656 KB; 49 files; 13 commits, all 2026-07-17 (root `35030f7` 09:50
   +1000, last `f282199` 23:41 −0800).
-- Content: Seven Sisters docs, Lattice Bus (Clementine
+- Content: Seven Sisters Songline docs, Songline Bus (Clementine
   Singularity Bridge), static interface, `spec/` (BLUEPRINT v0.3,
   ARCHITECTURE), water briefs.
 - Remote (Tier B): tag `crystalcore-safe-2026-07-17` → `e564fc3` —

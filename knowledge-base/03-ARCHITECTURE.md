@@ -154,7 +154,7 @@ this document does not treat it as one.**
   (Story/Vision), and the transmit records are a log of what was
   actually posted."
 - `crystalcore-seven-sisters-FULL.md`: "What this is not: Not ownership
-  of Aboriginal Seven Sisterss or sacred knowledge · Not a
+  of Aboriginal Seven Sisters Songlines or sacred knowledge · Not a
   claim that software creates physical rivers or inland seas... Not a
   substitute for talking to custodians on Country."
 - `WATER-BRIEF.md`: explicit Science/Vision table per basin, and an

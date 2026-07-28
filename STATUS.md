@@ -81,7 +81,7 @@ each repo's own STATUS.md where one exists.
   cleanly, 19/20 offline tests) and the raw laptop snapshot with
   RECOVERY-STATUS.md. Mirrors of that material also sit in the
   umbrella's archive/.
-- crystalcore (Lattice pack; not archived — same correction as above,
+- crystalcore (Songline pack; not archived — same correction as above,
   was wrongly marked "archived 2026-07-18, read-only") — never
   contained the package in any commit (full-history search, 2026-07-24).
 - crystal-vision (not archived — same correction, private) — audited
