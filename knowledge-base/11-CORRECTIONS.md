@@ -502,10 +502,67 @@ Also logged there, unresolved by design: two node names in those maps
 are not among the Codex's Five Keys, while the map's other five map onto
 them exactly. Recorded as render-only with canon status undecided — a
 maintainer's call about the mythos, not a defect for this pass to
-correct.
+correct. **→ Since resolved, see Part 8.**
 
 ### Added to Part 2 — identified, not applied
 
 | Finding | File(s) | Why not applied here |
 |---|---|---|
 | Stale pre-split path in the art gallery's truth label: cites `src/apps/lumina/crystalcore/sovereignty_scorer.py`, which does not exist. The file is at `vision/apps/lumina/crystalcore/sovereignty_scorer.py` after the Stage 1/2 split — the same defect class Part 1 corrected in six other files. The claim itself is **accurate**: verified this pass that `sovereignty_scorer` has zero references anywhere else in the Lumina app, so it is genuinely unwired. | `TerAustralis-Incognita/mythos/art/README.md` | One-line path fix, but in a repository this pass has otherwise not touched and against which no branch is open. Batching it with the next pass on that repository costs nothing; opening a fourth branch for one line does. |
+
+---
+
+## Part 8 — Applied 2026-07-28 (the open canon question, answered)
+
+Part 7's one deliberately-open item is closed. The maintainer confirmed
+**Sunwash Atolls** and **Cinderwake Chain** as canon Starline nodes the
+same day.
+
+Worth recording as a distinct case, because it inverts the pattern
+Parts 5–7 documented. There, the render was ahead of nothing — it
+carried decoration that the code then implemented as fact. Here the
+render was ahead of the *code*: it drew two real nodes the
+implementation did not yet have. Same divergence, opposite direction,
+and only one of the two is a defect. The rule that separates them is
+not "art must match code" but "each must say which it is."
+
+### `TerAustralis-Incognita/mythos/crystalcore-os/crystalcore_os.py` and `mythos/CRYSTALCORE-OS.md`
+
+- **Two nodes added, both key-bearing and both sealed** behind named
+  keys — Magenta Key and Ember Ley — making the First Gate a seven-key
+  gate. Node order follows the chart outward from Earth, which
+  renumbers the `visit <n>` shortcuts; saves are unaffected, since
+  `keys_held` stores names rather than indices.
+
+- **The count is now derived rather than written.** This is the part
+  that matters beyond the mythos. The gate condition was already
+  `len(keys_held) == len(nodes)` and absorbed the change for free; the
+  prose did not. Four strings said "five" outright and the snapshot
+  listing hardcoded `keys {n}/5` — every one of them became false the
+  moment the list grew. They are now spelled from `len(self.nodes)` by
+  a `_count_word()` helper, so the register survives and the number
+  cannot go stale again.
+
+  That is the same defect class as the sol constant in Part 6: a value
+  written into a second place, then drifting from the first. Part 6
+  corrected an instance; this removes the mechanism for one file.
+
+- **The artwork now lags the map.**
+  `mythos/art/starline-network-year-3000.jpeg` renders the original
+  five nodes. Labelled in `CRYSTALCORE-OS.md` as an earlier state of
+  the same map rather than left to contradict the ASCII chart
+  silently. Regenerating it at seven nodes is a separate decision, not
+  taken here.
+
+Verified by playthrough against a throwaway `HOME`: sealed nodes refuse
+entry without their named key, all seven yield keys, the First Gate
+opens at 7/7, and no stale "five" survives outside the lookup table and
+its explanatory docstring. Repository CI (markdownlint + link check)
+passed — the first PR in this constellation to run any CI at all, four
+of the other repositories having no `pull_request` workflow.
+
+**Naming note.** `Ember Ley` is recorded as the maintainer wrote it —
+"Ley", not "Key". In a project built on songlines, starlines and
+lattices, a ley line of embers reads as deliberate, and this pass had
+no standing to normalise an author's coinage into the more obvious
+word. Flagged for confirmation rather than silently corrected.
