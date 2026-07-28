@@ -448,3 +448,64 @@ been audited for this defect class (`crystal-vision`,
 `The-Crystal-Vision`, `TerAustralis-Incognita`,
 `TerAustralis-Incognita-Code`). This is recorded as unexamined, not as
 clean. Per the reasoning above, no claim is made about them either way.
+
+---
+
+## Part 7 — Applied 2026-07-28 (origin of the Part 5/6 defect)
+
+Parts 5 and 6 corrected the same mislabel in two repositories without
+establishing where it came from. It came from the concept art.
+
+The Grok render used as the AERIS build reference contains a panel
+captioned `STARSHIP TELEMETRY`, complete with `VEHICLE SN-42`,
+`VELOCITY 27.4 KM/S`, `POWER 82%` and an ECG trace. It was implemented
+faithfully. Nobody introduced the defect; a render was handed over as a
+build reference and, absent any statement to the contrary, its
+decorative instrumentation was indistinguishable from a specification.
+
+The full propagation, now closed: **render → `CrystalCore.OS` →
+`CrystalCore-AERIS` → both READMEs → an external exploration report
+that repeated "Starship telemetry" as fact → a suggested next feature,
+"add a Starship telemetry panel with animated flight-status data."**
+Four hops. Each one faithful to its input.
+
+### `CrystalCore-AERIS/CONCEPT-RENDERS.md` — new
+
+Records each reference render, what it shows, and which elements are set
+dressing. Deliberately **not** a new convention: it follows the
+table-plus-truth-label format `TerAustralis-Incognita/mythos/art/
+README.md` already uses, whose `eight-sovereign-laws.jpeg` row was
+already doing precisely this job ("a `0.1-alpha` experiment, but it is
+unwired — the companion does not actually score sessions"). The pattern
+existed; it had simply never been applied to the build references.
+
+Two findings of substance beyond the telemetry block:
+
+- **`HANDSHAKE: XX` contradicts the implementation.** The Starline
+  render's Noise panel says XX; `consent_transport/noise.py` implements
+  **IK** (`PROTOCOL_NAME = b"Noise_IK_25519_ChaChaPoly_SHA256"`, "IK
+  pattern only"). Different handshake, different assumptions — IK means
+  the initiator already holds the responder's static key, which is what
+  the manual pairing step provides; XX means neither side does. The
+  panel's other three lines (`ChaChaPoly`, `X25519`, `ED25519`) are all
+  correct against the code, which is exactly what lends the wrong one
+  its authority. Caught before implementation this time.
+- **Register determines risk.** The Starline Expansion maps show the
+  same network as the render above, drawn cartographically — compass
+  roses, chart framing, no uptimes, no packet rates, nothing shaped
+  like a reading. Same content, no defect surface. Recorded as the
+  preferred reference format, which is a cheaper fix than labelling
+  every future HUD.
+
+Also logged there, unresolved by design: two node names in those maps
+(**Sunwash Atolls**, **Cinderwake Chain**) appear in no repository and
+are not among the Codex's Five Keys, while the map's other five map onto
+them exactly. Recorded as render-only with canon status undecided — a
+maintainer's call about the mythos, not a defect for this pass to
+correct.
+
+### Added to Part 2 — identified, not applied
+
+| Finding | File(s) | Why not applied here |
+|---|---|---|
+| Stale pre-split path in the art gallery's truth label: cites `src/apps/lumina/crystalcore/sovereignty_scorer.py`, which does not exist. The file is at `vision/apps/lumina/crystalcore/sovereignty_scorer.py` after the Stage 1/2 split — the same defect class Part 1 corrected in six other files. The claim itself is **accurate**: verified this pass that `sovereignty_scorer` has zero references anywhere else in the Lumina app, so it is genuinely unwired. | `TerAustralis-Incognita/mythos/art/README.md` | One-line path fix, but in a repository this pass has otherwise not touched and against which no branch is open. Batching it with the next pass on that repository costs nothing; opening a fourth branch for one line does. |
