@@ -359,7 +359,11 @@ Found in `CrystalCore-AERIS`, which no prior pass had examined.
    handler were left alone. Internal, not user-visible; renaming risked
    the taskbar for no truth gain.
 
-**What was verified as sound, and bounded this correction.** The same
+**What was verified as sound, and bounded this correction.**
+**[Superseded the same day — see Part 6. The "not a pattern" claim below
+was wrong: the identical defect was then found in `CrystalCore.OS`,
+which this pass had not examined. The sentence is left standing rather
+than edited, because the error is the point.]** The same
 sweep confirmed the *accurate* claims, so the defect is narrow and not
 a pattern: the Mars clock is genuinely live and arithmetically correct
 (`88775.244` s is the true sol length; epoch is Perseverance's
@@ -384,3 +388,63 @@ label defect propagating outward: an external reader, human or machine,
 inherits whatever confidence the artifact projects. The correction is
 therefore in the artifact, not the report — the report was accurate
 about what it saw.
+
+---
+
+## Part 6 — Applied 2026-07-28 (later the same day)
+
+Part 5 was wrong about its own scope. It called the AERIS truth-label
+defect "narrow and not a pattern." Within the hour the identical defect
+was found in `CrystalCore.OS` — a repository Part 5 had not examined,
+in an earlier and more explicit form. Part 5's sentence is left in place
+with a pointer here rather than quietly edited: a corrections ledger
+that silently repairs its own misjudgements is worth less than one that
+shows them.
+
+### `CrystalCore.OS/index.html` and `README.md`
+
+- **"STARSHIP TELEMETRY" — relabelled.** Where AERIS titled the window
+  `◈ STARSHIP`, this one said `◈ STARSHIP TELEMETRY` outright, over the
+  same static stat rows, with the same zero network calls. Now
+  `◈ STARSHIP — SNAPSHOT` with a dated `.snapshot-note`, matching AERIS.
+  The `◈ NEWS FEED` window received the same treatment.
+
+- **A liveness claim in prose — removed.** The news item read
+  `POLYMARKET — Starship reusability odds: 62% (up 4% this week)`.
+  "This week" asserts a tracked series outright, which is a stronger
+  false claim than any AERIS carried. Deleted, along with the
+  `Polymarket Reusability / 62%` stat row and the figure in the
+  terminal's `starship` and `news` commands.
+
+- **The README contained its own disproof.** Under **Features**:
+  "Starship Telemetry panel (Flight 13 status + Polymarket odds)."
+  Under **Roadmap**: "Live Polymarket odds API." The odds cannot be
+  live if making them live is future work. The Features line now
+  describes what ships; the Roadmap line is untouched, being honest as
+  stated future work.
+
+- **Sol counter arithmetic — corrected.** Unrelated to the labelling,
+  found in the same sweep. The counter divided elapsed time by
+  `24.65 * 3600` s (88 740 s). A Martian sol is 88 775.244 s, so the
+  clock ran 35.244 s/sol fast and had accumulated 0.77 sols of error
+  since the 2021-02-18 epoch — enough to read **Sol 1934** on
+  2026-07-28 while `CrystalCore-AERIS`, using the correct constant,
+  read **Sol 1933**. Two sibling pages describing the same moment
+  disagreed by a full sol, and the one the README markets as a "Live
+  Mars Clock" was the wrong one. Now uses AERIS's constant; both agree.
+  Verified by headless-Chromium render.
+
+**Correction to Part 5's reasoning, not just its facts.** Part 5 cited
+the correct sol arithmetic in AERIS as evidence *bounding* the defect —
+"the accurate claims are accurate, therefore the problem is local."
+That inference was unsound twice over. The sol constant was not a
+project-wide invariant but a per-file literal, wrong in the sibling
+file. And a defect verified absent in the one repository examined says
+nothing about repositories not examined. Correct labelling in one
+artifact is not evidence about another; only looking is.
+
+**Standing scope note.** Four of the eight repositories still have not
+been audited for this defect class (`crystal-vision`,
+`The-Crystal-Vision`, `TerAustralis-Incognita`,
+`TerAustralis-Incognita-Code`). This is recorded as unexamined, not as
+clean. Per the reasoning above, no claim is made about them either way.
