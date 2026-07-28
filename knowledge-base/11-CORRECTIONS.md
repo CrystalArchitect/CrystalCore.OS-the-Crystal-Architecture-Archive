@@ -631,12 +631,21 @@ look correct in hindsight.
 
 ### What Part 8 is not
 
-Part 8 is unaffected. Its change — the seven-node canon — landed in
-`TerAustralis-Incognita#70`, which is open and green rather than
-closed, and was extended to the web recreation in
-`TerAustralis-Incognita-Code#29`. Neither is merged at the time of
-writing, so Part 8's own status should be re-checked before it is
-relied on, by whoever reads this next.
+Part 8 is unaffected, and its status is earned rather than assumed.
+Both halves of it merged on 2026-07-28: the seven-node canon in
+`TerAustralis-Incognita#70`, and its extension to the web recreation in
+`TerAustralis-Incognita-Code#29`. Part 8 is therefore the one entry in
+this run whose "applied" is literally true, and — since the Code repo
+owns the CNAME and publishes on merge — the live site at
+`www.teraustralis.com.au/crystalcore-os` now shows seven nodes too.
+
+This paragraph needed correcting twice while being written. It first
+said *"Neither is merged at the time of writing"*; #70 merged within
+the hour, and #29 merged while that sentence was being fixed. The rule
+below, bitten twice by its own author inside one pass — which is the
+right outcome, and the reason the wording now names merge commits and
+dates rather than describing a PR's mood. **State what merged and
+when. A sentence about what is currently open is written to rot.**
 
 **A rule this pass earned.** An entry in this file should not say
 "applied" while its change is in an unmerged pull request. Applied
