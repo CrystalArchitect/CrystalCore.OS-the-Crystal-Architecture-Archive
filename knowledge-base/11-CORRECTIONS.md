@@ -302,3 +302,276 @@ Everything else in Part 2 remains open as written, plus one addition:
 | Finding | File(s) | Why not applied here |
 |---|---|---|
 | Two independently-built knowledge bases now coexist (this archive's `knowledge-base/`, and `TerAustralis-Incognita/docs/`'s 7-file set) — reconciled with pointer notes this pass, but not merged into one structure | `TerAustralis-Incognita/docs/*.md` (7 files), this archive's `knowledge-base/` | A real information-architecture decision (which document owns which content long-term) — bigger than a documentation correction, and not something to settle unilaterally given this archive's own repeated deference to maintainer judgment on structural questions. |
+
+---
+
+## Part 5 — Applied 2026-07-28
+
+One new defect, in a class this archive had not previously audited for:
+a **truth-label failure in shipped UI**, rather than in documentation.
+Found in `CrystalCore-AERIS`, which no prior pass had examined.
+
+### `CrystalCore-AERIS/index.html` and `website/index.html`
+
+- **"Starship telemetry" was not telemetry — relabelled.** The AERIS
+  desktop presented a `◈ STARSHIP` window of stat rows (`Flight 13 /
+  Intact`, `Ship 40 / Indian Ocean`, `Reusability / 62%`, `Mars Goal /
+  Active`) and a `◈ NEWS FEED` window of four items, both styled as
+  instrument readouts. Verified by search: the page contains **zero**
+  `fetch`, `XMLHttpRequest`, `WebSocket`, or `EventSource` calls. Every
+  value was a literal string in the markup. The word "telemetry" and the
+  "feed" framing asserted live instrumentation that does not exist.
+
+  After: window titles are `◈ STARSHIP — SNAPSHOT` and `◈ NEWS —
+  SNAPSHOT`; each body carries a visible `.snapshot-note` reading
+  "Static snapshot — not live telemetry / not a live feed. Reviewed
+  2026-07." The terminal's `starship` command gained the same
+  disclosure in place of its reusability figure. The marketing site's
+  hero line and feature card ("STARSHIP TELEMETRY / Flight status,
+  reusability odds, Mars commitment") became "STARSHIP MISSION BOARD /
+  ...a recorded snapshot, not a live feed."
+
+- **Prediction-market odds presented as instrumentation — removed.**
+  The `Reusability 62%` stat row, the news item `POLY — Reusability odds
+  62% (+4%)`, and the terminal's `Reusability: 62%` were three
+  renderings of one prediction-market figure. The `(+4%)` delta in
+  particular implies a tracked series. All three deleted rather than
+  relabelled: a snapshot label makes a stale fact honest, but it cannot
+  make an odds quote into a measurement.
+
+- **`#news` fixed height removed (incidental).** `height: 200px` under
+  `.window { overflow: hidden }` clipped the new snapshot note. Height
+  now follows content, matching `#telemetry`'s existing behaviour.
+  Confirmed by headless-Chromium render before and after.
+
+**Scope held deliberately.** Three things were *not* done:
+
+1. The real-world flight claims (`Flight 13 / Intact`, `Ship 40 /
+   Indian Ocean`, the 2028 window) were neither verified nor corrected.
+   This pass had no authority to check them and did not guess; marking
+   them dated and static is what makes them safe, not editing their
+   content.
+2. No live data source was added. The page's zero-network-calls
+   property is a feature — the same property a prior pass recorded
+   approvingly for `crystal-vision` — and importing a feed to justify
+   the old label would have been the wrong direction of fix.
+3. The `id="telemetry"` element identifier and its `showWin('telemetry')`
+   handler were left alone. Internal, not user-visible; renaming risked
+   the taskbar for no truth gain.
+
+**What was verified as sound, and bounded this correction.**
+**[Superseded the same day — see Part 6. The "not a pattern" claim below
+was wrong: the identical defect was then found in `CrystalCore.OS`,
+which this pass had not examined. The sentence is left standing rather
+than edited, because the error is the point.]** The same
+sweep confirmed the *accurate* claims, so the defect is narrow and not
+a pattern: the Mars clock is genuinely live and arithmetically correct
+(`88775.244` s is the true sol length; epoch is Perseverance's
+2021-02-18 landing; it read Sol 1933 on 2026-07-28, matching
+independent calculation). The terminal's ten commands all exist. In
+`TerAustralis-Incognita-Code`, `core/crystal-core/consent_transport/`
+is a real `Noise_IK_25519_ChaChaPoly_SHA256` implementation on audited
+`cryptography` primitives with no hand-rolled cipher work, and its
+selftest passes 9/9 — including `test_denied_without_consent`,
+`test_revocation_takes_effect_next_request`, and
+`test_forged_fragment_is_rejected_by_receiver`. `discovery.py` is
+genuinely serverless (LAN UDP broadcast, no rendezvous host) and
+documents its own limits accurately.
+
+**Provenance — why this surfaced now.** The defect was found while
+checking an external AI-generated report ("CrystalCore.OS — AERIS /
+VAULT 12 Exploration Report," attributed to Manus AI, dated
+2026-07-28) that the maintainer supplied. That report repeated
+"Starship telemetry" as fact and presented shipped code, mythos, and
+aspiration in a single register with no layer distinction. This is the
+label defect propagating outward: an external reader, human or machine,
+inherits whatever confidence the artifact projects. The correction is
+therefore in the artifact, not the report — the report was accurate
+about what it saw.
+
+---
+
+## Part 6 — Applied 2026-07-28 (later the same day)
+
+Part 5 was wrong about its own scope. It called the AERIS truth-label
+defect "narrow and not a pattern." Within the hour the identical defect
+was found in `CrystalCore.OS` — a repository Part 5 had not examined,
+in an earlier and more explicit form. Part 5's sentence is left in place
+with a pointer here rather than quietly edited: a corrections ledger
+that silently repairs its own misjudgements is worth less than one that
+shows them.
+
+### `CrystalCore.OS/index.html` and `README.md`
+
+- **"STARSHIP TELEMETRY" — relabelled.** Where AERIS titled the window
+  `◈ STARSHIP`, this one said `◈ STARSHIP TELEMETRY` outright, over the
+  same static stat rows, with the same zero network calls. Now
+  `◈ STARSHIP — SNAPSHOT` with a dated `.snapshot-note`, matching AERIS.
+  The `◈ NEWS FEED` window received the same treatment.
+
+- **A liveness claim in prose — removed.** The news item read
+  `POLYMARKET — Starship reusability odds: 62% (up 4% this week)`.
+  "This week" asserts a tracked series outright, which is a stronger
+  false claim than any AERIS carried. Deleted, along with the
+  `Polymarket Reusability / 62%` stat row and the figure in the
+  terminal's `starship` and `news` commands.
+
+- **The README contained its own disproof.** Under **Features**:
+  "Starship Telemetry panel (Flight 13 status + Polymarket odds)."
+  Under **Roadmap**: "Live Polymarket odds API." The odds cannot be
+  live if making them live is future work. The Features line now
+  describes what ships; the Roadmap line is untouched, being honest as
+  stated future work.
+
+- **Sol counter arithmetic — corrected.** Unrelated to the labelling,
+  found in the same sweep. The counter divided elapsed time by
+  `24.65 * 3600` s (88 740 s). A Martian sol is 88 775.244 s, so the
+  clock ran 35.244 s/sol fast and had accumulated 0.77 sols of error
+  since the 2021-02-18 epoch — enough to read **Sol 1934** on
+  2026-07-28 while `CrystalCore-AERIS`, using the correct constant,
+  read **Sol 1933**. Two sibling pages describing the same moment
+  disagreed by a full sol, and the one the README markets as a "Live
+  Mars Clock" was the wrong one. Now uses AERIS's constant; both agree.
+  Verified by headless-Chromium render.
+
+**Correction to Part 5's reasoning, not just its facts.** Part 5 cited
+the correct sol arithmetic in AERIS as evidence *bounding* the defect —
+"the accurate claims are accurate, therefore the problem is local."
+That inference was unsound twice over. The sol constant was not a
+project-wide invariant but a per-file literal, wrong in the sibling
+file. And a defect verified absent in the one repository examined says
+nothing about repositories not examined. Correct labelling in one
+artifact is not evidence about another; only looking is.
+
+**Standing scope note.** Four of the eight repositories still have not
+been audited for this defect class (`crystal-vision`,
+`The-Crystal-Vision`, `TerAustralis-Incognita`,
+`TerAustralis-Incognita-Code`). This is recorded as unexamined, not as
+clean. Per the reasoning above, no claim is made about them either way.
+
+---
+
+## Part 7 — Applied 2026-07-28 (origin of the Part 5/6 defect)
+
+Parts 5 and 6 corrected the same mislabel in two repositories without
+establishing where it came from. It came from the concept art.
+
+The Grok render used as the AERIS build reference contains a panel
+captioned `STARSHIP TELEMETRY`, complete with `VEHICLE SN-42`,
+`VELOCITY 27.4 KM/S`, `POWER 82%` and an ECG trace. It was implemented
+faithfully. Nobody introduced the defect; a render was handed over as a
+build reference and, absent any statement to the contrary, its
+decorative instrumentation was indistinguishable from a specification.
+
+The full propagation, now closed: **render → `CrystalCore.OS` →
+`CrystalCore-AERIS` → both READMEs → an external exploration report
+that repeated "Starship telemetry" as fact → a suggested next feature,
+"add a Starship telemetry panel with animated flight-status data."**
+Four hops. Each one faithful to its input.
+
+### `CrystalCore-AERIS/CONCEPT-RENDERS.md` — new
+
+Records each reference render, what it shows, and which elements are set
+dressing. Deliberately **not** a new convention: it follows the
+table-plus-truth-label format `TerAustralis-Incognita/mythos/art/
+README.md` already uses, whose `eight-sovereign-laws.jpeg` row was
+already doing precisely this job ("a `0.1-alpha` experiment, but it is
+unwired — the companion does not actually score sessions"). The pattern
+existed; it had simply never been applied to the build references.
+
+Two findings of substance beyond the telemetry block:
+
+- **`HANDSHAKE: XX` contradicts the implementation.** The Starline
+  render's Noise panel says XX; `consent_transport/noise.py` implements
+  **IK** (`PROTOCOL_NAME = b"Noise_IK_25519_ChaChaPoly_SHA256"`, "IK
+  pattern only"). Different handshake, different assumptions — IK means
+  the initiator already holds the responder's static key, which is what
+  the manual pairing step provides; XX means neither side does. The
+  panel's other three lines (`ChaChaPoly`, `X25519`, `ED25519`) are all
+  correct against the code, which is exactly what lends the wrong one
+  its authority. Caught before implementation this time.
+- **Register determines risk.** The Starline Expansion maps show the
+  same network as the render above, drawn cartographically — compass
+  roses, chart framing, no uptimes, no packet rates, nothing shaped
+  like a reading. Same content, no defect surface. Recorded as the
+  preferred reference format, which is a cheaper fix than labelling
+  every future HUD.
+
+Also logged there, unresolved by design: two node names in those maps
+(**Sunwash Atolls**, **Cinderwake Chain**) appear in no repository and
+are not among the Codex's Five Keys, while the map's other five map onto
+them exactly. Recorded as render-only with canon status undecided — a
+maintainer's call about the mythos, not a defect for this pass to
+correct. **→ Since resolved, see Part 8.**
+
+### Added to Part 2 — identified, not applied
+
+| Finding | File(s) | Why not applied here |
+|---|---|---|
+| Stale pre-split path in the art gallery's truth label: cites `src/apps/lumina/crystalcore/sovereignty_scorer.py`, which does not exist. The file is at `vision/apps/lumina/crystalcore/sovereignty_scorer.py` after the Stage 1/2 split — the same defect class Part 1 corrected in six other files. The claim itself is **accurate**: verified this pass that `sovereignty_scorer` has zero references anywhere else in the Lumina app, so it is genuinely unwired. | `TerAustralis-Incognita/mythos/art/README.md` | One-line path fix, but in a repository this pass has otherwise not touched and against which no branch is open. Batching it with the next pass on that repository costs nothing; opening a fourth branch for one line does. |
+
+---
+
+## Part 8 — Applied 2026-07-28 (the open canon question, answered)
+
+Part 7's one deliberately-open item is closed. The maintainer confirmed
+**Sunwash Atolls** and **Cinderwake Chain** as canon Starline nodes the
+same day.
+
+Worth recording as a distinct case, because it inverts the pattern
+Parts 5–7 documented. There, the render was ahead of nothing — it
+carried decoration that the code then implemented as fact. Here the
+render was ahead of the *code*: it drew two real nodes the
+implementation did not yet have. Same divergence, opposite direction,
+and only one of the two is a defect. The rule that separates them is
+not "art must match code" but "each must say which it is."
+
+### `TerAustralis-Incognita/mythos/crystalcore-os/crystalcore_os.py` and `mythos/CRYSTALCORE-OS.md`
+
+- **Two nodes added, both key-bearing and both sealed** behind named
+  keys — Magenta Key and Ember Key — making the First Gate a seven-key
+  gate. Node order follows the chart outward from Earth, which
+  renumbers the `visit <n>` shortcuts; saves are unaffected, since
+  `keys_held` stores names rather than indices.
+
+- **The count is now derived rather than written.** This is the part
+  that matters beyond the mythos. The gate condition was already
+  `len(keys_held) == len(nodes)` and absorbed the change for free; the
+  prose did not. Four strings said "five" outright and the snapshot
+  listing hardcoded `keys {n}/5` — every one of them became false the
+  moment the list grew. They are now spelled from `len(self.nodes)` by
+  a `_count_word()` helper, so the register survives and the number
+  cannot go stale again.
+
+  That is the same defect class as the sol constant in Part 6: a value
+  written into a second place, then drifting from the first. Part 6
+  corrected an instance; this removes the mechanism for one file.
+
+- **The artwork now lags the map.**
+  `mythos/art/starline-network-year-3000.jpeg` renders the original
+  five nodes. Labelled in `CRYSTALCORE-OS.md` as an earlier state of
+  the same map rather than left to contradict the ASCII chart
+  silently. Regenerating it at seven nodes is a separate decision, not
+  taken here.
+
+Verified by playthrough against a throwaway `HOME`: sealed nodes refuse
+entry without their named key, all seven yield keys, the First Gate
+opens at 7/7, and no stale "five" survives outside the lookup table and
+its explanatory docstring. Repository CI (markdownlint + link check)
+passed — the first PR in this constellation to run any CI at all, four
+of the other repositories having no `pull_request` workflow.
+
+**Naming note — raised, and resolved the same day.** The key was first
+given as `Ember Ley` — "Ley", not "Key". This pass recorded it verbatim
+and flagged it rather than normalising it: in a project built on
+songlines, starlines and lattices, a ley line of embers is a plausible
+coinage, and an author's word is not a typo merely because a more
+obvious word exists nearby. The maintainer confirmed it was a slip and
+the key is **`Ember Key`**, now corrected in
+`crystalcore_os.py`, `CRYSTALCORE-OS.md`, and here.
+
+Worth keeping in the ledger even though the cautious reading turned out
+wrong. Asking cost one exchange; guessing wrong in the other direction
+would have written an invented coinage into the canon under the
+maintainer's name, and nothing in the artifact would have revealed it.
+The asymmetry, not the hit rate, is what justifies the flag.
