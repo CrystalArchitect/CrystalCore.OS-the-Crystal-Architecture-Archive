@@ -529,7 +529,7 @@ not "art must match code" but "each must say which it is."
 ### `TerAustralis-Incognita/mythos/crystalcore-os/crystalcore_os.py` and `mythos/CRYSTALCORE-OS.md`
 
 - **Two nodes added, both key-bearing and both sealed** behind named
-  keys — Magenta Key and Ember Ley — making the First Gate a seven-key
+  keys — Magenta Key and Ember Key — making the First Gate a seven-key
   gate. Node order follows the chart outward from Earth, which
   renumbers the `visit <n>` shortcuts; saves are unaffected, since
   `keys_held` stores names rather than indices.
@@ -561,8 +561,17 @@ its explanatory docstring. Repository CI (markdownlint + link check)
 passed — the first PR in this constellation to run any CI at all, four
 of the other repositories having no `pull_request` workflow.
 
-**Naming note.** `Ember Ley` is recorded as the maintainer wrote it —
-"Ley", not "Key". In a project built on songlines, starlines and
-lattices, a ley line of embers reads as deliberate, and this pass had
-no standing to normalise an author's coinage into the more obvious
-word. Flagged for confirmation rather than silently corrected.
+**Naming note — raised, and resolved the same day.** The key was first
+given as `Ember Ley` — "Ley", not "Key". This pass recorded it verbatim
+and flagged it rather than normalising it: in a project built on
+songlines, starlines and lattices, a ley line of embers is a plausible
+coinage, and an author's word is not a typo merely because a more
+obvious word exists nearby. The maintainer confirmed it was a slip and
+the key is **`Ember Key`**, now corrected in
+`crystalcore_os.py`, `CRYSTALCORE-OS.md`, and here.
+
+Worth keeping in the ledger even though the cautious reading turned out
+wrong. Asking cost one exchange; guessing wrong in the other direction
+would have written an invented coinage into the canon under the
+maintainer's name, and nothing in the artifact would have revealed it.
+The asymmetry, not the hit rate, is what justifies the flag.
