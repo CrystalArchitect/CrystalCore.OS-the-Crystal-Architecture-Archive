@@ -112,7 +112,7 @@ across six repositories, each owning a different slice of reality:
 | `TerAustralis-Incognita-Code` | Private | The engine (`core/`) and the user-facing application (`vision/`). |
 | `CrystalCore.OS-the-Crystal-Architecture-Archive` | Private | This repository — the fleet-wide `STATUS.md` ledger and this knowledge base. |
 | `The-Crystal-Vision` | Private | Frozen provenance (tag `vision-safe-2026-07-17`): the codex site and the companion's ancestor code, including a complete bytecode-recovered rescue of a lost laptop's work. |
-| `crystalcore` | Private | Frozen provenance (tag `crystalcore-safe-2026-07-17`): the Seven Sisters Songline pack, direct ancestor of `TerAustralis-Incognita-Code`'s `core/crystal-core/`. |
+| `crystalcore` | Private | Frozen provenance (tag `crystalcore-safe-2026-07-17`): the Seven Sisters Lattice pack, direct ancestor of `TerAustralis-Incognita-Code`'s `core/crystal-core/`. |
 | `crystal-vision` | Private | Frozen provenance: the standalone interface-demo ancestor. |
 
 Full detail: `02-REPOSITORY-MAP.md`. When this archive cites a claim, it

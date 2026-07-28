@@ -62,7 +62,7 @@ verdict."
   module list exactly.
 
 ### Historical Notes
-Born as "Clementine Singularity Bridge" / "Songline Bus" in the
+Born as "Clementine Singularity Bridge" / "Lattice Bus" in the
 standalone `crystalcore` repo (2026-07-17); renamed to Starline Weaver
 in the umbrella's canon on 2026-07-21. The old names persist,
 un-renamed, only in the frozen `crystalcore` repository.

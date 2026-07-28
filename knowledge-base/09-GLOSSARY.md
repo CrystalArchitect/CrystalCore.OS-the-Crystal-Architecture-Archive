@@ -71,8 +71,8 @@ expands the acronym. See `06-COMPONENTS.md`.
 each linked to a real water basin), written in protocol-manual style.
 Not a technical architecture. See `03-ARCHITECTURE.md`.
 
-**Songline** — Reserved exclusively for Aboriginal culture, per
-`mythos/NAMES.md`: "'Songline' is not used for any of these — it
+**ancient knowledge** — Reserved exclusively for Aboriginal culture, per
+`mythos/NAMES.md`: "'ancient knowledge' is not used for any of these — it
 belongs to the First Peoples of this land, not to a piece of software."
 Formerly used for the software message bus (now Starline Weaver) before
 the 2026-07-21 rename; only the frozen `crystalcore` repository still
@@ -86,7 +86,7 @@ name lives on only as a documented, deprecated import alias
 (`mythos/` — "Starlines are the map"). See `06-COMPONENTS.md`.
 
 **Starline Weaver** — The multi-AI message bus, `clementine/bridge/`.
-Formerly "Songline Bus" / "Clementine Singularity Bridge"; renamed
+Formerly "Lattice Bus" / "Clementine Singularity Bridge"; renamed
 2026-07-21. See `06-COMPONENTS.md`.
 
 **Starlines / Dreamlines** — The mythic framing behind Starline Weaver
