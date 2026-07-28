@@ -412,6 +412,40 @@ the codebase.
 
 ---
 
+## Disposition
+
+Every finding above was acted on the same day, across ten pull requests.
+This section records what happened to each; the findings themselves are
+left as written, so the report stays a snapshot of 2026-07-28 rather than
+a moving document.
+
+| # | Fixed in | Note |
+|---|---|---|
+| H1 | `TerAustralis-Incognita` (ADR-0013) + `crystalcore`, `crystal-vision`, `The-Crystal-Vision`, and six licence-less repos | Maintainer chose uniform CC BY-NC-ND 4.0 portfolio-wide. All eleven now carry byte-identical licence text. |
+| M1 | `TerAustralis-Incognita-Code` | Handshake frames capped, socket timeout, bounded connections that refuse rather than queue. |
+| M2 | `TerAustralis-Incognita-Code` | Key file created `0600`; write made atomic. |
+| M3 | `TerAustralis-Incognita-Code` | Mutating routes require `application/json`, stated once in `before_request`. |
+| M4 | `teraustralis-incognita-v2` | Dev server defaults to `127.0.0.1`; `DEV_HOST` is the explicit opt-in. |
+| M5 | this repository | Knowledge base extended to eleven repositories, by accretion. |
+| M6 | **not fixed** | 302 duplicated files remain. Deduplication is its own decision; ADR-0013 records it as open. |
+| L1 | `CrystalCore.OS`, `CrystalCore-AERIS` | Input escaped before echo; verified in Chromium before and after. |
+| L2 | `teraustralis-v2-presentation`, `TerAustralis-Incognita` | Unused CDN tags removed from the deck; d3 vendored for the prototypes that do use it. |
+| L3 | `TerAustralis-Incognita` | 62 → 0. Checker added to CI that resolves against `git ls-files`. |
+| L4 | six repositories | Licence added; `teraustralis-incognita-v2`'s unbacked MIT claim corrected. |
+| L5 | `teraustralis-incognita-v2` | Junk `add` dependency removed. |
+| L6 | `The-Crystal-Vision`, `teraustralis-incognita-v2` | Both JavaScript applications now build and type-check in CI. |
+| L7 | this repository | README written. |
+
+One finding was added during the fixing pass and is not in the list
+above, because the review missed it: `TerAustralis-Incognita-Code` had
+**Apache-2.0 sub-licences nested inside a CC BY-NC-ND repository**
+(`core/crystal-core/LICENSE`, `vision/apps/crystal-interface/LICENSE`),
+so 36 source files asserted CC BY-NC-ND in their own SPDX headers while
+the `LICENSE` beside them asserted Apache-2.0. It is H1 in miniature,
+inside one repository, and the original sweep did not catch it because
+that sweep compared licences *between* repositories. Fixed under
+ADR-0013; recorded here so the miss is on the record too.
+
 ## Suggested order of work
 
 1. **H1** — decide the licensing story and make it consistent. Everything
