@@ -100,12 +100,29 @@ copyright holder, so dual-licensing is entirely permissible — but
 nothing anywhere states that it is intentional, so which terms actually
 govern is undetermined for any downstream reader.
 
-Second, narrower point: **CC-BY-NC-ND-4.0 is applied to 114 source
-files** (SPDX header census, Tier B). Creative Commons explicitly
+Second, narrower point: **CC-BY-NC-ND-4.0 is applied to 115 source
+files** as an SPDX header (Tier B). Creative Commons explicitly
 recommends against using CC licenses for software, and NoDerivatives is
 structurally at odds with a repository that accepts pull requests — a
-patch is a derivative work. Apache-2.0 appears in only 6 SPDX headers by
-comparison.
+patch is a derivative work.
+
+> **Correction (same day).** An earlier version of this paragraph said
+> "Apache-2.0 appears in only 6 SPDX headers by comparison." That was
+> wrong, and wrong in a way this report's own evidence tiers should have
+> caught: the six occurrences are prose *about* SPDX headers, inside
+> `CHANGELOG.md`, `ADR-0009.md`, `04-GOVERNANCE.md`, and
+> `11-CORRECTIONS.md` — documents discussing a past batch correction —
+> not headers on any source file. **Zero source files carry an
+> Apache-2.0 SPDX header.** The original census counted textual
+> occurrences and reported them as headers.
+>
+> This does not affect H1's conclusion, which rests on SHA-256 over file
+> *contents* and on the root `LICENSE` files, both of which were measured
+> correctly. It does mean the Apache-2.0 side of the conflict lived
+> entirely in `LICENSE` files, never in per-file headers — which is why
+> `04-GOVERNANCE.md`'s standing claim that "96 files carry
+> `SPDX-License-Identifier: Apache-2.0`" is also stale; that batch was
+> corrected before this review ran, as `11-CORRECTIONS.md` Part 4 records.
 
 This is the one finding worth resolving before anything else, because
 every other repository decision (what to merge where, what to open
