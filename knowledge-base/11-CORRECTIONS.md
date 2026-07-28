@@ -4,6 +4,71 @@ Every documentation correction this reconstruction made or identified,
 in two sections: applied directly to the source file, and identified
 but left for a future pass.
 
+## Part 0 — Applied 2026-07-28 (portfolio review pass)
+
+### The archive covered 6 of 11 repositories
+
+- **`knowledge-base/02-REPOSITORY-MAP.md` and `00-INDEX.md`** — before:
+  "all six repositories" / "the six-repository CrystalArchitect
+  portfolio." After: eleven. `CrystalCore.OS`, `CrystalCore-AERIS`,
+  `crystalcore-os-aeris-vault12`, `teraustralis-incognita-v2`, and
+  `teraustralis-v2-presentation` were absent from the map entirely.
+
+  This is only partly an omission. Four of the five did not exist when
+  the reconstruction ran on 2026-07-24 — the three terminal repos were
+  created 2026-07-29 (+1000) and `teraustralis-v2-presentation` on
+  2026-07-28. The genuine miss is `teraustralis-incognita-v2`, created
+  2026-07-24 14:14 UTC, which existed on the day and was not surveyed.
+
+  The original six-repository statements were left standing and the new
+  material added as its own Statement, so that what the archive asserted
+  on 2026-07-24 remains readable as a claim about 2026-07-24. Correcting
+  by accretion rather than by overwrite is the same discipline
+  `10-PROVENANCE.md` applies to everything else here.
+
+- **Standing risk this exposes.** The ledger has no trigger that fires
+  when a repository is created. It was re-run only because a review
+  happened to be commissioned. Whatever replaces that — a scheduled
+  re-survey, or a rule that a new repository is not real until the map
+  names it — is an open decision, recorded here rather than resolved.
+
+### `02-REPOSITORY-MAP.md` — vault12 described from a stale clone
+
+- Before: `crystalcore-os-aeris-vault12` listed as "`index.html`,
+  `logo.jpg`, and a README", and grouped with `CrystalCore.OS` and
+  `CrystalCore-AERIS` as one of "the three single-page terminal
+  repositories ... variants of one another." After: recorded as the
+  **specification home for Starline edge nodes and the Consent Token**,
+  carrying seven technical documents.
+
+  The clone this was measured from was taken at 20:45 UTC; the seven
+  specifications landed on that repository's `main` afterwards
+  (head `a09943c`). So the archive described a specification repository
+  as a web page — a claim outliving the evidence it was drawn from,
+  which is the precise failure this archive exists to prevent.
+
+  Corrected in place with the error left visible and the re-read dated,
+  rather than rewritten to look as though it had always been right.
+
+- **Added, not merely corrected:** a Statement comparing the vault12
+  specification against the running `consent_transport` implementation.
+  They are the same protocol at the transport layer and diverge at the
+  consent layer — Noise IK matches the spec exactly, while Consent
+  Tokens, expiry, scope, and propagatable revocation are specified and
+  not built. Filed on the maturity ladder accordingly.
+
+- **Standing risk, same shape as the eleven-repository miss above.** Both
+  errors have one cause: a clone read once and then trusted. Nothing in
+  this archive's method re-reads a source before a claim about it is
+  published. Recorded here rather than resolved.
+
+### `README.md` (this repository)
+
+- Before: 49 bytes — the repository name as an H1, no trailing newline,
+  no content, in the repository that holds the portfolio's knowledge
+  base and system ledger. After: a real front door pointing at
+  `knowledge-base/00-INDEX.md`, `STATUS.md`, and the review reports.
+
 ## Part 1 — Applied this pass (2026-07-24)
 
 Scope discipline: only small, mechanical, high-confidence corrections

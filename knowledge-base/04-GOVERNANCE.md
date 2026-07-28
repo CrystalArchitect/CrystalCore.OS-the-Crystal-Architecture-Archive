@@ -197,15 +197,27 @@ distinct from the rest. This is the literal, in-the-wild remnant of the
 model ADR-0010 reverted.
 
 Separately: `TerAustralis-Incognita-Code`'s own root `LICENSE` is CC
-BY-NC-ND 4.0, yet 96 of its source files (across `.py`/`.js`/`.ts`/
-`.svelte`) still carry `SPDX-License-Identifier: Apache-2.0` headers —
+BY-NC-ND 4.0, and 96 of its source files (across `.py`/`.js`/`.ts`/
+`.svelte`) once carried `SPDX-License-Identifier: Apache-2.0` headers —
 the exact defect ADR-0008 already fixed once, in the umbrella, via a
-batch header rewrite. This repository never inherited that fix.
+batch header rewrite, which this repository never inherited.
 
-**Status: Implemented** (the license itself, and the boundary), **and
-Unresolved** (the 96-file SPDX mismatch — identified, not corrected in
-this pass; too large a mechanical operation for this session, though
-mechanically identical to a fix the project has already executed once).
+**That is now resolved.** The batch rewrite was applied (97 files, the
+97th being this archive's own prior addition `core/crystalcore/
+selftest.py`), and re-verified 2026-07-28: `origin/main` carries **0**
+Apache-2.0 SPDX headers on source files and 109 CC-BY-NC-ND-4.0 ones.
+See `11-CORRECTIONS.md` Part 4.
+
+A related defect *did* survive it, and was fixed separately under
+ADR-0013 on 2026-07-28: the headers were corrected, but two nested
+`LICENSE` files — `core/crystal-core/LICENSE` and
+`vision/apps/crystal-interface/LICENSE` — were still Apache-2.0, so
+files asserting CC BY-NC-ND in their own headers sat beside a `LICENSE`
+asserting Apache-2.0. Header rewrites do not touch `LICENSE` files, and
+nothing was checking the two agreed.
+
+**Status: Implemented** (the license, the boundary, the SPDX headers,
+and the nested `LICENSE` files).
 
 ### Evidence
 - `docs/adr/ADR-0010.md`: "four parallel license regimes are real,
@@ -215,8 +227,12 @@ mechanically identical to a fix the project has already executed once).
   import-g63jm9`: `git ls-tree -r` confirms the full `packages/` tree
   and its per-package licensing, including
   `packages/crystalcore-ei/COMMERCIAL_LICENSE.md`.
-- Direct grep: `TerAustralis-Incognita-Code` root `LICENSE` is CC
-  BY-NC-ND 4.0; 96 files carry `SPDX-License-Identifier: Apache-2.0`.
+- Direct grep, 2026-07-24: `TerAustralis-Incognita-Code` root `LICENSE`
+  is CC BY-NC-ND 4.0; 96 files carried
+  `SPDX-License-Identifier: Apache-2.0`.
+- Direct grep, 2026-07-28, against `origin/main`: 0 source files carry an
+  Apache-2.0 SPDX header; 109 carry CC-BY-NC-ND-4.0. The mismatch this
+  section reported is gone.
 
 ### Historical Notes
 None beyond what's stated above.
