@@ -309,7 +309,7 @@ directly from local clones).
 |---|---|---|---|---|
 | `CrystalCore.OS` | Single-page mythos terminal — the multiplanetary desktop: boot screen, draggable windows, Mars clock, Starship telemetry, news feed, command prompt. `index.html` + `README.md`, no build step. | `b9bcbd2` 2026-07-29 02:47 +1000 | `5af57a4` 2026-07-29 02:52 +1000 | 5 / 2 |
 | `CrystalCore-AERIS` | The AERIS Edition of the same terminal, plus `ALIGNMENT_PROTOCOL.md` (a multi-LLM unity charter) and a `website/` directory. | `fde9a56` 2026-07-29 03:04 +1000 | `c8f0d95` 2026-07-29 04:06 +1000 | 5 / 4 |
-| `crystalcore-os-aeris-vault12` | The AERIS / Vault 12 cut: `index.html`, `logo.jpg`, and a README carrying the Master Year-3000 Starline chart and First Gate status. | `1348a80` 2026-07-29 05:57 +1000 | `5b611f7` 2026-07-29 06:44 +1000 | 6 / 3 |
+| `crystalcore-os-aeris-vault12` | **The specification home for Starline edge nodes and the Consent Token.** Seven technical specifications (see the Statement below), plus the AERIS / Vault 12 terminal page and its README. | `1348a80` 2026-07-29 05:57 +1000 | `a09943c` 2026-07-29 (docs: complete technical document set + NON SOLUS) | 10 tracked files |
 | `teraustralis-incognita-v2` | The largest of the five: a React 19 + TypeScript + Vite + Tailwind application (65 `.tsx` files) with an Express static server, built on a Manus generator scaffold. Co-authored by `Manus` — the only non-maintainer author anywhere in the portfolio since `The-Crystal-Vision`'s bot commits. | `7fa231c` 2026-07-24 14:14 UTC | `3762968` 2026-07-28 20:22 UTC | 4 / 90 |
 | `teraustralis-v2-presentation` | The deck for the above: 13 standalone HTML slides plus a presentation script, slide notes, and slide state. | `f056b9c` 2026-07-28 20:22 UTC | `d4fae1e` 2026-07-28 20:29 UTC | 3 / 17 |
 
@@ -343,12 +343,25 @@ had not been re-run.
 
 ## Statement
 
-The three single-page terminal repositories (`CrystalCore.OS`,
-`CrystalCore-AERIS`, `crystalcore-os-aeris-vault12`) are variants of one
-another, not independent works, and none of them is the mythos terminal
-the umbrella ships.
+The two single-page terminal repositories (`CrystalCore.OS` and
+`CrystalCore-AERIS`) are variants of one another, not independent works,
+and neither is the mythos terminal the umbrella ships.
+`crystalcore-os-aeris-vault12` carries a third variant of the same page,
+but is **not** primarily a terminal repository — see the correction below.
 
 **Status: Implemented** (read from the files themselves).
+
+> **Correction (2026-07-28, same day).** This Statement first read "the
+> three single-page terminal repositories," counting
+> `crystalcore-os-aeris-vault12` as a third variant and nothing more, and
+> the table above described it as `index.html`, `logo.jpg`, and a README.
+> That was measured against a clone taken at 20:45 UTC. The seven
+> specification documents below landed on its `main` after that, and the
+> archive described a specification repository as a single-page artefact.
+> The error is the one this archive exists to prevent — a claim outliving
+> the evidence it was drawn from — so it is corrected in place and left
+> visible rather than quietly rewritten. Re-read from `origin/main`
+> 2026-07-28 21:5x UTC.
 
 The umbrella's `mythos/crystalcore-os/crystalcore_os.py` — the terminal
 `STATUS.md` lists under "Running" — is a Python program with save/resume
@@ -373,3 +386,105 @@ None — first recorded here.
 
 ### Cross References
 `06-COMPONENTS.md`, `09-GLOSSARY.md`.
+
+---
+
+## Statement
+
+`crystalcore-os-aeris-vault12` holds the **Starline Consent Transport
+specification set** — seven documents, all dated 2026-07-29, covering
+edge-node hardware tiers, the Consent Token, the Keeper role, the Tier 0
+runtime loop, canonical lattice status messages, and Noise IK + token
+verification for constrained devices.
+
+**Status: Exists as a document** (all seven read in full; they specify
+behaviour, they do not implement it).
+
+| Document | Lines | What it fixes |
+|---|---|---|
+| `STARLINE-EDGE-SPEC.md` | 117 | Hardware tiers 0 / 1 / 2 / R, power envelopes, model sizes |
+| `STARLINE-EDGE-NODE-ARCHITECTURE.md` | 156 | Layered node design |
+| `CONSENT-TOKEN-SCHEMA.md` | 129 | Token structure, lifecycle, revocation mechanics |
+| `AELTHARION-KEEPER.md` | 78 | The Keeper as a technical role |
+| `TIER0-RUNTIME-LOOP.md` | 154 | Duty cycle, Lumina tick, Power Governor |
+| `LATTICE-STATUS-MESSAGES.md` | 87 | Canonical boot/status messages, incl. NON SOLUS |
+| `NOISE-IK-CONSENT-VERIFICATION.md` | 122 | Minimal verification steps for constrained nodes |
+
+### Evidence
+- Tier A: `git ls-tree -r origin/main` and `git show origin/main:<file>`,
+  read 2026-07-28. Head `a09943c`, "docs: update README with complete
+  current technical document set + NON SOLUS".
+
+### Historical Notes
+See the correction in the Statement above: an earlier version of this
+map described this repository as a single-page terminal artefact,
+measured before these documents landed.
+
+### Cross References
+`03-ARCHITECTURE.md`, `06-COMPONENTS.md`, and the Statement below on how
+this specification relates to the running code.
+
+---
+
+## Statement
+
+The Starline specification in `crystalcore-os-aeris-vault12` and the
+running Starline implementation in `TerAustralis-Incognita-Code`
+(`core/crystal-core/consent_transport/`) describe the same protocol at
+the transport layer and **diverge at the consent layer**. The transport
+half is built; the Consent Token half is designed, not built.
+
+**Status: Implemented** (the Noise IK transport and per-peer consent
+gate) **and Designed, not built** (Consent Tokens, expiry, scope,
+propagatable revocation).
+
+**Where the code already meets the spec:**
+
+| Spec | Implementation |
+|---|---|
+| `NOISE-IK-...` §5 — pattern `-> e, es, s, ss` / `<- e, ee, se`, pre-message `<- s` | `noise.py` `MESSAGE_PATTERNS` is exactly this; mutual auth and forward secrecy hold |
+| `CONSENT-TOKEN-SCHEMA` §3 — Ed25519 over *canonical* serialization, deterministic field order, no whitespace | `ConsentReceipt._signable_bytes()` uses `json.dumps(..., sort_keys=True, separators=(",", ":"))` |
+| `NOISE-IK-...` §7 — "Fail closed: any doubt → reject" | `is_granted()` returns `False` when no receipt exists; unpaired peers denied; unverifiable fragments dropped |
+| `CONSENT-TOKEN-SCHEMA` §4.5 — revocation immediate | Consent is re-checked per request, so a revoke lands on the very next connection; covered by `test_revocation_takes_effect_next_request` |
+| "No central authority" | Receipts are local, signed by the local identity; no registry anywhere |
+
+**Where the spec describes something the code does not have:**
+
+1. **There is no token.** Consent is a per-peer boolean —
+   `ConsentReceipt{peer_fingerprint, granted, ts}` — not a token with
+   `token_id`, `purpose`, `scope`, `constraints`.
+2. **No expiry.** `expires_at` is required by the schema and `§4.6` calls
+   it a hard wall-clock wall. `is_granted()` has no time bound at all: a
+   grant is eternal until explicitly revoked. This is the widest gap —
+   the verification doc's "time binding" step has nothing to check.
+3. **No scope.** The schema allows `shard_ids`, `shard_class`,
+   `max_bytes`. In code, consent is all-or-nothing per peer. The `kinds`
+   filter in `fragment_provider` is the *requester's* preference, not a
+   consent-enforced ceiling — a consented peer may ask for any kind.
+4. **Revocation does not propagate.** The schema makes revocation a
+   signed message carrying `token_id` and `revoked_at` that any node
+   honouring it must treat as final. In code, revocation is a local
+   receipt; nothing transmits it. `consent.py`'s own docstring is honest
+   about the consequence: it stops future requests, and cannot reach data
+   a peer already holds.
+5. **Recipient binding is indirect.** The schema binds a token to *both*
+   identities. `ConsentReceipt` names only the peer and is signed by the
+   local identity, so the issuer is implicit; the two long-term keys are
+   tied together by the `PeerStore` pairing record rather than by the
+   consent artefact itself.
+
+### Evidence
+- Tier A: `consent_transport/noise.py`, `consent.py`, `transport.py`,
+  `peers.py`, `fragment.py` read in full; the four Crystal Core suites
+  executed 2026-07-28 (51/51, and 13/13 for `consent_transport` after
+  hardening).
+- Tier C: `CONSENT-TOKEN-SCHEMA.md` §§2–5 and
+  `NOISE-IK-CONSENT-VERIFICATION.md` §§3–7.
+
+### Historical Notes
+First recorded here. The specification postdates the implementation: the
+`consent_transport` module was imported under Migration-Plan Stage 1,
+and these documents were written 2026-07-29.
+
+### Cross References
+`06-COMPONENTS.md`, `FULL-REVIEW-2026-07-28.md`.
