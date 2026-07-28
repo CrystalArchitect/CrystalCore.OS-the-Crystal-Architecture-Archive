@@ -307,6 +307,10 @@ Everything else in Part 2 remains open as written, plus one addition:
 
 ## Part 5 — Applied 2026-07-28
 
+**→ Status superseded, see Part 9.** The fixes described below were
+never merged; the maintainer closed the PR carrying them. The finding
+stands, the applied-status does not.
+
 One new defect, in a class this archive had not previously audited for:
 a **truth-label failure in shipped UI**, rather than in documentation.
 Found in `CrystalCore-AERIS`, which no prior pass had examined.
@@ -393,6 +397,10 @@ about what it saw.
 
 ## Part 6 — Applied 2026-07-28 (later the same day)
 
+**→ Status superseded, see Part 9.** As with Part 5, the fixes below
+were never merged. The finding — the same defect in a second
+repository — stands.
+
 Part 5 was wrong about its own scope. It called the AERIS truth-label
 defect "narrow and not a pattern." Within the hour the identical defect
 was found in `CrystalCore.OS` — a repository Part 5 had not examined,
@@ -452,6 +460,10 @@ clean. Per the reasoning above, no claim is made about them either way.
 ---
 
 ## Part 7 — Applied 2026-07-28 (origin of the Part 5/6 defect)
+
+**→ Status partly superseded, see Part 9.** `CONCEPT-RENDERS.md` was
+never merged and does not exist. The causal account of where the defect
+came from is unaffected.
 
 Parts 5 and 6 corrected the same mislabel in two repositories without
 establishing where it came from. It came from the concept art.
@@ -575,3 +587,59 @@ wrong. Asking cost one exchange; guessing wrong in the other direction
 would have written an invented coinage into the canon under the
 maintainer's name, and nothing in the artifact would have revealed it.
 The asymmetry, not the hit rate, is what justifies the flag.
+
+---
+
+## Part 9 — Applied 2026-07-28 (Parts 5–7 reclassified: found, not fixed)
+
+Parts 5–7 were written and merged while their fixes sat in open pull
+requests. The maintainer then closed those pull requests without
+merging. The corrections never landed, and this file — merged to `main`
+— went on describing them in the past tense as applied.
+
+That is the defect this ledger exists to catch, occurring in the ledger
+itself. A corrections record that claims corrections which do not exist
+is worse than no record, because it retires a finding that is still
+live.
+
+**This is a status change, not a retraction.** Every finding in Parts
+5–7 was verified and remains true. Only the applied-status was wrong.
+
+### What is now false, and what replaces it
+
+| Part 5–7 claimed | Reality on 2026-07-28 |
+|---|---|
+| `CrystalCore-AERIS`: window titles **are** `◈ STARSHIP — SNAPSHOT` and `◈ NEWS — SNAPSHOT`; the `.snapshot-note` disclosure exists | Not merged. Both windows still title static content as instrumentation. |
+| `CrystalCore-AERIS`: the prediction-market odds figure was **removed** in all three places | Not merged. `Reusability 62%`, the `POLY … (+4%)` news item, and the terminal figure all remain. |
+| `CrystalCore-AERIS`: `#news` fixed height **removed** (incidental) | Not merged. |
+| `CrystalCore.OS`: same relabelling applied; sol constant **corrected** to `88775.244` | Not merged. The counter still divides by `24.65 * 3600`, running 35.244 s/sol fast — it read **Sol 1934** against `CrystalCore-AERIS`'s correct **Sol 1933**. |
+| `CrystalCore-AERIS/CONCEPT-RENDERS.md` — **new** | Does not exist. The build-boundary record was never created. |
+
+Parts 5–7 keep their text with a `→ Status superseded` pointer at the
+head of each, following the precedent Part 6 set over Part 5: the
+record shows what was believed and when, rather than being rewritten to
+look correct in hindsight.
+
+### Moved to Part 2 — identified, not applied
+
+| Finding | File(s) | Why not applied |
+|---|---|---|
+| Static stat and news windows titled as live instrumentation, on a page with zero network calls | `CrystalCore-AERIS/index.html`, `website/index.html` | Fix was written and reviewed, then the PR was closed unmerged by the maintainer. A closed PR is a decision, not an oversight — this stays a live finding until the maintainer chooses otherwise, and is not to be re-opened unasked. |
+| Same defect, earlier and more explicit form: window titled `STARSHIP TELEMETRY`, news item claiming odds "up 4% this week" | `CrystalCore.OS/index.html`, `README.md` | Same PR-closed reason. |
+| Sol counter divides by `24.65 * 3600` s where a Martian sol is `88775.244` s — 35.244 s/sol fast, already a full sol adrift from its sibling page | `CrystalCore.OS/index.html` | Same PR-closed reason. Unlike the labelling above this is a plain arithmetic error, independent of any judgment about how the page should be framed. |
+| No record marks which elements of the Grok build-reference renders are decoration rather than specification | `CrystalCore-AERIS` (file was to be `CONCEPT-RENDERS.md`) | Same PR-closed reason. Part 7's causal account of the propagation stands regardless; what is missing is the artifact that would stop it recurring. |
+
+### What Part 8 is not
+
+Part 8 is unaffected. Its change — the seven-node canon — landed in
+`TerAustralis-Incognita#70`, which is open and green rather than
+closed, and was extended to the web recreation in
+`TerAustralis-Incognita-Code#29`. Neither is merged at the time of
+writing, so Part 8's own status should be re-checked before it is
+relied on, by whoever reads this next.
+
+**A rule this pass earned.** An entry in this file should not say
+"applied" while its change is in an unmerged pull request. Applied
+means merged. Until then the honest word is *proposed* — Parts 5–8 were
+all written in the past tense before their PRs landed, and three of
+them turned out to be wrong.
