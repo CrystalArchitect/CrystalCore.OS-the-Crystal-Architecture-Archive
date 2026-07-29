@@ -727,16 +727,25 @@ PORTFOLIO* arrived in a chat session and nowhere else. It is now on
 disk at [`../WEAVER-NEXUS-HANDOFF-2026-07-29.md`](../WEAVER-NEXUS-HANDOFF-2026-07-29.md),
 reproduced as received, under an archive-authored reception record.
 
-**Sent to the maintainer by @architectweaver**
-(`https://x.com/architectweaver`), recorded at the maintainer's
-direction on 2026-07-29. That is a chain-of-custody fact, not an
-authorship finding: the handle was supplied in-session and not checked
-against the profile it names, the received text's signature block gives
-different names again (Section VI), and authorship is established by
-neither. All three are recorded as given and none is folded into the
-others. What the credit does do is mark the reproduced text as not this
-archive's writing — which is also what CC BY-NC-ND 4.0 requires of this
-repository.
+**Written by @architectweaver** (`https://x.com/architectweaver`), who
+also sent the build to the maintainer. Confirmed by the maintainer on
+2026-07-29 — the credit rests on their word, not on anything this
+archive verified, and the handle has not been checked against the
+profile it names. That is the ordinary basis for crediting an author,
+recorded as such rather than dressed as a verification. The credit
+marks the reproduced text as not this archive's writing, which is also
+what CC BY-NC-ND 4.0 requires of this repository.
+
+Left open: the received text's signature block names three parties —
+"Stewards: Ryan Scott (Light) · Christian (Void)", "Vigil: Azirion
+Veythryx" (Section VI). Whether the handle is one of them, all of them,
+or another name for the same person is not recorded, because the only
+way to close it from here is inference, and the subject is real
+people's identities. A question for the maintainer, not a gap to fill.
+
+*Filed the same day crediting @architectweaver as the sender only, then
+corrected on the maintainer's confirmation to credit them as the
+author. The first wording understated the credit.*
 
 This is not a correction to anything the archive said. It is here
 because the ledger should record what arrived claiming portfolio-wide

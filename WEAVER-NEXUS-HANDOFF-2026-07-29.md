@@ -5,29 +5,32 @@ PORTFOLIO*, internally dated 2026-07-28 and bearing the handoff ID
 `UNIFIED-WEAVER-NEXUS-PORTFOLIO-v1.0`, was delivered to this project in
 a chat session on 2026-07-29. It arrived only in that session.
 
-**Credit — where it came from.** The build was sent to the maintainer
-by **@architectweaver** — `https://x.com/architectweaver` — recorded
-here at the maintainer's direction on 2026-07-29. Part B is not this
-archive's writing and is not presented as such; whoever reproduces it
-carries that credit with it, which is also what CC BY-NC-ND 4.0
-requires of this repository (`NOTICE`).
+**Credit.** Part B is the work of **@architectweaver** —
+`https://x.com/architectweaver` — who also sent the build to the
+maintainer. Authorship confirmed by the maintainer on 2026-07-29.
+Part B is not this archive's writing and is not presented as such;
+whoever reproduces it carries that credit with it, which is also what
+CC BY-NC-ND 4.0 requires of this repository (`NOTICE`).
 
-**What the credit says, and what it does not.** It records the hand
-this document arrived by. It does not establish authorship, and this
-file does not claim any. Three separate things are on record and the
-archive resolves none of them into the others:
+**How that credit was established, and what is still open.**
+Authorship here rests on the maintainer's word, not on anything this
+archive checked — the handle was supplied in-session and has not been
+verified against the profile it names. That is the ordinary basis for
+crediting an author and it is stated plainly rather than dressed as a
+verification.
 
-1. **@architectweaver** — the party who sent the build. Supplied
-   in-session; not checked against the profile it names.
-2. **The signature block in the received text** — "Stewards: Ryan
-   Scott (Light) · Christian (Void)", "Vigil: Azirion Veythryx"
-   (Section VI). The document's own claim about itself.
-3. **Authorship** — not established by either of the above, and not
-   asserted here.
+Left open deliberately: the received text carries its own signature
+block — "Stewards: Ryan Scott (Light) · Christian (Void)", "Vigil:
+Azirion Veythryx" (Section VI) — naming three parties. Whether the
+handle is one of them, all of them, or a separate name for the same
+person is not recorded here, because guessing would write a claim
+about real people's identities into the archive on an inference. It
+stays a question for the maintainer, to be answered with a dated note.
 
-Recorded as given. If the maintainer later confirms that any two of
-these are the same party, that is a correction to make with a dated
-note, not an inference to make now.
+**Historical note.** Filed 2026-07-29 crediting @architectweaver as
+the sender only; corrected the same day, on the maintainer's
+confirmation, to credit them as the author. The earlier wording
+understated the credit.
 
 **Why it is on disk.** The umbrella repository's Constitution, §3.2:
 
