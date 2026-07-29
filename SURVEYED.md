@@ -33,7 +33,7 @@ the record of what the archive was re-read against, and when.
 | Repository | Surveyed at | Read |
 |---|---|---|
 | `TerAustralis-Incognita` | `e9268832dc0cbc0b71943f3415a5879d40c4f212` | 2026-07-29 |
-| `TerAustralis-Incognita-Code` | `2f307c094d319966636424d94ebc172ec24b0d23` | 2026-07-29 |
+| `TerAustralis-Incognita-Code` | `46c562b9d06204923f19ec1b94697ec4ef0e900d` | 2026-07-29 |
 | `CrystalCore.OS-the-Crystal-Architecture-Archive` | `f2414aea539b2e798a977b89a68c0217d17215c2` | 2026-07-29 |
 | `The-Crystal-Vision` | `0f3cb8e60ab360f5c94d5772f5d2cc8903ab9959` | 2026-07-29 |
 | `crystalcore` | `bd587d1ee3a55d4349f1a98ff957f8dc19a57473` | 2026-07-29 |
