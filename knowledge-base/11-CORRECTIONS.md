@@ -59,8 +59,17 @@ but left for a future pass.
 
 - **Standing risk, same shape as the eleven-repository miss above.** Both
   errors have one cause: a clone read once and then trusted. Nothing in
-  this archive's method re-reads a source before a claim about it is
-  published. Recorded here rather than resolved.
+  this archive's method re-read a source before a claim about it was
+  published.
+
+  **Addressed 2026-07-29.** [`SURVEYED.md`](../SURVEYED.md) now records
+  the commit each repository's claims were read from, and
+  `.github/scripts/check-freshness.py` reports which have moved since.
+  Staleness deliberately does not fail: the portfolio moves faster than
+  any survey of it, so being behind is the normal state. What is removed
+  is the silence — the archive can be behind, but no longer invisibly,
+  which is precisely how it came to describe a six-repository portfolio
+  that had eleven.
 
 ### `README.md` (this repository)
 
