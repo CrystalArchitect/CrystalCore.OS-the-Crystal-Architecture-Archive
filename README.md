@@ -16,6 +16,7 @@ right and this archive has a bug — open a correction per
 | Which repository owns what, and why there are eleven | [`knowledge-base/02-REPOSITORY-MAP.md`](knowledge-base/02-REPOSITORY-MAP.md) |
 | Where each repository came from, in git evidence | [`REPO-ARCHAEOLOGY-2026-07-24.md`](REPO-ARCHAEOLOGY-2026-07-24.md) |
 | What is currently wrong, and how bad | [`FULL-REVIEW-2026-07-28.md`](FULL-REVIEW-2026-07-28.md) |
+| A portfolio-wide handoff by @architectweaver, and what checking it found | [`WEAVER-NEXUS-HANDOFF-2026-07-29.md`](WEAVER-NEXUS-HANDOFF-2026-07-29.md) |
 | What this archive got wrong and later fixed | [`knowledge-base/11-CORRECTIONS.md`](knowledge-base/11-CORRECTIONS.md) |
 | Which commit each claim was read from, and whether it has moved | [`SURVEYED.md`](SURVEYED.md) |
 

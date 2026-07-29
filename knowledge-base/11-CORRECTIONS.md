@@ -773,3 +773,110 @@ when. A sentence about what is currently open is written to rot.**
 means merged. Until then the honest word is *proposed* — Parts 5–8 were
 all written in the past tense before their PRs landed, and three of
 them turned out to be wrong.
+
+---
+
+## Part 10 — Filed 2026-07-29 (an inbound document, checked and quarantined)
+
+A handoff titled *FINAL MASTER HANDBOFF — UNIFIED WEAVER NEXUS
+PORTFOLIO* arrived in a chat session and nowhere else. It is now on
+disk at [`../WEAVER-NEXUS-HANDOFF-2026-07-29.md`](../WEAVER-NEXUS-HANDOFF-2026-07-29.md),
+reproduced as received, under an archive-authored reception record.
+
+**Credited to four names**, at the maintainer's direction on
+2026-07-29: **@architectweaver** (`https://x.com/architectweaver`), who
+wrote the build and sent it, plus the three the received text signs
+itself with — **Ryan Scott (Light)** and **Christian (Void)** as
+Stewards, **Azirion Veythryx** as Vigil (Section VI).
+
+Four names, not necessarily four people. The maintainer is unsure
+whether the handle is one of the three, and the archive cannot tell
+from here, so every name that appears is credited. That is the safe
+direction to be wrong in — crediting a name twice costs nothing,
+dropping a contributor costs someone their attribution — and it is not
+a headcount or a claim about who anyone is.
+
+None of it is verified, and it is not written as though it were. The
+handle was supplied in-session and never checked against the profile it
+names; the three signature names are the document's claim about itself,
+reproduced. That is the ordinary basis for crediting authors. What the
+credit does establish is that the reproduced text is not this archive's
+writing — which is also what CC BY-NC-ND 4.0 requires of this
+repository.
+
+*Three wordings in one day: @architectweaver as sender, then as author
+on the maintainer's confirmation, then all four names when the overlap
+between them turned out to be unknown. Each earlier version understated
+the credit; all are left visible rather than overwritten.*
+
+This is not a correction to anything the archive said. It is here
+because the ledger should record what arrived claiming portfolio-wide
+authority, what was checked, and what the check found — the same reason
+Part 0 records the eleven-repository miss.
+
+**Why it was filed rather than absorbed.** The Constitution requires it
+(`TerAustralis-Incognita/docs/governance/Constitution.md` §3.2: "Orphan
+content (only in one chat) must be promoted to disk or logged as
+deliberate draft"). Nothing in it could be absorbed into this knowledge
+base, because every Statement here must cite a file path, line number,
+or commit SHA (`12-CONTRIBUTING.md`) and not one of its rows can.
+
+### The finding that matters
+
+Fourteen identifiers from the handoff — `witness_verifier`, `EMASTER`,
+`RCAP-200`, `Weaver Nexus`, `Abraxas`, `Empty Throne`, `Density-Driven
+Gravity`, `Recursive Harmonic Intelligence`, `Must-Keep Ledger`,
+`Evidence Ladder`, `Codex of the Oracle`, `Apokatastasis`, `Kavanah`,
+`Azirion` — were searched across every commit of all eleven
+repositories: `git grep` over `git rev-list --all`, 502 commits.
+
+**Zero matches. Every repository, every commit.**
+
+So the "Unified Weaver Nexus Portfolio" and the CrystalArchitect
+portfolio this archive documents share no tracked artifact. Not one
+volume, blocker, validator, ledger, proof, or script the handoff names
+is in these repositories. Its stated highest-leverage next action — run
+`witness_verifier.py` — cannot be taken from here; the script is not
+here.
+
+That is a scope fact, not an accusation. The material may exist in a
+workspace this archive has never seen. What follows from it is narrow
+and firm: **nothing in `STATUS.md` moves, and the handoff is not a
+description of these eleven repositories.**
+
+### The one thing that could be checked failed
+
+Section III.C's twelve collections sum to **85**. The total is stated as
+**84** in four separate places. Each collection's internal status
+breakdown is consistent with its own count; only the total is off, by
+exactly one.
+
+Same defect class this file already carries twice — a count written into
+a second place and then drifting from the first (Part 6's sol constant,
+Part 8's hardcoded `keys {n}/5`). Unresolvable from here: the 84 rows
+are not in these repositories to count.
+
+### Two names, and a typo, left for the maintainer
+
+- **`Weaver` and `Chronicle` are already taken.** `Starline Weaver` is a
+  self-tested code component (`StarlineWeaver`, `mythos/NAMES.md`), and
+  `Chronicle` names both `vision/site/src/lib/data/chronicle.js` and
+  `~/.crystalcore/chronicle.jsonl` (`Roadmap.md`). The handoff reuses
+  both for mythic figures. Under "Locked names stay locked"
+  (`AGENTS.md`), that has to be resolved before any of this material
+  could be promoted into `mythos/` — a maintainer decision, not a
+  documentation fix.
+
+- **The title reads `HANDBOFF`**, twice, while the body says handoff
+  throughout. Preserved verbatim rather than normalised, on the `Ember
+  Ley` precedent in Part 8: flag it, don't silently write a guess into
+  the canon under the author's name. Almost certainly a slip.
+
+### Standing risk, third instance
+
+Part 0 recorded it twice — a clone read once and then trusted, and a
+ledger with no trigger for repository creation. This is the same gap
+facing outward: a document asserting portfolio-wide status arrived, and
+nothing in this archive's method would have noticed it, contradicted
+it, or stopped it being quoted as ledger truth. It is on disk because a
+session happened to file it. There is still no trigger.

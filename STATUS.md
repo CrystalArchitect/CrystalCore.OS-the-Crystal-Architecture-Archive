@@ -1,6 +1,7 @@
 # STATUS
 
-Last updated: 2026-07-24
+Last updated: 2026-07-24. One entry added 2026-07-29 under "Exists as
+a document" — nothing else on this page was re-verified that day.
 
 Full portfolio knowledge-base reconstruction this pass:
 `knowledge-base/00-INDEX.md` (this repo).
@@ -34,6 +35,15 @@ Written, readable, no execution involved.
 - Master Structure v0.2 (registers, document tree)
 - Timeline + Evolution Map v0.1
 - Sovereign Node Mesh framework v1.1
+- Weaver Nexus Portfolio handoff — by @architectweaver, Ryan Scott,
+  Christian, and Azirion Veythryx; received 2026-07-29, filed as
+  received in WEAVER-NEXUS-HANDOFF-2026-07-29.md. A document, and only
+  a document. It describes eight volumes, 84 artifacts, formal proofs,
+  a hardware program and a runtime kernel; a search of all 502 commits
+  across all eleven repositories found none of them, so nothing else on
+  this page moves because of it. It sets its own ceiling too — every
+  row unreceipted, witness gate 0/2, production authority withheld.
+  Read the reception record at the head of that file before the text.
 
 ## Designed, not built
 Specified enough that someone could build it. Nobody has.
