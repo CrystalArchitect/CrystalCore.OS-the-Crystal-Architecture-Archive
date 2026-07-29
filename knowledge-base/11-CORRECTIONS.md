@@ -1373,3 +1373,98 @@ The distinction this instance draws, which the previous five did not:
 *claims* have gone stale. Nothing watches whether the *machinery that
 publishes them still runs*. A claim can be perfectly current, correctly
 surveyed, freshly re-read — and served to nobody.
+
+## Part 15 — Applied 2026-07-29 (the fix undid itself, same day)
+
+Part 14 closed at the maintainer's Settings click: Pages on, `crystalcore`
+reachable. The click itself reopened what it closed.
+
+### What the click actually did
+
+Settings → Pages → Source → "GitHub Actions" is not just a switch. GitHub's
+onboarding screen for that flow offers starter workflow templates, and two
+were committed straight to `main` — no pull request, no review:
+
+- `61d4b59` — `.github/workflows/jekyll-gh-pages.yml`, Jekyll's stock
+  template, `source: ./`
+- `919c898` — `.github/workflows/statichtml.yml`, the stock static
+  template, `path: '.'`
+
+Both publish **the entire repository**. Neither template knows that
+`static.yml` — narrowed to four files in Part 14, `#7`, `259b038` — already
+exists and already does the correct version of exactly what they're for.
+All three carried `concurrency: group: "pages"` and triggered on the same
+push, so every push to `main` became a three-way race for whichever
+workflow's `deploy-pages` call landed last.
+
+### The race, timed from the run logs
+
+| Time (UTC) | Event |
+|---|---|
+| 16:23:27 | `jekyll-gh-pages.yml` deploys first (commit `61d4b59`) — full repository root live |
+| 16:23:47 | `static.yml` deploys 20s later, same commit — narrow site live again |
+| 16:24:45 | `jekyll-gh-pages.yml` deploys again (commit `919c898`) — `static.yml` and `statichtml.yml` both **cancelled** |
+| 22:56:31 | `static.yml` redeploys (commit `197250a5`, this correction's fix) — narrow site live |
+
+Between 16:24:45 and 22:56:31 — **six and a half hours** — the live site at
+`https://crystalarchitect.github.io/TheCrystalVision/` was the Jekyll build
+of the entire repository root. The build log (job `90639249345`) lists what
+it published, including `spec/ARCHITECTURE.md` *and* an auto-rendered
+`spec/ARCHITECTURE.html`, `spec/BLUEPRINT-v0.3.md` (+`.html`),
+`services/decode.py`, `services/api.py`, `services/ingest.py`,
+`services/twin.py`, `services/selftest.py`, `WATER-BRIEF.md`,
+`SECURITY.md`, and `TRANSMIT-LOG.md`. Jekyll's default Markdown processing
+turned private specification files into a second, rendered public page
+each — a private `.md` at least reads as a text file; Jekyll gave it a
+navigable HTML page too. This is the identical exposure Part 14 measured at
+52 files and narrowed to four, reopened by a mechanism entirely outside the
+workflow file that had just been fixed.
+
+### The fix
+
+`#8` deleted both starter workflows outright rather than editing their
+`path`/`source`. Neither has a legitimate purpose in this repository, and
+removing them — rather than reconfiguring them — also removes the race
+itself: `static.yml` is now the only workflow capable of deploying Pages.
+`static.yml` was diffed against `259b038` and is byte-identical; the Part 14
+fix was never the problem. Merging `#8` triggered the redeploy confirmed in
+the table above: artifact size 10,923 bytes, against the Jekyll build's
+112,131 — a cheap, checkable signal that the narrow site, not the
+repository, is what's live.
+
+### Standing risk, seventh instance
+
+The first six (Parts 0, 10, 11, 13, 14) are all "nothing triggers on X
+happening." This one is sharper: **a fix can be correct, merged, reviewed,
+and verified, and still be silently superseded by activity that never
+touches the reviewed change at all.** `static.yml` was not edited, not
+reverted, not broken. Two unrelated files were added beside it, and the
+platform's own concurrency semantics picked a winner nobody chose. Checking
+that a fix is correct at merge time, as Part 14 did, does not establish
+that it stays the thing that's live.
+
+### A fact for the record, not a correction
+
+While tracing the run logs, `owner=CrystalArchitect, repo=crystalcore`
+resolved to `full_name: "CrystalArchitect/TheCrystalVision"`. The
+repository has been renamed — no hyphen, distinct from both `crystal-vision`
+(frozen) and `The-Crystal-Vision` (hyphenated, active, the unrelated
+Svelte/Clementine repository already in this portfolio). Old remotes and API
+calls by the old slug still redirect and work, which is how this correction
+was written and pushed without incident. The rename is not acted on here —
+recorded for whoever next reconciles `SURVEYED.md` against what's actually
+out there, the same gap Part 0 and Part 1 both trace to a clone read once
+and trusted.
+
+### What is fixed and what is not
+
+| | |
+|---|---|
+| The two competing workflows | Removed, `#8` |
+| The race that let either win | Eliminated — `static.yml` is now the only Pages-capable workflow |
+| The narrow site | Redeployed and reconfirmed live, `197250a5` |
+| The repository rename | Recorded, not resolved |
+
+Unlike Part 14, this correction closes clean: nothing here is deferred to
+the maintainer. The Settings click was correct and is done; what needed
+fixing was the unreviewed code it brought in alongside it.
