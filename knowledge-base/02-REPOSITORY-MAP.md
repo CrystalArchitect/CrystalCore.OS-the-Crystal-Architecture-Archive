@@ -438,6 +438,38 @@ half is built; the Consent Token half is designed, not built.
 gate) **and Designed, not built** (Consent Tokens, expiry, scope,
 propagatable revocation).
 
+> **Superseded 2026-07-29 — the consent layer no longer diverges.** The
+> statement above was accurate when written at 2026-07-28 21:57 UTC. PR
+> #34, *"Consent Tokens: reference implementation of the v0.1 schema"*,
+> merged into `TerAustralis-Incognita-Code` at 2026-07-29 03:42 UTC —
+> about five and three quarter hours later — and builds all four of the
+> things listed as designed-only. It is left standing, dated, rather than
+> rewritten, per this file's practice.
+>
+> `consent_transport/token.py` (344 lines) implements the schema and
+> names `CONSENT-TOKEN-SCHEMA.md` v0.1 as its source; `consent.py` gained
+> 181 lines, and the token layer is wired into `transport.py` and
+> `agent.py` rather than standing beside them.
+>
+> Each of the four is exercised by a named test, not merely present:
+>
+> | Was "designed, not built" | Now covered by |
+> |---|---|
+> | Consent Tokens | `test_purpose_is_mandatory`, `test_identity_binding_cannot_be_skipped`, `test_tampering_with_any_field_breaks_the_signature` |
+> | Expiry | `test_token_expires`, `test_expired_token_stops_the_exchange_that_a_live_one_allowed` |
+> | Scope | `test_token_grants_only_what_its_scope_names`, `test_token_scope_is_enforced_over_a_real_connection`, `test_byte_budget_is_enforced_and_refuses_an_oversized_transfer` |
+> | Propagatable revocation | `test_revocation_kills_the_token_and_is_signed`, `test_forged_revocation_is_refused`, `test_revocation_gossiped_from_the_real_issuer_is_honoured` |
+>
+> `python -m consent_transport.selftest` reports **32/32 passing**, up
+> from 9, verified by running it 2026-07-29. `ci.yml:43` runs that same
+> command, so the coverage is enforced rather than incidental. Several
+> tests drive a real socket — `test_token_scope_is_enforced_over_a_real_connection`
+> and `test_byte_budget_stops_a_batch_midway_on_the_wire` — so this is
+> Built in the strong sense, not a schema with a struct behind it.
+>
+> The conformance table below predates the token layer and describes only
+> the transport half. It is still true; it is no longer the whole picture.
+
 **Where the code already meets the spec:**
 
 | Spec | Implementation |

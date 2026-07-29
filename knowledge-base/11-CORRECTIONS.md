@@ -880,3 +880,78 @@ facing outward: a document asserting portfolio-wide status arrived, and
 nothing in this archive's method would have noticed it, contradicted
 it, or stopped it being quoted as ledger truth. It is on disk because a
 session happened to file it. There is still no trigger.
+
+---
+
+## Part 11 — Applied 2026-07-29 (the consent layer no longer diverges)
+
+`02-REPOSITORY-MAP.md` stated that the vault12 Starline specification
+and the running implementation *"diverge at the consent layer"*, filing
+**Consent Tokens, expiry, scope, and propagatable revocation** as
+"Designed, not built." All four are now built, tested, and enforced by
+CI.
+
+**True when written, overtaken by hours.** The claim was committed at
+2026-07-28 21:57 UTC (`f5acade`). PR #34, *"Consent Tokens: reference
+implementation of the v0.1 schema"*, merged into
+`TerAustralis-Incognita-Code` at 2026-07-29 03:42 UTC — five and three
+quarter hours later. This is the same shape as the six-repository count
+and the `SystemMap.md` "Consequences" paragraph before it: accurate at
+the moment of writing, and carrying no date by which a reader could tell.
+
+### What actually landed
+
+`consent_transport/token.py`, 344 lines, naming `CONSENT-TOKEN-SCHEMA.md`
+v0.1 as its source. `consent.py` gained 181 lines; `selftest.py` gained
+344; the layer is wired into `transport.py` and `agent.py` rather than
+standing beside them. 925 insertions across five files.
+
+Each of the four items is exercised by a named test rather than merely
+present — the distinction this ledger has spent the day insisting on:
+
+- **Tokens** — `test_purpose_is_mandatory`,
+  `test_identity_binding_cannot_be_skipped`,
+  `test_tampering_with_any_field_breaks_the_signature`
+- **Expiry** — `test_token_expires`,
+  `test_expired_token_stops_the_exchange_that_a_live_one_allowed`
+- **Scope** — `test_token_grants_only_what_its_scope_names`,
+  `test_byte_budget_is_enforced_and_refuses_an_oversized_transfer`
+- **Propagatable revocation** —
+  `test_revocation_kills_the_token_and_is_signed`,
+  `test_forged_revocation_is_refused`,
+  `test_revocation_gossiped_from_the_real_issuer_is_honoured`
+
+`python -m consent_transport.selftest` reports **32/32 passing**, up from
+9, run 2026-07-29 rather than inferred. `ci.yml:43` runs that exact
+command. Two tests drive a real socket
+(`test_token_scope_is_enforced_over_a_real_connection`,
+`test_byte_budget_stops_a_batch_midway_on_the_wire`), so this is Built in
+the strong sense.
+
+### Applied
+
+- **`02-REPOSITORY-MAP.md`** — the Designed-not-built statement is left
+  standing with a dated supersession beneath it, per this file's practice
+  of correcting by accretion. The conformance table under it predates the
+  token layer and describes only the transport half; noted as still true
+  but no longer the whole picture.
+- **`SURVEYED.md`** — the `TerAustralis-Incognita-Code` row moved from
+  `2f307c09` to `46c562b9`, the commit this re-read was actually taken
+  from. `check-freshness.py` now reports that repository as current.
+
+### What this says about the method
+
+Worth recording that the fix worked. `SURVEYED.md` and
+`check-freshness.py` were added earlier the same day in response to two
+stale-claim failures. This is the third instance of that class — and the
+first found by *deliberately re-reading a named commit* rather than by
+someone happening to notice. The freshness check flagged the repository
+as moved; re-reading it produced this correction. That is the loop
+closing as designed, once.
+
+One caveat on the audit's own reach: `CONSENT-TOKEN-SCHEMA.md` lives in
+`crystalcore-os-aeris-vault12`, which is outside this session's scope —
+`add_repo` requires an approval a non-interactive session cannot obtain.
+So the code was verified against its own tests and its own claims about
+the schema, **not** against the schema text. Whether the implementation
+is faithful to §6 is unverified here and stays open.
