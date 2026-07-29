@@ -1047,3 +1047,220 @@ One caveat on the audit's own reach: `CONSENT-TOKEN-SCHEMA.md` lives in
 So the code was verified against its own tests and its own claims about
 the schema, **not** against the schema text. Whether the implementation
 is faithful to §6 is unverified here and stays open.
+
+---
+
+## Part 13 — Applied 2026-07-29 (the repositories nobody had checked)
+
+Part 9 left a standing scope note: seven of the portfolio's eleven
+repositories had never been examined for this defect class. Part 6 gave
+the reason it mattered — *"a defect verified absent in the one repository
+examined says nothing about repositories not examined… only looking is."*
+This is the looking, for three of them: `The-Crystal-Vision`,
+`crystal-vision`, and `crystalcore`.
+
+Every finding below was verified by execution — running the suite,
+listing the endpoints the shipped client actually calls, resolving the
+branches — not by reading code and inferring. One finding contradicted
+the first reading of it and is recorded as the evidence has it, not as
+the first pass had it.
+
+### What the count is now
+
+Not seven. `crystalcore-os-aeris-vault12` — the one Part 9 singled out as
+most at risk and flagged to examine first — **was examined**, by a
+parallel session, and is recorded above as Part 11. Three repositories
+are audited here. That leaves **two** genuinely unexamined:
+`teraustralis-incognita-v2` and `teraustralis-v2-presentation`, both
+outside this session's GitHub scope for the same reason as before.
+Recorded as unexamined, not clean.
+
+### The finding with a consequence
+
+`crystalcore/clementine/SONGLINE-PROTOCOL.md:117`, under **"What v0 is
+not"**:
+
+> Not a network service (in-process only; no sockets, no server yet)
+
+Thirty lines earlier, the same file has a section headed **"Booting
+Clementine (networked bus)"** describing a live HTTP service and
+tabulating five endpoints. The socket is real —
+`clementine/bridge/server.py:189` constructs a `ThreadingHTTPServer` —
+and `SECURITY.md:20-23` describes its binding behaviour correctly.
+
+"What v0 is not" is the section a reader consults to size an attack
+surface, and it told them there were no sockets. Two security-relevant
+documents in one repository disagreeing about whether a listening socket
+exists. A stale line that survived the commit which added the server.
+
+This is the first instance of the defect class in the portfolio with a
+security consequence rather than a credibility one. Applied — the entry
+now states what v0 genuinely is not (hosted, authenticated, encrypted)
+and names `SECURITY.md` as the authority.
+
+### The most-of-a-repository finding
+
+`The-Crystal-Vision`'s `content/GOVERNANCE.md` is the file the site links
+to as proof of integrity — *"Documentation must not outpace the code. See
+GOVERNANCE.md"* (`crystalcore-app/crystalcore.html:62`). It was the least
+accurate file in that repository. Three guarantees, each false:
+
+| Claim | What running it showed |
+|---|---|
+| `:21` "passes the offline test suite before merging" | CI ran `compileall` only; the suite was never executed |
+| `:21` (same) | The suite **failed**: `test_provider.py:212` asserted `0.13.3` against a `version.py` reading `0.13.4`. Both arrived in one import commit, so it had never passed |
+| `:22` "Nothing enters `main`" | There is no `main` branch. The default is `master` |
+| `:15` Built means "covered by the offline test suite", example: semantic recall | No test referenced recall, embedding or recency |
+
+A fourth, adjacent: `crystalcore-app/tests/test_status.py` was written
+pytest-style against a project that does not depend on pytest, so
+`unittest` imported it, found no `TestCase`, and reported *"Ran 0 tests …
+OK"*. Three tests that looked like coverage and were not — the silent
+form of the same defect, and the one worth naming, because a suite that
+reports OK while running nothing is harder to catch than one that fails.
+
+Applied by making the promises true rather than softening them: the
+version test now derives instead of duplicating, `test_status.py` is
+ported (18 tests → 20), CI gained a job that runs the suite, and the
+Built row names a capability the suite genuinely covers *and names the
+test*, so the claim is checkable.
+
+### A count that was fabricated in two repositories at once
+
+`crystal-vision/app.js:122` and `crystalcore/interface/app.js:63-73` both
+animate a counter to a hardcoded `const target = 847`, in both cases over
+a `NODES` array holding **five** entries that the adjacent mesh panel
+renders faithfully. The count-up animation is the tell: a number rolling
+into place reads as a measured roll-up, not a literal.
+
+Same fabricated constant, two repositories, shared ancestry. Recorded
+because it is the first case here of the defect propagating *by copying a
+file* rather than by a claim being restated — a different transmission
+path from the one Part 7 traced, and one that a per-document review would
+not catch.
+
+`crystalcore` mitigates it with a `(simulated)` label and a page banner;
+`crystal-vision` says only `(demo)`. Neither is corrected — see below.
+
+### Not applied, and why
+
+`crystal-vision` carries sixteen findings, the sharpest being a README
+documenting `python -m services.pipeline_demo` and `python -m
+node.agent.server`, **neither of which exists anywhere in the
+portfolio**, which also contradicts that repository's own `SECURITY.md`
+("Static demo only … no backend").
+
+It is not corrected, because correcting it would be the wrong shape of
+work. Its `main` carries twelve commits: ten dated 2026-07-17, then a
+relicensing commit and its merge. Those two touched `LICENSE`, `NOTICE`
+and one README line and nothing else, so the *content* is frozen
+provenance. Its living copy is
+`TerAustralis-Incognita-Code/vision/apps/crystal-interface/`, corrected
+2026-07-24, and that copy already fixes the phantom backend, the sibling
+map, the narrow disclaimer and the dead docs link — its README opens
+*"Corrected 2026-07-24 — six repos exist today, not the three implied
+below originally."* Repairing a snapshot nobody is meant to run, whose
+descendant is already right, buys nothing and costs the provenance.
+
+The recommendation on record is a pointer at the top of its README, and
+that is the maintainer's to make.
+
+Held back for the same reason — a repair that is a product decision
+rather than a correction, following Part 9's *"a closed PR is a decision,
+not an oversight"*:
+
+| Finding | Repository | Why it is the maintainer's call |
+|---|---|---|
+| Seven ✅ Working markers for web-UI features that do not exist — profile switching, one-click forget, a reflect button, an editable profile card. The shipped client calls exactly two endpoints; `server.py` defines five more that nothing calls | `The-Crystal-Vision` | Two honest repairs exist — downgrade the markers, or rebuild the UI the pre-split monolith had. That is a decision about the product |
+| `content/MEMORY.md` marks Reflective Memory `✅ Built (v10)` at `:26` and `⬜ design` at `:58` | `The-Crystal-Vision` | Which is true is a status call |
+| `crystalcore-app/crystalcore.html:77-83` ships install instructions whose every line fails against a fresh clone | `The-Crystal-Vision` | Depends on whether that pre-split site is still meant to be published |
+| `cli/crystalcore.py:112-113` prints `Red button: OFF` unconditionally while a real `RedButton` exists in `clementine/bridge/bus.py:36` that it never consults | `crystalcore` | Wiring it to real state or labelling it as static is a design choice |
+| `spec/ARCHITECTURE.md:60` marks `CONSTITUTION.md` `●` Built; no such file exists | `crystalcore` | Create the document or change the marker |
+
+### What was clean, stated because absence of evidence is not evidence
+
+Part 6's rule cuts both ways: a repository is not clean because it was
+never checked, and it *is* worth recording when a check comes back
+empty.
+
+- **`The-Crystal-Vision` has no fake-live-data defect at all.** An
+  exhaustive search for `fetch`, `XMLHttpRequest`, `WebSocket`,
+  `EventSource` and `axios` returns two hits, both backing real
+  behaviour. `webapp/src/lib/Senses.svelte:9,18` disables its unbuilt
+  Voice and Sight controls with a `soon` badge, under a comment saying
+  they "hint at what's coming without pretending it works today." That is
+  the house example of doing this correctly, and it belongs in the record
+  as much as the failures do.
+- **`crystalcore/services/`** — the pipeline was run, not read. Ten raw
+  events, seven decoded, three quarantined with the correct reasons; unit
+  normalisation checked by hand (21 500 Wh → 21.5 kWh).
+- **`crystalcore`'s numeric constants** — Pleiades `~440 ly` agrees across
+  six files, LEB `~1.2M km²` across three, GAB `~1.7M km²` across five,
+  each matching published values. This is the category that produced the
+  sol drift, and here it is genuinely clean.
+- **`crystal-vision`'s economics panel** — the static-looking figures are
+  recomputed at initialisation and the literals match the computed
+  defaults exactly. Expected to be a finding; is not one.
+
+### The archive asserted the defect it documents
+
+Found while auditing the others, in this repository.
+`02-REPOSITORY-MAP.md` described `CrystalCore.OS` as "boot screen,
+draggable windows, Mars clock, **Starship telemetry**, news feed, command
+prompt", under a Statement graded **Implemented**.
+
+Parts 5, 6 and 9 are *entirely about that phrase*. Every other occurrence
+of it in this archive sits inside quotation marks, being discussed as a
+false claim. That row was the only place the archive stated it in its own
+voice — and it survived five corrections that were about exactly this,
+because the corrections were filed in `11-CORRECTIONS.md` and the claim
+was in `02-REPOSITORY-MAP.md`.
+
+Corrected, with the reason left in that file's Historical Notes. The
+lesson is narrow and worth keeping: **fixing a claim where it is
+discussed does not fix it where it is asserted.** A correction should
+grep the whole archive for the phrase it is retiring.
+
+### This Part nearly published a stale claim about staleness
+
+Caught before merge, and recorded because the shape is exact. The
+paragraph above first read *"Every one of its ten commits is dated
+2026-07-17."* That was true of the **local clone** the audit ran against
+(`ba1dbb7`). On `origin/main` there are twelve: a relicensing commit
+(2026-07-28) and its merge (2026-07-29) landed after that clone was
+taken. The audit also reported `crystal-vision` as an Apache-2.0
+repository in conflict with ADR-0013 — which was true when the clone was
+taken and had already been resolved on `main`, by the very commit the
+clone was missing.
+
+So a Part whose subject is claims that outlive their evidence was itself
+about to state two, from a four-hour-old checkout. Exactly the failure
+`SURVEYED.md` was created for, in Part 0's words: *"Both were true of the
+clones they were read from. Neither was true by the time anyone read
+them."*
+
+Two things follow, and only the second is new.
+
+The findings themselves survived — re-checked against `origin/main`,
+`const target = 847` over a five-entry `NODES` is still there, and the
+two later commits touched only `LICENSE`, `NOTICE` and one README line.
+That is luck, not method: had they touched `app.js`, the finding would
+have been wrong too.
+
+The new part: `SURVEYED.md` records what the *archive* was read from,
+and `check-freshness.py` reported all three of these repositories
+current — because it compares the survey against the remote, and the
+survey was right. Neither noticed that the **working clone the audit ran
+in** was behind. A freshness check on the record is not a freshness check
+on the reader. An audit should `git fetch` and state which commit it read,
+the same way a Statement does.
+
+### Standing risk, fifth instance
+
+Parts 0, 10 and 11 recorded that nothing triggers on a repository being
+created, on a clone going stale, on an inbound status document arriving,
+or on a public repository gaining a document. Add this: **nothing
+triggers on a repository being unaudited.** Three were audited today
+because a session was asked to look, and the two that remain will stay
+unexamined until someone asks again. `check-freshness.py` reports what
+has *moved*; nothing reports what has never been *read*.
