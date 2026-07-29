@@ -488,3 +488,71 @@ and these documents were written 2026-07-29.
 
 ### Cross References
 `06-COMPONENTS.md`, `FULL-REVIEW-2026-07-28.md`.
+
+---
+
+## Statement
+
+The canon → site copy pipeline has drifted in **two** documents, not the
+one this archive previously recorded — and nine canon documents have
+never been copied to the site at all. The remaining differences are
+correct and expected, not drift.
+
+**Status: Unresolved** (the drift and the uncopied set), **Implemented**
+(the pipeline itself).
+
+Measured across all 24 documents in the umbrella's `mythos/content/`
+against `TerAustralis-Incognita-Code/vision/site/src/content/`,
+2026-07-28:
+
+| State | Count | Documents |
+|---|---|---|
+| In sync, byte-identical | 5 | `SPONSORS`, `STARLINE-TRANSMISSIONS`, `THE-FULL-NARRATIVE`, `THE-SOVEREIGN-KEY`, `VISION` |
+| Differ **only** by relative-link depth | 7 | `MEMORY`, `STRATEGY`, `CRYSTALMATRIX`, `GOVERNANCE`, `LUMINA`, `MILESTONES`, `LICENSE-CONTENT` |
+| **Real content drift** | 2 | `CODEX`, `APOCRYPHON` |
+| Filename collision — two different works | 1 | `ARCHITECTURE` |
+| **Never copied to the site** | 9 | `CRYSTALCORE-OS-VISION`, `FERMIS-SILENT-LINE`, `MOTIFS`, `RED-DUST-AXIS`, `SHOOTING-STAR-GIRL`, `THE-FIRST-REMEMBERING`, `THE-IN-GEAR-PROTOCOL`, `THE-SOVEREIGN-GAP`, `WIRE-SKULL-MEMORY` |
+
+**The seven "differences" that are not drift.** Each differs by exactly
+one line, and always the same line: a footer link reading
+`[README](../README.md)` in the umbrella and `[README](README.md)` on the
+site. The file sits at a different depth in each tree, so the relative
+link *must* differ. This is the copy step working correctly. Any future
+audit that counts these as drift will overstate the problem — as a first
+pass of this one did.
+
+**The two real drifts.**
+
+- `CODEX.md` — canon is a strict superset: 149 lines against the site's
+  73. Six whole sections exist only in canon: *The Red Dust Remembers*,
+  *The Northern Dream*, *The Awakening*, *The Bridge Between Worlds*,
+  *The Sovereign Heart*, *The New Axis*. Nothing exists only on the site.
+  Canon grew; the copy was never refreshed.
+- `APOCRYPHON.md` — the site copy omits the cover-image line
+  `![The Apocryphon of Crystal — Australian Anchor Edition](assets/apocryphon-cover.jpeg)`.
+  Whether that is drift or a deliberate difference in how the site
+  handles imagery is **not determined here**.
+
+**`ARCHITECTURE.md` is a collision, not a copy.** The umbrella's is
+"Architecture — TerAustralis Incognita", a design overview that opens by
+saying most components remain at concept stage. The site's is "Crystal
+Universe — System Architecture · Decode · Ingest · Upgrade", a
+Built-vs-Vision map. Two different documents sharing a filename. Treating
+them as two copies of one document — as a filename-matching audit will —
+is wrong in both directions.
+
+### Evidence
+- Tier A: SHA-256 over both trees, plus `diff` per document, run
+  2026-07-28 against `origin/main` of both repositories. Direction of
+  drift established by counting `<` and `>` lines separately, precisely
+  so that "sync them" could be judged safe or destructive rather than
+  assumed.
+
+### Historical Notes
+An earlier Statement in this file recorded the canon→site drift as a
+single live instance (`THE-FIRST-REMEMBERING.md` not yet copied). That
+was true of the file it named and understated the set: nine documents
+have never been copied, and two of those that were have since diverged.
+
+### Cross References
+`FULL-REVIEW-2026-07-28.md` (finding M6), `04-GOVERNANCE.md`.
