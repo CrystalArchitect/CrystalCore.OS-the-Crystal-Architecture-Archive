@@ -1468,3 +1468,87 @@ and trusted.
 Unlike Part 14, this correction closes clean: nothing here is deferred to
 the maintainer. The Settings click was correct and is done; what needed
 fixing was the unreviewed code it brought in alongside it.
+---
+
+## Part 16 — Filed 2026-07-29 (a twelfth repository, and this
+archive's own tooling caught lying)
+
+### The portfolio has twelve repositories
+
+`teraustralis-proposal` was created at **20:17** and is **public**. The
+archive learned of it at **20:54**, thirty-seven minutes later, and only
+because a question about repository descriptions caused the account's
+repositories to be listed — twelve rows where the archive expected
+eleven. Nothing in the method would have surfaced it otherwise.
+
+It is now recorded in [`02-REPOSITORY-MAP.md`](02-REPOSITORY-MAP.md),
+[`../STATUS.md`](../STATUS.md) and [`../SURVEYED.md`](../SURVEYED.md).
+Two things about it are worth carrying here rather than only in the map:
+
+- **It is the only repository addressed to people outside the project** —
+  a formal proposal seeking technical review and partnership, under an
+  ABN and a named founder. Whatever this archive gets wrong elsewhere
+  costs the maintainer time. What that repository gets wrong costs
+  someone else's judgement.
+- **Its technical brief asserted four properties of CrystalCore in the
+  present tense.** Checked against `TerAustralis-Incognita-Code` at
+  `f81dc37`: local-first held; auditable and consent-native held for
+  tool calls but not for memory; **fail-safe isolation was not
+  implemented at all**. Reported the same day with a correction patch.
+  This is Part 11's defect class again, now in front of investors.
+
+And a detail that reframes it. The pre-restructure `TECHNICAL-BRIEF.md`
+carried a `## Current Status` section reading *"this brief states the
+design intent."* The restructure at `c0a7c63` dropped it. **The honesty
+label existed first and was lost in a reorganisation** — nobody decided
+to overclaim. That is a gentler and more useful finding than
+intent-to-mislead, and it argues for labels that live in the same block
+as the claim, where moving one moves the other.
+
+### This archive's own freshness tooling was making a stale claim
+
+`SURVEYED.md` was written in this session to stop the archive being
+quietly out of date. Its "Known limits" section said:
+
+> Only `TerAustralis-Incognita` is public. The freshness check can read
+> that one anonymously; the other ten need a checkout or credentials.
+
+`check-freshness.py` said the same in a docstring: *"ten of the eleven
+repositories are private."*
+
+**Both halves were wrong.** Live GitHub metadata: **five are public** —
+`TerAustralis-Incognita`, `CrystalCore.OS`, `CrystalCore-AERIS`,
+`crystalcore-os-aeris-vault12`, `teraustralis-proposal`. And running the
+script rather than reasoning about it showed visibility was never the
+constraint: from a session container it reports `not reachable from
+here: 0` and resolves **all twelve**, private ones included.
+
+So the file built to prevent stale claims shipped one, and understated
+its own tool in both directions at once. Nobody had run it and read the
+output against what the documentation promised. That is the same failure
+the file exists to catch, committed by the file.
+
+Recorded here rather than quietly patched, because a corrections log that
+omits its author's errors is a worse instrument than one that includes
+them.
+
+### Standing risk, fifth instance — and it is no longer a prediction
+
+Parts 0, 10 and 11 recorded that nothing triggers when a repository is
+created, when a clone goes stale, or when a document arrives. Part 11
+called it *"the longest-standing unresolved item in this file."*
+
+It was written on 2026-07-29. `teraustralis-proposal` was created on
+2026-07-29, some hours later, and went unnoticed until a coincidence
+surfaced it. The gap did not merely remain open; it was demonstrated by
+the very next event.
+
+`check-freshness.py` narrows the *stale clone* case and, now that it is
+known to reach all twelve, narrows it further than the archive believed.
+It does nothing for repository creation, because it only checks
+repositories `SURVEYED.md` already lists — a repository nobody has heard
+of is not stale, it is absent, and no amount of freshness checking finds
+it. Closing that needs a different mechanism: something that enumerates
+the account and diffs against the roster.
+
+Still open. Still the longest-standing item here.

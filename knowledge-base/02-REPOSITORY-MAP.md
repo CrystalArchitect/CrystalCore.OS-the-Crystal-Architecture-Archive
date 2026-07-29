@@ -1,6 +1,6 @@
 # Repository Map
 
-The canonical map of all eleven repositories: what each owns, how they
+The canonical map of all twelve repositories: what each owns, how they
 relate, and where the seams between them are.
 
 > **Scope correction (2026-07-28).** This document was written on
@@ -603,3 +603,71 @@ have never been copied, and two of those that were have since diverged.
 
 ### Cross References
 `FULL-REVIEW-2026-07-28.md` (finding M6), `04-GOVERNANCE.md`.
+
+---
+
+## Statement
+
+A twelfth repository exists: `teraustralis-proposal`, created 2026-07-29
+20:17 and **public**. It is the only repository in the portfolio
+addressed to people outside the project — a formal proposal package
+seeking technical review and partnership, published under an ABN with a
+named founder.
+
+It holds **no code**. Seven numbered documents (`01-PROBLEMS.md` through
+`07-INVESTMENT-THESIS.md`), a `README.md` and a `LICENSE`. Nothing to
+build, nothing to run, no CI.
+
+Two things distinguish it from every other repository here.
+
+**It diverges on licence.** ADR-0013 sets CC-BY-NC-ND 4.0 portfolio-wide.
+This repository is **All Rights Reserved**, refusing permission to "copy,
+reproduce, or redistribute" or to "build upon, implement, or
+commercialise any of the ideas" without written consent. That is a
+defensible choice for a proposal under evaluation — the reasoning is
+different from the reasoning for canon — but it is an undocumented
+divergence from an accepted ADR, and ADR-0009 requires licensing changes
+be recorded.
+
+**It restates CrystalCore for a reader who has never seen it.**
+`05-TECHNICAL-BRIEF.md` describes the same architecture that
+`crystalcore-os-aeris-vault12` specifies and
+`TerAustralis-Incognita-Code` implements. That is a third copy of a
+description whose canonical homes are elsewhere, and it is the copy most
+likely to be read by someone with money and no context.
+
+**Status: Exists as a document** (prose only, nothing executable).
+
+### Evidence
+- `origin/main` at `829156b`, read 2026-07-29. Twelve commits, from
+  `9698d7e` at 20:17 to `829156b` at 20:54 — **thirty-seven minutes** of
+  history at the time of survey.
+- Zero files under `.github/`: no CI, no deploy workflow.
+- Licence history: MIT until `4bfb860` ("Replace MIT with All Rights
+  Reserved — view only"), strengthened at `4bbe185` (ABN added).
+- `05-TECHNICAL-BRIEF.md` §Core Properties, checked against
+  `TerAustralis-Incognita-Code` at `f81dc37`: of six properties asserted
+  in the present tense, one held fully, two held partly, and one —
+  "fail-safe isolation" — was not implemented at all. Reported to the
+  maintainer 2026-07-29 with a correction patch.
+
+### Historical Notes
+The archive did not know this repository existed until 2026-07-29, when
+a survey prompted by an unrelated question happened to list the account's
+repositories and returned twelve rows where the archive expected eleven.
+Nothing in the method would have surfaced it otherwise — the same gap
+recorded in `11-CORRECTIONS.md` Parts 0, 10 and 11, now in its fifth
+instance. See Part 16.
+
+A pre-restructure duplicate document set (`VISION.md`, `PROPOSAL.md`,
+`TECHNICAL-BRIEF.md`, `GEOGRAPHIC-BRIEF.md`, `INVESTMENT-THESIS.md`) was
+present at survey time, unreferenced and diverged from the numbered set
+that superseded it. Notably the older `TECHNICAL-BRIEF.md` carried a
+`## Current Status` section — "this brief states the design intent" —
+which the restructure at `c0a7c63` dropped. The honesty label existed
+first and was lost in reorganisation, which is how the numbered version
+came to read as a description of a built system.
+
+### Cross References
+`STATUS.md` (per-repo ledger), `SURVEYED.md`, `11-CORRECTIONS.md`
+Part 16, `04-GOVERNANCE.md` (licensing, ADR-0009 and ADR-0013).

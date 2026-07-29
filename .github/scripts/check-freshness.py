@@ -13,7 +13,7 @@ survey of it; drift here is the normal state, not a defect. What the
 script removes is silence — the archive can be behind, but it can no
 longer be behind *invisibly*, which is exactly how it came to describe a
 six-repository portfolio that had eleven, and a specification repository
-that it called a web page.
+that it called a web page. It is twelve as of 2026-07-29.
 
 It exits non-zero only when it cannot do its job: a malformed
 `SURVEYED.md`, or a repository listed that it cannot parse.
@@ -22,8 +22,8 @@ It exits non-zero only when it cannot do its job: a malformed
     python3 .github/scripts/check-freshness.py --local /path/to/checkouts
 
 `--local` points at a directory holding checkouts named after each
-repository, which is how to check the ten private ones without handing
-this script credentials.
+repository, which is how to check the seven private ones from somewhere
+that cannot reach them, without handing this script credentials.
 """
 
 from __future__ import annotations
@@ -53,8 +53,16 @@ def parse_survey() -> list[tuple[str, str, str]]:
 
 
 def head_of(repo: str, local: Path | None) -> str | None:
-    """Current head, or None if unreachable. Unreachable is an ordinary
-    outcome here (ten of the eleven repositories are private), not an error."""
+    """Current head, or None if unreachable.
+
+    Unreachable is an ordinary outcome, not an error -- seven of the twelve
+    repositories are private, and a run without credentials will simply not
+    see them. From a session container with the git proxy configured, all
+    twelve resolve.
+
+    This docstring claimed "ten of the eleven repositories are private"
+    until 2026-07-29. Wrong on both counts: five are public, and privacy
+    was not what determined reachability anyway."""
     if local:
         path = local / repo
         if not (path / ".git").is_dir():

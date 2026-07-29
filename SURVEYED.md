@@ -43,6 +43,7 @@ the record of what the archive was re-read against, and when.
 | `crystalcore-os-aeris-vault12` | `430cce13b1bce6e09a781981db9940df402c85d3` | 2026-07-29 |
 | `teraustralis-incognita-v2` | `8d5f4c1ce1a024cc69740fa3e690cc85dc8edce3` | 2026-07-29 |
 | `teraustralis-v2-presentation` | `7b58f4f69f623dd68165647592ac0a7533371265` | 2026-07-29 |
+| `teraustralis-proposal` | `829156b3935dc736673203468a7e2f296f3cd62b` | 2026-07-29 |
 
 ## Known limits of this file
 
@@ -51,7 +52,22 @@ the record of what the archive was re-read against, and when.
   changed", not "this specific Statement is now wrong". Narrowing that
   would mean per-Statement provenance, which is a larger change to the
   documentation template.
-- **Only `TerAustralis-Incognita` is public.** The freshness check can
-  read that one anonymously; the other ten need a checkout or
-  credentials, so the check reports them as unverifiable rather than
-  guessing.
+- **Reachability was described wrongly, twice over.** This section used to
+  read: "Only `TerAustralis-Incognita` is public. The freshness check can
+  read that one anonymously; the other ten need a checkout or credentials,
+  so the check reports them as unverifiable rather than guessing."
+
+  Both halves were false. **Five of the twelve are public**, not one —
+  `TerAustralis-Incognita`, `CrystalCore.OS`, `CrystalCore-AERIS`,
+  `crystalcore-os-aeris-vault12`, `teraustralis-proposal`. And visibility
+  turns out not to be the limit at all: run from a session container with
+  the git proxy configured, the check resolves **all twelve**, private
+  ones included — `not reachable from here: 0`. The seven private
+  repositories need credentials only when the script is run somewhere
+  that lacks them.
+
+  So a file written to stop the archive making stale claims was carrying
+  one, and it understated its own tool in both directions. Corrected
+  2026-07-29 against live GitHub metadata and against the script's actual
+  output — recorded in `11-CORRECTIONS.md` Part 15 rather than quietly
+  fixed.
