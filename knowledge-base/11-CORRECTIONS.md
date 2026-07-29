@@ -549,6 +549,27 @@ the denominator wrong. Knowing the rule is not the same as having a
 number you can trust — a scope claim needs its source named, not just
 its logic sound.
 
+**Superseded 2026-07-29, for one of the three.**
+`crystalcore-os-aeris-vault12` has since been examined. It was cloned and
+read in full, and `02-REPOSITORY-MAP.md` now carries two Statements about
+it: the seven Starline specifications it holds, and a comparison of that
+specification against the running `consent_transport` implementation.
+So the "unexamined, look here first" flag below is answered, not standing.
+
+The flag was right about where to look. The examination found, in
+`docs/southern-node-lfa-operational-log.md`, a document reporting
+node-to-lattice latency to one decimal place, standard deviation, 95th
+percentile, and a Southern-versus-Northern node comparison table — with
+no truth label, unlike every sibling document in that repository. Nothing
+in the portfolio can produce those figures: `core/node/mesh/stub.py` is
+in-process only with libp2p marked HOLD, and Starline binds 127.0.0.1.
+
+That is precisely the defect class this Part predicted for that
+repository: a decorative figure in the register of a measured one, in a
+public specification repository. It is recorded here rather than
+corrected, because the fix is a truth label on the maintainer's own
+canon, not a change this archive should make unasked.
+
 One of the three matters more than the other two.
 `crystalcore-os-aeris-vault12` is **public**, and Part 0 records it as
 carrying the Starline edge-node and Consent Token specifications. A
