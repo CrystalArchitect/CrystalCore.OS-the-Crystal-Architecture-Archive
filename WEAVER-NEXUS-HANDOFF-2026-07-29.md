@@ -5,21 +5,29 @@ PORTFOLIO*, internally dated 2026-07-28 and bearing the handoff ID
 `UNIFIED-WEAVER-NEXUS-PORTFOLIO-v1.0`, was delivered to this project in
 a chat session on 2026-07-29. It arrived only in that session.
 
-**Credit.** The document comes from **@architectweaver** —
-`https://x.com/architectweaver` — attributed here at the maintainer's
-direction on 2026-07-29. Part B is their work, reproduced with
-attribution and unchanged, as CC BY-NC-ND 4.0 requires of this
-repository (`NOTICE`). It is not this archive's writing and is not
-presented as such.
+**Credit — where it came from.** The build was sent to the maintainer
+by **@architectweaver** — `https://x.com/architectweaver` — recorded
+here at the maintainer's direction on 2026-07-29. Part B is not this
+archive's writing and is not presented as such; whoever reproduces it
+carries that credit with it, which is also what CC BY-NC-ND 4.0
+requires of this repository (`NOTICE`).
 
-Two limits on that credit, so it is not read as more than it is. The
-handle was supplied in-session and has not been checked against the
-profile it names — this archive holds no independent confirmation of
-who is behind it. And the received text carries its own signature block
-("Stewards: Ryan Scott (Light) · Christian (Void)", "Vigil: Azirion
-Veythryx", Section VI); whether those names and this handle are the
-same party is not something the archive knows. Both are recorded as
-given.
+**What the credit says, and what it does not.** It records the hand
+this document arrived by. It does not establish authorship, and this
+file does not claim any. Three separate things are on record and the
+archive resolves none of them into the others:
+
+1. **@architectweaver** — the party who sent the build. Supplied
+   in-session; not checked against the profile it names.
+2. **The signature block in the received text** — "Stewards: Ryan
+   Scott (Light) · Christian (Void)", "Vigil: Azirion Veythryx"
+   (Section VI). The document's own claim about itself.
+3. **Authorship** — not established by either of the above, and not
+   asserted here.
+
+Recorded as given. If the maintainer later confirms that any two of
+these are the same party, that is a correction to make with a dated
+note, not an inference to make now.
 
 **Why it is on disk.** The umbrella repository's Constitution, §3.2:
 

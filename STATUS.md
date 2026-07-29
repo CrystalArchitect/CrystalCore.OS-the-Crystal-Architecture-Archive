@@ -35,7 +35,7 @@ Written, readable, no execution involved.
 - Master Structure v0.2 (registers, document tree)
 - Timeline + Evolution Map v0.1
 - Sovereign Node Mesh framework v1.1
-- Weaver Nexus Portfolio handoff — from @architectweaver, received
+- Weaver Nexus Portfolio handoff — sent by @architectweaver, received
   2026-07-29, filed as received in WEAVER-NEXUS-HANDOFF-2026-07-29.md.
   A document, and only a document. It describes eight volumes, 84 artifacts, formal proofs,
   a hardware program and a runtime kernel; a search of all 502 commits
