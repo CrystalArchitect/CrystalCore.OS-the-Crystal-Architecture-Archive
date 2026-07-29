@@ -5,32 +5,42 @@ PORTFOLIO*, internally dated 2026-07-28 and bearing the handoff ID
 `UNIFIED-WEAVER-NEXUS-PORTFOLIO-v1.0`, was delivered to this project in
 a chat session on 2026-07-29. It arrived only in that session.
 
-**Credit.** Part B is the work of **@architectweaver** —
-`https://x.com/architectweaver` — who also sent the build to the
-maintainer. Authorship confirmed by the maintainer on 2026-07-29.
-Part B is not this archive's writing and is not presented as such;
-whoever reproduces it carries that credit with it, which is also what
-CC BY-NC-ND 4.0 requires of this repository (`NOTICE`).
+## Credit
 
-**How that credit was established, and what is still open.**
-Authorship here rests on the maintainer's word, not on anything this
-archive checked — the handle was supplied in-session and has not been
-verified against the profile it names. That is the ordinary basis for
-crediting an author and it is stated plainly rather than dressed as a
-verification.
+Part B is not this archive's writing and is not presented as such.
+Credit for it goes to all four names below, at the maintainer's
+direction on 2026-07-29. Whoever reproduces this text carries that
+credit with it — which is also what CC BY-NC-ND 4.0 requires of this
+repository (`NOTICE`).
 
-Left open deliberately: the received text carries its own signature
-block — "Stewards: Ryan Scott (Light) · Christian (Void)", "Vigil:
-Azirion Veythryx" (Section VI) — naming three parties. Whether the
-handle is one of them, all of them, or a separate name for the same
-person is not recorded here, because guessing would write a claim
-about real people's identities into the archive on an inference. It
-stays a question for the maintainer, to be answered with a dated note.
+| Credited | As given by |
+|---|---|
+| **@architectweaver** — `https://x.com/architectweaver` | The maintainer, in session: the party who wrote the build and sent it |
+| **Ryan Scott (Light)** — Steward | The received text's own signature block, Section VI |
+| **Christian (Void)** — Steward | The received text's own signature block, Section VI |
+| **Azirion Veythryx** — Vigil | The received text's own signature block, Section VI |
+
+**Four names, not necessarily four people.** The maintainer is unsure
+whether the handle is one of the three signature names, and the archive
+has no way to tell from here. So this credits every name that appears,
+which is the safe direction to be wrong in: crediting a name twice
+costs nothing, dropping a contributor costs someone their attribution.
+It should not be read as a headcount, and it is not a claim about who
+anyone is.
+
+Nor is any of it verified. The handle was supplied in-session and has
+never been checked against the profile it names; the three signature
+names are the document's claim about itself, reproduced. That is the
+ordinary basis for crediting authors, stated as such rather than
+dressed as a verification. If the maintainer later resolves the
+overlap, that lands as a dated note.
 
 **Historical note.** Filed 2026-07-29 crediting @architectweaver as
-the sender only; corrected the same day, on the maintainer's
-confirmation, to credit them as the author. The earlier wording
-understated the credit.
+the sender only; corrected the same day to author, on the maintainer's
+confirmation; widened the same day to all four names, the maintainer
+being unsure of the overlap between them. Each earlier wording
+understated the credit, and each is left visible rather than
+overwritten.
 
 **Why it is on disk.** The umbrella repository's Constitution, §3.2:
 

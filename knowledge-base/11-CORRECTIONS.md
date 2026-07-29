@@ -727,25 +727,31 @@ PORTFOLIO* arrived in a chat session and nowhere else. It is now on
 disk at [`../WEAVER-NEXUS-HANDOFF-2026-07-29.md`](../WEAVER-NEXUS-HANDOFF-2026-07-29.md),
 reproduced as received, under an archive-authored reception record.
 
-**Written by @architectweaver** (`https://x.com/architectweaver`), who
-also sent the build to the maintainer. Confirmed by the maintainer on
-2026-07-29 — the credit rests on their word, not on anything this
-archive verified, and the handle has not been checked against the
-profile it names. That is the ordinary basis for crediting an author,
-recorded as such rather than dressed as a verification. The credit
-marks the reproduced text as not this archive's writing, which is also
-what CC BY-NC-ND 4.0 requires of this repository.
+**Credited to four names**, at the maintainer's direction on
+2026-07-29: **@architectweaver** (`https://x.com/architectweaver`), who
+wrote the build and sent it, plus the three the received text signs
+itself with — **Ryan Scott (Light)** and **Christian (Void)** as
+Stewards, **Azirion Veythryx** as Vigil (Section VI).
 
-Left open: the received text's signature block names three parties —
-"Stewards: Ryan Scott (Light) · Christian (Void)", "Vigil: Azirion
-Veythryx" (Section VI). Whether the handle is one of them, all of them,
-or another name for the same person is not recorded, because the only
-way to close it from here is inference, and the subject is real
-people's identities. A question for the maintainer, not a gap to fill.
+Four names, not necessarily four people. The maintainer is unsure
+whether the handle is one of the three, and the archive cannot tell
+from here, so every name that appears is credited. That is the safe
+direction to be wrong in — crediting a name twice costs nothing,
+dropping a contributor costs someone their attribution — and it is not
+a headcount or a claim about who anyone is.
 
-*Filed the same day crediting @architectweaver as the sender only, then
-corrected on the maintainer's confirmation to credit them as the
-author. The first wording understated the credit.*
+None of it is verified, and it is not written as though it were. The
+handle was supplied in-session and never checked against the profile it
+names; the three signature names are the document's claim about itself,
+reproduced. That is the ordinary basis for crediting authors. What the
+credit does establish is that the reproduced text is not this archive's
+writing — which is also what CC BY-NC-ND 4.0 requires of this
+repository.
+
+*Three wordings in one day: @architectweaver as sender, then as author
+on the maintainer's confirmation, then all four names when the overlap
+between them turned out to be unknown. Each earlier version understated
+the credit; all are left visible rather than overwritten.*
 
 This is not a correction to anything the archive said. It is here
 because the ledger should record what arrived claiming portfolio-wide
