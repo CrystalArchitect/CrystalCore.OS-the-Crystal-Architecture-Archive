@@ -307,7 +307,7 @@ directly from local clones).
 
 | Repository | What it is | Root commit | Head | Commits / files |
 |---|---|---|---|---|
-| `CrystalCore.OS` | Single-page mythos terminal — the multiplanetary desktop: boot screen, draggable windows, Mars clock, Starship telemetry, news feed, command prompt. `index.html` + `README.md`, no build step. | `b9bcbd2` 2026-07-29 02:47 +1000 | `5af57a4` 2026-07-29 02:52 +1000 | 5 / 2 |
+| `CrystalCore.OS` | Single-page mythos terminal — the multiplanetary desktop: boot screen, draggable windows, Mars clock, a static Starship stat panel, a static news panel, command prompt. `index.html` + `README.md`, no build step. | `b9bcbd2` 2026-07-29 02:47 +1000 | `5af57a4` 2026-07-29 02:52 +1000 | 5 / 2 |
 | `CrystalCore-AERIS` | The AERIS Edition of the same terminal, plus `ALIGNMENT_PROTOCOL.md` (a multi-LLM unity charter) and a `website/` directory. | `fde9a56` 2026-07-29 03:04 +1000 | `c8f0d95` 2026-07-29 04:06 +1000 | 5 / 4 |
 | `crystalcore-os-aeris-vault12` | **The specification home for Starline edge nodes and the Consent Token.** Seven technical specifications (see the Statement below), plus the AERIS / Vault 12 terminal page and its README. | `1348a80` 2026-07-29 05:57 +1000 | `a09943c` 2026-07-29 (docs: complete technical document set + NON SOLUS) | 10 tracked files |
 | `teraustralis-incognita-v2` | The largest of the five: a React 19 + TypeScript + Vite + Tailwind application (65 `.tsx` files) with an Express static server, built on a Manus generator scaffold. Co-authored by `Manus` — the only non-maintainer author anywhere in the portfolio since `The-Crystal-Vision`'s bot commits. | `7fa231c` 2026-07-24 14:14 UTC | `3762968` 2026-07-28 20:22 UTC | 4 / 90 |
@@ -334,6 +334,21 @@ days without being surveyed. `teraustralis-v2-presentation` was created
 (`teraustralis-incognita-v2`) and four repositories that arrived after
 the archive was written — not a reconstruction error, but a ledger that
 had not been re-run.
+
+**Corrected 2026-07-29: this table asserted the defect it documents.**
+The `CrystalCore.OS` row read "Mars clock, **Starship telemetry**, news
+feed" — under a Statement graded **Implemented**, which asserts that
+telemetry is what the panel is. It is not, and Parts 5, 6 and 9 of
+`11-CORRECTIONS.md` are entirely about that phrase: the window titles a
+static stat block with zero network calls behind it. Every other
+occurrence of "Starship telemetry" in this archive sits inside quotation
+marks, being *discussed* as a false claim. This row was the only place
+the archive stated it in its own voice, and it went unnoticed through
+five corrections that were about exactly this. The row now says "a static
+Starship stat panel, a static news panel." Nothing else in the row
+changed, and the defect in `CrystalCore.OS` itself remains live and
+unfixed by the maintainer's decision — see Part 9's "identified, not
+applied" table.
 
 ### Cross References
 `11-CORRECTIONS.md`, `01-SYSTEM-OVERVIEW.md`,
