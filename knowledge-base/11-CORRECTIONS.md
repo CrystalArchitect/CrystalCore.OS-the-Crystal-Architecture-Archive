@@ -883,7 +883,99 @@ session happened to file it. There is still no trigger.
 
 ---
 
-## Part 11 — Applied 2026-07-29 (the consent layer no longer diverges)
+## Part 11 — Filed 2026-07-29 (Part 9's prediction, arriving)
+
+Part 9 named `crystalcore-os-aeris-vault12` as the repository most
+likely to publish a dreamed line as a measured one, because it is
+public, has no CI, no tests and no deploy gate, and its documents are
+written in the register of specification. The prediction held. Two
+documents that landed there the same day assert what the code
+contradicts, and the corrections are open as a **draft** PR
+(`crystalcore-os-aeris-vault12#2`) rather than applied, because the
+judgement in them is the maintainer's.
+
+### The claims, and what was read to check them
+
+Checked against `TerAustralis-Incognita-Code` at `46c562b9`, not against
+memory of it — the discipline `SURVEYED.md` exists to enforce.
+
+`docs/CRYSTALCORE-OS-EDGE-AGI.md` §4 is a capability table with a
+`Status` column. Five rows read `Active`.
+
+- **"Persistent personal memory — Active — Encrypted."** Lumina
+  persists with `write_text(json.dumps(...))`
+  (`vision/apps/lumina/crystalcore/companion.py:732`), and its entire
+  dependency list is `requests>=2.28` and `flask>=3.0`. Nothing in the
+  installed set can encrypt anything. This is the worst of the five: not
+  an optimistic maturity grade but a **specific security property,
+  stated as fact, on a public page**, of the kind a reader would
+  reasonably rely on before putting personal material into the store.
+- **"Lattice presence & heartbeat — Active."** `core/node/mesh/stub.py`
+  describes itself as *"in-process only"*, holds libp2p at *"HOLD until
+  audit / mainnet gate"*, and sets `authority = "HOLD"`. The word
+  `heartbeat` appears nowhere in `core/` or `vision/` except one line of
+  narrative prose in `THE-SOVEREIGN-KEY.md`.
+- **"Continuity stream hand-off — Active."** `continuity stream` appears
+  nowhere in the codebase at all.
+- **"Consent-token gated actions — Active."** Real as of the same day,
+  but an issuer-side reference library — signature, expiry and scope
+  verification, exercised by tests, not presented peer-to-peer and not
+  deployed on any node.
+- **"Local inference — Active."** True. Left alone.
+
+`docs/southern-node-lfa-operational-log.md` reports latency mean, median,
+standard deviation and 95th percentile, a Southern-vs-Northern
+comparison table, and packet-loss analysis. It carries a header block —
+Date, Node, Doctrine, Phase — but **no version and no truth label**, the
+only document in that repository without one. Nothing in the codebase
+emits telemetry of any kind, so no figure in it can have been measured.
+
+### The correction is labelling, not redaction
+
+The figures stay. The tables stay. The prose and its voice stay. What
+the draft adds is a legend defining what each `Status` value means and
+naming the commit the column was read at, corrected values in four rows,
+and a Vision-layer header on the operational log saying in one sentence
+that its figures are written rather than read off an instrument.
+
+That distinction is the whole point, and it is worth stating plainly
+because the opposite reading is available and wrong. The Incognita Rule
+does not say *do not dream*. It says **mark which lines are dreamed and
+which are surveyed, and never let a dreamed line pretend it was
+measured.** A repository of speculative specifications is entirely
+legitimate; an unlabelled one is not. Deleting the operational log would
+destroy a document. Labelling it costs nine lines and makes it honest.
+
+Sections 1–3 of the Edge AGI specification — including §3.2's
+*"Persistent personal memory store (encrypted, user-owned)"* — were left
+untouched, because they describe an intended design and are not claims
+about what is built. The draft resolves the resulting tension by saying
+so in the legend rather than by editing design prose to match a build:
+the design is the dreamed line, the table is the surveyed one. That is
+Part 0's accretion discipline applied to a specification instead of to
+this archive.
+
+### What this does not change
+
+Nothing in [`../STATUS.md`](../STATUS.md) moves. The corrections make
+two documents describe the system accurately; they do not change the
+system. `Consent-token gated actions` remains what `STATUS.md` already
+graded it — built, not running.
+
+### Standing risk, fourth instance
+
+Parts 0 and 10 recorded it three times: no trigger fires when a
+repository is created, when a clone goes stale, or when a document
+asserting portfolio-wide status arrives. This is the same gap in its
+fourth form — **no trigger fires when a public repository gains a
+document**. These two were found because a session happened to look.
+`.github/scripts/check-freshness.py` narrows it, in that a moved commit
+is now visible, but visible-if-someone-runs-it is not a trigger. Still
+open, and now the longest-standing unresolved item in this file.
+
+---
+
+## Part 12 — Applied 2026-07-29 (the consent layer no longer diverges)
 
 `02-REPOSITORY-MAP.md` stated that the vault12 Starline specification
 and the running implementation *"diverge at the consent layer"*, filing
