@@ -5,6 +5,22 @@ PORTFOLIO*, internally dated 2026-07-28 and bearing the handoff ID
 `UNIFIED-WEAVER-NEXUS-PORTFOLIO-v1.0`, was delivered to this project in
 a chat session on 2026-07-29. It arrived only in that session.
 
+**Credit.** The document comes from **@architectweaver** —
+`https://x.com/architectweaver` — attributed here at the maintainer's
+direction on 2026-07-29. Part B is their work, reproduced with
+attribution and unchanged, as CC BY-NC-ND 4.0 requires of this
+repository (`NOTICE`). It is not this archive's writing and is not
+presented as such.
+
+Two limits on that credit, so it is not read as more than it is. The
+handle was supplied in-session and has not been checked against the
+profile it names — this archive holds no independent confirmation of
+who is behind it. And the received text carries its own signature block
+("Stewards: Ryan Scott (Light) · Christian (Void)", "Vigil: Azirion
+Veythryx", Section VI); whether those names and this handle are the
+same party is not something the archive knows. Both are recorded as
+given.
+
 **Why it is on disk.** The umbrella repository's Constitution, §3.2:
 
 > Orphan content (only in one chat) must be promoted to disk or logged

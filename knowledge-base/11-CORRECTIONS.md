@@ -727,6 +727,15 @@ PORTFOLIO* arrived in a chat session and nowhere else. It is now on
 disk at [`../WEAVER-NEXUS-HANDOFF-2026-07-29.md`](../WEAVER-NEXUS-HANDOFF-2026-07-29.md),
 reproduced as received, under an archive-authored reception record.
 
+**Credited to @architectweaver** (`https://x.com/architectweaver`), at
+the maintainer's direction on 2026-07-29. The handle was supplied
+in-session and not checked against the profile it names, and the
+received text's own signature block gives different names again
+(Section VI); the archive records both as given and resolves neither.
+The point of the credit is that the reproduced text is someone else's
+work and is marked as theirs, which is also what CC BY-NC-ND 4.0
+requires of this repository.
+
 This is not a correction to anything the archive said. It is here
 because the ledger should record what arrived claiming portfolio-wide
 authority, what was checked, and what the check found — the same reason
