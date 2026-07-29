@@ -1264,3 +1264,112 @@ triggers on a repository being unaudited.** Three were audited today
 because a session was asked to look, and the two that remain will stay
 unexamined until someone asks again. `check-freshness.py` reports what
 has *moved*; nothing reports what has never been *read*.
+
+---
+
+## Part 14 — Applied 2026-07-29 (a deploy that had been failing for eleven days)
+
+Part 13 corrected `crystalcore`'s `index.html`, which headed a file list
+*"On this machine (Grok home)"* on a page GitHub Pages serves to
+strangers. After it merged, this ledger's author wrote that the fix
+*"goes live immediately"*, and the pull request said the page was
+*"served to strangers by Pages."*
+
+Neither was true. Nothing had published from that repository in eleven
+days.
+
+### What was actually happening
+
+`.github/workflows/static.yml` had failed on **every push since
+2026-07-28** — `9a40544`, `bd587d1`, `36489fa`, three merges — with:
+
+> `Get Pages site failed. Please verify that the repository has Pages
+> enabled and configured to build using GitHub Actions. Error: Not Found`
+
+The repository reports `has_pages: false`. Pages is switched off. The
+last successful deploy was `f282199`, **2026-07-18**.
+
+So the merge succeeded, the workflow ran, the workflow went red, and
+three merges passed over it without anyone reading the result.
+
+### The error worth naming precisely
+
+Not "the deploy was broken and I did not know." The error was one of
+**inference**: a merge succeeded, therefore the change is live. That is
+the same inference shape this file has spent two days cataloguing — read
+the artifact, conclude the capability. Reading a `README` and concluding
+a feature exists, and reading a merge and concluding a page is served,
+are the same move. The second one felt safer because a real event had
+occurred; what had not been checked was whether that event produced the
+outcome claimed for it.
+
+It was made while auditing three repositories for exactly this failure,
+and it stood until the maintainer said *"fix the failure please"* and
+someone finally looked at the deploy.
+
+### A second finding, older and larger
+
+`static.yml` uploaded `path: '.'` — the **entire repository**.
+`crystalcore` is private; a Pages site is public. So the configuration
+published all **52** tracked files, including `spec/`, `services/`,
+`clementine/transcripts/` and `.claude/settings.json`, none of which the
+site links to. The site is **four** files: `index.html` and
+`interface/{index.html,style.css,app.js}`, confirmed by tracing every
+`href` and `src`.
+
+This was live and working from 2026-07-16 to 2026-07-18. It predates
+every audit in this file and was found only because the deploy failure
+sent someone to read the workflow.
+
+Narrowed in `259b038`: the workflow now assembles just those four files
+and uploads that. Verified by serving the assembled directory over HTTP —
+all four paths 200, both navigation links resolving, and
+`spec/ARCHITECTURE.md`, `.claude/settings.json`, `README.md` and the
+transcripts all 404.
+
+### An operational fact, now confirmed twice
+
+`enablement: true` on `actions/configure-pages@v5` — the remedy the error
+message itself names — was **refused**, observed directly on run
+`30462094166`:
+
+> `pages: write cannot enable Pages in this account`
+
+This is the second independent confirmation.
+`TerAustralis-Incognita-Code/.github/workflows/deploy.yml` already
+carried the note from an earlier session: *"the step cannot actually
+change the setting: `GITHUB_TOKEN` with `pages: write` is not
+sufficient."* That attempt used `PUT /pages` to change the build type;
+this one used `POST /pages` to create the site. Different endpoints, same
+refusal.
+
+Recorded as a fact about this account rather than a one-off, so the next
+session does not repeat the investigation: **no workflow can enable Pages
+here.** It is a settings click or it does not happen.
+
+### What is fixed and what is not
+
+| | |
+|---|---|
+| Publish scope narrowed to the four files the site reaches | Applied, `259b038` |
+| Failure message names the setting to change instead of `Not Found` | Applied, `259b038` |
+| The deploy itself | **Still red.** The site genuinely is not publishing |
+
+The red is deliberate, at the maintainer's direction. A green check on a
+workflow that publishes nothing is precisely the defect this file exists
+to catch, and skipping quietly would have produced one. The remaining
+step — Settings → Pages → Source → "GitHub Actions" — is the
+maintainer's, and no code change substitutes for it.
+
+### Standing risk, sixth instance
+
+Parts 0, 10, 11 and 13 record that nothing triggers on a repository being
+created, a clone going stale, an inbound status document arriving, a
+public repository gaining a document, or a repository being unaudited.
+Add: **nothing triggers on a deploy that has been failing.**
+
+The distinction this instance draws, which the previous five did not:
+`SURVEYED.md` and `check-freshness.py` watch whether the archive's
+*claims* have gone stale. Nothing watches whether the *machinery that
+publishes them still runs*. A claim can be perfectly current, correctly
+surveyed, freshly re-read — and served to nobody.
