@@ -516,11 +516,37 @@ file. And a defect verified absent in the one repository examined says
 nothing about repositories not examined. Correct labelling in one
 artifact is not evidence about another; only looking is.
 
-**Standing scope note.** Four of the eight repositories still have not
-been audited for this defect class (`crystal-vision`,
+**Standing scope note.** Four of the eight repositories then visible had
+not been audited for this defect class (`crystal-vision`,
 `The-Crystal-Vision`, `TerAustralis-Incognita`,
 `TerAustralis-Incognita-Code`). This is recorded as unexamined, not as
 clean. Per the reasoning above, no claim is made about them either way.
+
+**Corrected 2026-07-28: the denominator was wrong.** "Eight" was this
+session's clone count, not the portfolio. A GitHub API query for
+`user:CrystalArchitect` returns **eleven**, so seven repositories are
+unaudited for this defect class, not four — the three additions
+(`crystalcore-os-aeris-vault12`, `teraustralis-incognita-v2`,
+`teraustralis-v2-presentation`) were never in this session's scope and
+could not be cloned, `add_repo` requiring an approval a non-interactive
+session cannot obtain.
+
+Worth naming plainly, because it is the third instance of one error in
+this file. Part 6 established that a defect verified absent in the
+repositories you examined says nothing about repositories you did not.
+Part 9 reduced that to "only looking is." Then the very sentence stating
+the rule counted its own scope from what happened to be mounted, and got
+the denominator wrong. Knowing the rule is not the same as having a
+number you can trust — a scope claim needs its source named, not just
+its logic sound.
+
+One of the three matters more than the other two.
+`crystalcore-os-aeris-vault12` is **public**, and Part 0 records it as
+carrying the Starline edge-node and Consent Token specifications. A
+public specification repository is exactly where a decorative figure
+read as a specification does the most damage, and it is precisely the
+class of repository this defect has favoured. Unexamined, and flagged
+as the one to look at first.
 
 ---
 
