@@ -1552,3 +1552,81 @@ it. Closing that needs a different mechanism: something that enumerates
 the account and diffs against the roster.
 
 Still open. Still the longest-standing item here.
+
+---
+
+## Part 17 — Filed 2026-07-30 (a second Clementine, built for nothing)
+
+### What happened
+
+Asked to build a local-first companion app, an assistant built one from
+scratch: a Node bridge, a set of Web Components, a consent gate, a
+hash-chained audit log, an installable PWA layer, and a deployment
+runbook. Roughly nine hundred lines across six commits, verified end to
+end in a browser.
+
+It already existed. `The-Crystal-Vision/clementine/` holds a Clementine
+companion — Ollama wired to `llama3.1:8b`, layered memory with
+`nomic-embed-text` embeddings and recency-weighted recall, profiles,
+reflection, summarisation, streaming, and a Svelte interface with chat,
+avatar and senses. Around eighteen hundred lines, and further along than
+the replacement on every axis except three.
+
+The portfolio's own README said so. `crystalcore/README.md` line 7 reads:
+*"the-crystal-vision = The Crystal Vision (codex site + Clementine
+sovereign companion app)."* The map was correct, present, and unread.
+
+### The cost, and the part that was not wasted
+
+Three pieces were genuinely absent from the existing app and were folded
+into it: the consent gate, the audit log, and installability. Those are
+now in `The-Crystal-Vision` PR #44. The Node implementation of the same
+ideas was discarded rather than kept alongside — two codebases sharing one
+name is how the confusion began.
+
+The unrecoverable cost is the memory system, the profiles, and the Svelte
+interface, all rebuilt worse and thrown away. Perhaps half the work.
+
+### A symptom that should have been read as evidence
+
+Mid-task the maintainer ran `pip install -r requirements pythonclemen…`
+in a droplet console. The assistant replied that there was no
+`requirements.txt` because the bridge was plain Node with no
+dependencies. That was true of the directory the assistant had built and
+false about the maintainer's project:
+`The-Crystal-Vision/clementine/requirements.txt` exists and holds Flask
+and requests. The maintainer was trying to run the real Clementine and was
+told it did not exist.
+
+The correction was available in the user's own commands and was overridden
+by the assistant's model of the work. That is the mechanism worth naming:
+not ignorance of the repository, but confidence surviving contact with
+evidence against it.
+
+### Why this belongs in this file
+
+This file records what the archive got wrong, including when the archive
+itself was the author. Parts 15 and 16 record tooling that shipped a stale
+claim and a survey method that missed a repository. This is the same class
+one layer out: **work begun without reading the map that was already
+written.** A portfolio whose central problem has been overclaiming can
+also suffer its inverse — building what exists because nobody checked.
+
+### The rule it argues for
+
+Before building anything named after something in this portfolio, grep the
+portfolio for the name. `crystalcore/clementine/` (the Songline Bus hub)
+and `The-Crystal-Vision/clementine/` (the companion) are both called
+Clementine and are different systems; a third would have made it worse.
+The name collision is unresolved and is now the second naming decision
+waiting on the maintainer, alongside Lumina.
+
+### Standing risk, sixth instance
+
+Parts 0, 10, 11 and 16 record that nothing fires when a repository is
+created or a document arrives. This is the same gap read from the other
+direction: nothing fires when work *duplicates* what a repository already
+contains, either. The roster this archive maintains is exactly the
+instrument that would have prevented it, and it was not consulted.
+
+Still open.
