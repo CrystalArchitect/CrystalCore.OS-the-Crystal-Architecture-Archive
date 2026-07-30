@@ -671,3 +671,45 @@ came to read as a description of a built system.
 ### Cross References
 `STATUS.md` (per-repo ledger), `SURVEYED.md`, `11-CORRECTIONS.md`
 Part 16, `04-GOVERNANCE.md` (licensing, ADR-0009 and ADR-0013).
+
+---
+
+## Statement
+
+`crystal-vision` was **renamed** to `CrystalCore-Starlines-and-Dreamlines` on
+2026-07-29 and now publishes via GitHub Pages rather than Vercel. It is the
+same repository — GitHub redirects the old name, so both resolve — and the
+portfolio still holds **twelve**.
+
+Every Statement above that names `crystal-vision` remains correct as a claim
+about its date. This entry exists so that a reader looking for that name today
+finds where it went, rather than concluding the repository is missing or that
+a new one has appeared.
+
+**Status: Implemented** (verified against live GitHub metadata, not inferred
+from file contents).
+
+### Evidence
+- GitHub API returns id **1304095452**, `full_name:
+  CrystalArchitect/CrystalCore-Starlines-and-Dreamlines`, for *both*
+  `CrystalArchitect/crystal-vision` and the new name. One id, one repository.
+- `git ls-remote` against a clone whose `origin` is `…/crystal-vision`
+  returns `6364d0d`, the head of the renamed repository.
+- Head `6364d0d`, read 2026-07-30. Still private.
+
+### Historical Notes
+An assistant first read this as a *thirteenth* repository holding a duplicate
+of `crystal-vision`, on the evidence that all twelve shared files were
+byte-identical, and drafted entries here, in `STATUS.md` and in `SURVEYED.md`
+raising the count to thirteen. That was wrong, was caught by this archive's own
+freshness check reporting an impossible shared head commit, and was discarded
+before it was committed. Recorded in `11-CORRECTIONS.md` Part 18.
+
+Two defects found in the repository during that survey were real and were
+corrected the same day: two GitHub Actions workflows racing to publish Pages
+(both succeeding, the later winning), and a README that still identified the
+repository by its former name.
+
+### Cross References
+`STATUS.md` (per-repo ledger), `SURVEYED.md` (rename is invisible to a
+name-keyed survey — see its Known limits), `11-CORRECTIONS.md` Part 18.
