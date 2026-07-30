@@ -1630,3 +1630,82 @@ contains, either. The roster this archive maintains is exactly the
 instrument that would have prevented it, and it was not consulted.
 
 Still open.
+
+---
+
+## Part 18 — Filed 2026-07-30 (a thirteenth repository that was not one)
+
+### The claim, and its retraction
+
+On 2026-07-30 the maintainer shared a GitHub Pages URL for
+`CrystalCore-Starlines-and-Dreamlines`. The archive did not have that name.
+
+An assistant surveyed it, found every one of its twelve shared files
+byte-identical to `crystal-vision`, and concluded: a thirteenth repository,
+holding a duplicate of the twelfth. Draft entries were written for
+`02-REPOSITORY-MAP.md`, `STATUS.md`, `SURVEYED.md`, and this file; the count
+was raised from twelve to thirteen throughout; and a note was added to the
+other repository's README warning that the two copies would silently diverge.
+
+**All of it was wrong.** `crystal-vision` was **renamed** to
+`CrystalCore-Starlines-and-Dreamlines` on 2026-07-29. GitHub redirects the old
+name. There is one repository, and the portfolio still has twelve.
+
+Nothing reached this repository's `main` — the draft was discarded before
+commit. The README note did reach the other repository and was corrected the
+same hour, in a pull request that says plainly that it is fixing its author's
+error.
+
+### What caught it
+
+Running the archive's own tool rather than reasoning about the result.
+`check-freshness.py` reported `crystal-vision` as *now at* `c471338` — which
+was, character for character, the head of the supposedly separate repository.
+Two repositories do not share a head commit by coincidence.
+
+Confirmed twice over: `git ls-remote` against a clone whose `origin` is
+`…/crystal-vision` returns this repository's head, and the GitHub API returns
+id **1304095452** with `full_name: CrystalCore-Starlines-and-Dreamlines` for
+both names. One id, one repository.
+
+### The reasoning error
+
+Identical content across two names has two explanations: someone copied it, or
+it is the same thing. The assistant took the first without testing the second,
+then built a structure on top of it — a Statement, a ledger entry, a survey
+row, a corrections entry, and a warning in someone else's README. Each new
+piece made the original inference feel more established without ever
+re-examining it.
+
+That is the same failure as Part 17, one step earlier in the chain. Part 17
+recorded work begun without reading the map. This is work continued without
+re-reading the evidence.
+
+### The defect it exposed, which is real
+
+`SURVEYED.md` is **keyed by repository name**, and a rename is invisible to it.
+GitHub's redirect meant `check-freshness.py` kept fetching the right repository
+under a name that no longer existed, and reported the result as an ordinary
+moved commit. Had the rename been to a name the archive did not recognise *and*
+the redirect not existed, the row would have gone silently unreachable instead.
+
+Neither failure mode is loud. Keying rows on the numeric repository id GitHub
+assigns — stable across renames — would make a rename visible **as** a rename,
+which is the only way this archive would ever notice one.
+
+Recorded here rather than fixed in passing: the fix changes the survey table's
+shape, and the archive's discipline is that a schema change gets proposed, not
+slipped in beside a correction.
+
+### On the standing risk
+
+This is **not** an eighth instance of the repository-creation gap. No repository
+was created; one was renamed. Parts 0, 10, 11, 16 and 17 stand as they are.
+
+What it adds is a second failure mode for the same roster: not only does nothing
+fire when a repository appears, nothing fires when one changes identity. The
+mechanism proposed in Part 16 — enumerate the account, diff against the survey —
+would catch both, and keying on id rather than name is what would let it tell
+them apart.
+
+Still open.

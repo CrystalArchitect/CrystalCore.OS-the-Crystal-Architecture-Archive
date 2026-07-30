@@ -99,11 +99,14 @@ each repo's own STATUS.md where one exists.
 - crystalcore (Songline pack; not archived — same correction as above,
   was wrongly marked "archived 2026-07-18, read-only") — never
   contained the package in any commit (full-history search, 2026-07-24).
-- crystal-vision (not archived — same correction, private) — audited
-  2026-07-24: functional static Vercel demo, v0.5.1, Apache-2.0, zero
-  network calls, zero secrets. Two minor cosmetic defects (a dead
-  element-id reference, one footer link that 404s past the deploy
-  tree). No longer the blank on this list — detail in
+- CrystalCore-Starlines-and-Dreamlines — renamed from crystal-vision on
+  2026-07-29; GitHub redirects the old name, so both refer to one
+  repository. Not archived, private. Audited 2026-07-24 under its former
+  name: functional static demo, v0.5.1, zero network calls, zero secrets.
+  Two minor cosmetic defects (a dead element-id reference, one footer link
+  that 404s past the deploy tree). Now published via GitHub Pages rather
+  than Vercel; two Pages workflows were racing to deploy and the later one
+  won, corrected 2026-07-30. Detail in
   knowledge-base/02-REPOSITORY-MAP.md.
 - teraustralis-proposal (public; added to this ledger 2026-07-29, the day
   it was created) — the outward-facing proposal package, seeking
