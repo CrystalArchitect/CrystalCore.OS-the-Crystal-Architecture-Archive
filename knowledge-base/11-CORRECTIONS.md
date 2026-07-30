@@ -1468,3 +1468,165 @@ and trusted.
 Unlike Part 14, this correction closes clean: nothing here is deferred to
 the maintainer. The Settings click was correct and is done; what needed
 fixing was the unreviewed code it brought in alongside it.
+---
+
+## Part 16 — Filed 2026-07-29 (a twelfth repository, and this
+archive's own tooling caught lying)
+
+### The portfolio has twelve repositories
+
+`teraustralis-proposal` was created at **20:17** and is **public**. The
+archive learned of it at **20:54**, thirty-seven minutes later, and only
+because a question about repository descriptions caused the account's
+repositories to be listed — twelve rows where the archive expected
+eleven. Nothing in the method would have surfaced it otherwise.
+
+It is now recorded in [`02-REPOSITORY-MAP.md`](02-REPOSITORY-MAP.md),
+[`../STATUS.md`](../STATUS.md) and [`../SURVEYED.md`](../SURVEYED.md).
+Two things about it are worth carrying here rather than only in the map:
+
+- **It is the only repository addressed to people outside the project** —
+  a formal proposal seeking technical review and partnership, under an
+  ABN and a named founder. Whatever this archive gets wrong elsewhere
+  costs the maintainer time. What that repository gets wrong costs
+  someone else's judgement.
+- **Its technical brief asserted four properties of CrystalCore in the
+  present tense.** Checked against `TerAustralis-Incognita-Code` at
+  `f81dc37`: local-first held; auditable and consent-native held for
+  tool calls but not for memory; **fail-safe isolation was not
+  implemented at all**. Reported the same day with a correction patch.
+  This is Part 11's defect class again, now in front of investors.
+
+And a detail that reframes it. The pre-restructure `TECHNICAL-BRIEF.md`
+carried a `## Current Status` section reading *"this brief states the
+design intent."* The restructure at `c0a7c63` dropped it. **The honesty
+label existed first and was lost in a reorganisation** — nobody decided
+to overclaim. That is a gentler and more useful finding than
+intent-to-mislead, and it argues for labels that live in the same block
+as the claim, where moving one moves the other.
+
+### This archive's own freshness tooling was making a stale claim
+
+`SURVEYED.md` was written in this session to stop the archive being
+quietly out of date. Its "Known limits" section said:
+
+> Only `TerAustralis-Incognita` is public. The freshness check can read
+> that one anonymously; the other ten need a checkout or credentials.
+
+`check-freshness.py` said the same in a docstring: *"ten of the eleven
+repositories are private."*
+
+**Both halves were wrong.** Live GitHub metadata: **five are public** —
+`TerAustralis-Incognita`, `CrystalCore.OS`, `CrystalCore-AERIS`,
+`crystalcore-os-aeris-vault12`, `teraustralis-proposal`. And running the
+script rather than reasoning about it showed visibility was never the
+constraint: from a session container it reports `not reachable from
+here: 0` and resolves **all twelve**, private ones included.
+
+So the file built to prevent stale claims shipped one, and understated
+its own tool in both directions at once. Nobody had run it and read the
+output against what the documentation promised. That is the same failure
+the file exists to catch, committed by the file.
+
+Recorded here rather than quietly patched, because a corrections log that
+omits its author's errors is a worse instrument than one that includes
+them.
+
+### Standing risk, fifth instance — and it is no longer a prediction
+
+Parts 0, 10 and 11 recorded that nothing triggers when a repository is
+created, when a clone goes stale, or when a document arrives. Part 11
+called it *"the longest-standing unresolved item in this file."*
+
+It was written on 2026-07-29. `teraustralis-proposal` was created on
+2026-07-29, some hours later, and went unnoticed until a coincidence
+surfaced it. The gap did not merely remain open; it was demonstrated by
+the very next event.
+
+`check-freshness.py` narrows the *stale clone* case and, now that it is
+known to reach all twelve, narrows it further than the archive believed.
+It does nothing for repository creation, because it only checks
+repositories `SURVEYED.md` already lists — a repository nobody has heard
+of is not stale, it is absent, and no amount of freshness checking finds
+it. Closing that needs a different mechanism: something that enumerates
+the account and diffs against the roster.
+
+Still open. Still the longest-standing item here.
+
+---
+
+## Part 17 — Filed 2026-07-30 (a second Clementine, built for nothing)
+
+### What happened
+
+Asked to build a local-first companion app, an assistant built one from
+scratch: a Node bridge, a set of Web Components, a consent gate, a
+hash-chained audit log, an installable PWA layer, and a deployment
+runbook. Roughly nine hundred lines across six commits, verified end to
+end in a browser.
+
+It already existed. `The-Crystal-Vision/clementine/` holds a Clementine
+companion — Ollama wired to `llama3.1:8b`, layered memory with
+`nomic-embed-text` embeddings and recency-weighted recall, profiles,
+reflection, summarisation, streaming, and a Svelte interface with chat,
+avatar and senses. Around eighteen hundred lines, and further along than
+the replacement on every axis except three.
+
+The portfolio's own README said so. `crystalcore/README.md` line 7 reads:
+*"the-crystal-vision = The Crystal Vision (codex site + Clementine
+sovereign companion app)."* The map was correct, present, and unread.
+
+### The cost, and the part that was not wasted
+
+Three pieces were genuinely absent from the existing app and were folded
+into it: the consent gate, the audit log, and installability. Those are
+now in `The-Crystal-Vision` PR #44. The Node implementation of the same
+ideas was discarded rather than kept alongside — two codebases sharing one
+name is how the confusion began.
+
+The unrecoverable cost is the memory system, the profiles, and the Svelte
+interface, all rebuilt worse and thrown away. Perhaps half the work.
+
+### A symptom that should have been read as evidence
+
+Mid-task the maintainer ran `pip install -r requirements pythonclemen…`
+in a droplet console. The assistant replied that there was no
+`requirements.txt` because the bridge was plain Node with no
+dependencies. That was true of the directory the assistant had built and
+false about the maintainer's project:
+`The-Crystal-Vision/clementine/requirements.txt` exists and holds Flask
+and requests. The maintainer was trying to run the real Clementine and was
+told it did not exist.
+
+The correction was available in the user's own commands and was overridden
+by the assistant's model of the work. That is the mechanism worth naming:
+not ignorance of the repository, but confidence surviving contact with
+evidence against it.
+
+### Why this belongs in this file
+
+This file records what the archive got wrong, including when the archive
+itself was the author. Parts 15 and 16 record tooling that shipped a stale
+claim and a survey method that missed a repository. This is the same class
+one layer out: **work begun without reading the map that was already
+written.** A portfolio whose central problem has been overclaiming can
+also suffer its inverse — building what exists because nobody checked.
+
+### The rule it argues for
+
+Before building anything named after something in this portfolio, grep the
+portfolio for the name. `crystalcore/clementine/` (the Songline Bus hub)
+and `The-Crystal-Vision/clementine/` (the companion) are both called
+Clementine and are different systems; a third would have made it worse.
+The name collision is unresolved and is now the second naming decision
+waiting on the maintainer, alongside Lumina.
+
+### Standing risk, sixth instance
+
+Parts 0, 10, 11 and 16 record that nothing fires when a repository is
+created or a document arrives. This is the same gap read from the other
+direction: nothing fires when work *duplicates* what a repository already
+contains, either. The roster this archive maintains is exactly the
+instrument that would have prevented it, and it was not consulted.
+
+Still open.

@@ -40,10 +40,15 @@ Written, readable, no execution involved.
   received in WEAVER-NEXUS-HANDOFF-2026-07-29.md. A document, and only
   a document. It describes eight volumes, 84 artifacts, formal proofs,
   a hardware program and a runtime kernel; a search of all 502 commits
-  across all eleven repositories found none of them, so nothing else on
-  this page moves because of it. It sets its own ceiling too — every
+  across all eleven repositories then known found none of them, so
+  nothing else on this page moves because of it. It sets its own ceiling too — every
   row unreceipted, witness gate 0/2, production authority withheld.
   Read the reception record at the head of that file before the text.
+
+- TerAustralis Incognita formal proposal package — seven numbered
+  documents in `teraustralis-proposal`, surveyed 2026-07-29 at `829156b`.
+  Prose only: no code, no CI, nothing to run. Public, and the only
+  repository in the portfolio addressed to readers outside the project.
 
 ## Designed, not built
 Specified enough that someone could build it. Nobody has.
@@ -99,6 +104,15 @@ each repo's own STATUS.md where one exists.
   network calls, zero secrets. Two minor cosmetic defects (a dead
   element-id reference, one footer link that 404s past the deploy
   tree). No longer the blank on this list — detail in
+  knowledge-base/02-REPOSITORY-MAP.md.
+- teraustralis-proposal (public; added to this ledger 2026-07-29, the day
+  it was created) — the outward-facing proposal package, seeking
+  technical review and partnership under ABN 70 741 068 059. No code, no
+  CI. Licensed All Rights Reserved, diverging from the portfolio-wide
+  CC-BY-NC-ND of ADR-0013 — defensible for a proposal, undocumented as a
+  decision. Its technical brief asserted four capability properties in
+  the present tense that the reference implementation did not hold;
+  reported with a correction patch the same day. Detail in
   knowledge-base/02-REPOSITORY-MAP.md.
 
 ## Known unknowns
