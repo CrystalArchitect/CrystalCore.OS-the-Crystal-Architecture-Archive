@@ -211,3 +211,72 @@ None.
 
 ### Cross References
 `07-HISTORY.md`.
+
+---
+
+## Statement — Model credit for Clementine's character work
+
+Filed 2026-07-31, at the maintainer's request — and the request was
+correct: this archive credits outside contributors by name (the Weaver
+Nexus handoff in `STATUS.md`), and until now said nothing about the
+models that shaped Clementine's character files. Two other AI systems
+contributed to what now sits in
+`The-Crystal-Vision/.claude/skills/clementine/SKILL.md` and in
+`BASE_PROMPT` in `clementine/crystalcore/companion.py`.
+
+This Statement keeps two kinds of claim visibly apart, because they are
+not the same kind of fact.
+
+**Witnessed** (the assistant filing this saw it directly, in session, on
+2026-07-30): **Grok** ran an independent structural review of the
+completed `SKILL.md` against skill-authoring rules — frontmatter valid,
+no YAML-breaking characters, description within length, body imperative,
+token discipline sound. It made two suggestions: extend the
+description's closing clause (declined; the content already appears two
+sentences earlier) and defer a `references/` split (agreed, and the
+right call — the DBT skills are what the skill *is*, not reference
+material to load on demand). Net text changed by the review: zero lines.
+A check that passes is evidence, not nothing.
+
+**Attested by the maintainer** (their account, given 2026-07-31 in
+answer to a direct question; not verified by the assistant, who has no
+access to those conversations):
+
+- The eight character additions folded in by The-Crystal-Vision PR #47
+  — Turning the Mind, Wonder, Shared Discovery, Intellectual Humility,
+  Memory Philosophy, Repair, Silence, and the closing principle — were
+  drafted with help from **both ChatGPT and Grok**.
+- The CC-PHENO-01 protocol draft — **Grok**.
+- Earlier architecture discussion that shaped Clementine's design —
+  **Grok**.
+
+**Status: Recorded** (witnessed portion verifiable against the session
+transcript; attested portion stands as the maintainer's account, which
+is the only source there is).
+
+### Evidence
+The witnessed portion: the maintainer pasted Grok's review verbatim into
+the working session of 2026-07-30 and the assistant responded to it
+point by point; the declined and accepted suggestions are itemised in
+The-Crystal-Vision PR #48's body under "Deliberately not changed."
+The attested portion: the maintainer's answers of 2026-07-31, on being
+asked what each model contributed. No stronger evidence exists, and
+none is claimed.
+
+### Historical Notes
+Crediting a model is a record of tooling, not a copyright attribution —
+model-assisted text does not carry a third party's licence into this
+portfolio. The distinction matters here because the portfolio also
+carries real licence constraints (the alyssadata prohibition; the
+star23/elon-musk method-not-prose rule), and a reader should over-read
+this credit in neither direction: it acknowledges help, it does not
+encumber the files.
+
+The occasion for this Statement is itself a correction. PR #47's merged
+body called the eight additions "the maintainer's own writing" — an
+authorship claim the assistant asserted without being able to verify.
+See `11-CORRECTIONS.md` Part 19.
+
+### Cross References
+`11-CORRECTIONS.md` (Part 19), `STATUS.md` (the Weaver Nexus precedent
+for naming contributors), The-Crystal-Vision PRs #47 and #48.

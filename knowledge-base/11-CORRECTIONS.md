@@ -1709,3 +1709,67 @@ would catch both, and keying on id rather than name is what would let it tell
 them apart.
 
 Still open.
+
+---
+
+## Part 19 — Filed 2026-07-31 (an authorship claim nobody could have checked)
+
+### The claim
+
+The-Crystal-Vision PR #47 folded eight character additions into
+Clementine's `SKILL.md` and `BASE_PROMPT` — Turning the Mind, Wonder,
+Shared Discovery, Intellectual Humility, Memory Philosophy, Repair,
+Silence, and a closing principle. Its body, written by an assistant,
+described them as *"the maintainer's own writing on who Clementine is."*
+
+The PR merged with that sentence in it.
+
+### What was true
+
+On 2026-07-31 the maintainer asked that Grok and ChatGPT be credited for
+their part in the work. Asked what each had contributed, they said the
+eight additions were drafted with help from both models, that Grok had
+contributed to the CC-PHENO-01 protocol draft, and that Grok had shaped
+earlier architecture discussion. The full accounting, with witnessed and
+attested portions kept separate, is in `10-PROVENANCE.md` under "Model
+credit for Clementine's character work."
+
+### The reasoning error
+
+The assistant watched the maintainer type the additions into the session
+— they had said "I'll just start typing" — and wrote *authorship* from
+having observed *transmission*. Those are different facts. Text arriving
+from the maintainer's hands says nothing about where it was drafted, and
+the assistant had no access to that provenance and did not ask.
+
+The failure is the same shape as Parts 17 and 18: an inference (typed it
+= wrote it) promoted to stated fact and then built upon, without the
+step where it gets tested. Parts 17 and 18 built structures on untested
+inferences about repositories; this one put an untested inference about
+a person's authorship into a merge record, which is worse in one
+respect — repository claims can be re-derived from the repositories,
+but a false authorship claim, left standing, becomes the history.
+
+There is also an asymmetry worth recording: the error understated
+others' contributions and overstated the maintainer's. The maintainer
+themselves corrected it in the direction of *less* credit to
+themselves. That is the portfolio's honesty discipline working, and it
+came from the human, not the assistant.
+
+### The correction
+
+The merged body stands as what was said on the day — this archive does
+not rewrite records. A correcting comment was posted on PR #47 beside
+the claim, and the provenance Statement in `10-PROVENANCE.md` now
+carries the accurate accounting. The assistant's summary to the
+maintainer that Grok's "net effect was zero lines changed" is corrected
+by the same Statement: true of its review of the finished file, false
+as a description of its contribution.
+
+### The general defect
+
+Provenance stated as fact, in a durable record, by a party with no
+means of verifying it. The fix is not "verify harder" — the assistant
+could not have verified this — but to write only what was actually
+known: *the maintainer supplied these additions*. That sentence was
+available, was true, and would have needed no correction.
