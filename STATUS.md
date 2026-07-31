@@ -2,6 +2,8 @@
 
 Last updated: 2026-07-24. One entry added 2026-07-29 under "Exists as
 a document" — nothing else on this page was re-verified that day.
+Entries added 2026-07-31 under "Running" and in the per-repo ledger for
+TerAustralis-Incognita; again, nothing else on this page was re-verified.
 
 Full portfolio knowledge-base reconstruction this pass:
 `knowledge-base/00-INDEX.md` (this repo).
@@ -18,6 +20,15 @@ Executes, or can be opened and used by someone other than me.
 - The two demo shells, the engine's own interface page, and the
   story-library prototype render in a headless browser, verified
   2026-07-24 — see the per-repo ledgers.
+- Provenance manifest and Bitcoin anchoring, in TerAustralis-Incognita,
+  added 2026-07-31. `mythos/tools/provenance.py` hashes the creative
+  work into one deterministic, `sha256sum -c`-compatible manifest;
+  `--check` names anything that drifted. A GitHub Actions workflow
+  stamps that manifest via OpenTimestamps and commits the proof back —
+  run three times on 2026-07-31, each time producing a proof whose
+  attested hash matches the manifest it was taken for. Free: no wallet,
+  no token, no cryptocurrency. Verifiable by anyone with the repository
+  and an `ots` client, which is the point.
 
 ## Built, not currently running
 Code exists and ran previously. No machine to run it on.
@@ -73,6 +84,28 @@ each repo's own STATUS.md where one exists.
   research. CI green with honestly shrunken scope; Pages deploys
   nothing since src/site moved out; the dbt warehouse is built, not
   running. Has its own STATUS.md.
+  Added 2026-07-31: **the music is held here now.** Ten recordings sit
+  in `mythos/music/`, each catalogued with its length, generation
+  timestamp and Suno track id read from its own ID3 tag. Until that day
+  the audio existed only on one platform under one subscription — the
+  only class of work in this portfolio held nowhere the maintainer
+  controlled. Four works are canon (three ignition songs plus Wire Skull
+  Memory); six recordings are not named in any canon document and are
+  labelled as such rather than promoted by being filed.
+  **Rights are split by a date.** A Suno Pro subscription ran to
+  2026-06-06; a purchase record shows a charge on 2026-05-07. Three May
+  recordings are confirmed Pro. Six recordings generated after 6 June
+  were made with no subscription, so free-tier terms apply and they are
+  very likely non-commercial. Two early-May recordings are **unresolved**
+  — the purchase view was filtered to 90 days, which cannot see whether
+  an earlier billing cycle existed.
+  **One recording was removed the same day.** `look-what-you-made-me-do.mp3`
+  shared its title with a 2017 Taylor Swift song; the maintainer listened
+  and confirmed the audio relates to it. Removed from the tree because
+  this repository is public and asserts CC BY-NC-ND over its audio, and
+  that grant is not the maintainer's to make over someone else's
+  composition. The catalogue row and a dated truth label stay; git
+  history was deliberately not rewritten.
 - TerAustralis-Incognita-Code — the engine and the vision app. All
   four core suites and Lumina's core tests pass on a fresh clone; CI
   (ci.yml) runs those suites on push — corrected 2026-07-24, this line
@@ -138,6 +171,11 @@ each repo's own STATUS.md where one exists.
   string in a test, not the code). A full Clementine session
   with Ollama is still untested.
 - Which workflows produce measurable value? Untested.
+- Did the Suno Pro subscription begin on 2026-05-07, or merely renew
+  then? Added 2026-07-31. It decides whether Red Dust Axis (2 May) and
+  the first Shooting Star Girl take (4 May) were made on a paid plan or
+  the free tier, and so whether they may be sold. One check settles it:
+  the same Apple purchase history with the range widened past April.
 - teraustralis-final.html — no longer listed under Running (moved
   here 2026-07-24). Full six-repo search this session — filename and
   content-grep, including archive/, local-snapshot directories, and
