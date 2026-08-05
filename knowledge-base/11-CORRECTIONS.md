@@ -1773,3 +1773,70 @@ means of verifying it. The fix is not "verify harder" — the assistant
 could not have verified this — but to write only what was actually
 known: *the maintainer supplied these additions*. That sentence was
 available, was true, and would have needed no correction.
+
+---
+
+## Part 20 — Filed 2026-08-05 (a library appeared, and two more names changed)
+
+### What a partial survey could see
+
+A library-sync session on 2026-08-05 had eleven CrystalArchitect
+repositories in scope, cloned on disk, and no way to enumerate the
+account. Against the twelve this archive last counted (Part 16, as
+amended by Part 18's rename finding), the differences visible from
+inside that scope:
+
+- **`the-library` exists.** Created 2026-08-03 08:42 (+1000), two
+  commits by the maintainer: a stub README and `loop-framework.md` — a
+  working document on recursive narrative loops (a twelve-layer radar, a
+  Method-vs-Logos rule, a DBT-based self-check protocol), which is also
+  the constellation's first governance-adjacent document to arrive
+  through no ledger at all. The session built the repository out into a
+  document collection: the master plan of 2026-08-01, the Manus
+  full-repository review of 2026-07-29, accession rules, and a sync
+  record (`records/2026-08-05-library-sync.md`) holding the survey
+  behind this filing.
+- **The repository this archive documents as `crystalcore` now carries
+  the GitHub name `TheCrystalVision`, and `The-Crystal-Vision` now
+  carries `Clementine---Local-Soveriegn-Edge-AGI`.** Identification is
+  by content: each clone's README still opens with its old identity
+  ("This is **Crystal Core** — the protocol pack" / "This is **The
+  Crystal Vision** — codex site + Clementine sovereign companion app").
+  The decisive test is the one Part 18 prescribed — GitHub's stable
+  numeric id — and the session had no account metadata to run it, so
+  rename-versus-recreation is here an inference, stated as one.
+- **The renamed `CrystalCore-Starlines-and-Dreamlines` (né
+  `crystal-vision`, Part 18) is no longer frozen.** The archive's model
+  holds it as provenance-only, never edited. Its clone carries commits
+  through 2026-07-31 — `GROK_BUILD.md`, `BUILD_MANIFEST.json`, a
+  rebuilt single-page site. A frozen repository that thaws silently is a
+  classification going stale with no mechanism to notice, which is this
+  file's oldest theme wearing a new coat.
+- **Every sibling map that names the old spellings now points at the
+  wrong doors** — including the maps inside the two renamed repositories
+  themselves, one of which still spells the umbrella `teraaustralis`
+  against ADR-0007. Part 17 showed those maps are what stands between a
+  session and rebuilding what exists; they are now wrong in four
+  repositories at once.
+
+### What this filing deliberately does not do
+
+`02-REPOSITORY-MAP.md`, `STATUS.md` and `SURVEYED.md` are not updated by
+it. The session could see eleven repositories, not the account: it could
+not read the July names to distinguish rename from replacement, could
+not check visibility, and could not count the constellation. Part 18
+demonstrated what happens when a structure is built on an untested
+identity inference; the same restraint applied here means the map waits
+for a pass with account metadata. Filed instead, with the evidence
+stated at its actual strength.
+
+### The standing risk, still standing
+
+Parts 0, 10, 11, 16 and 17 record that nothing fires when a repository
+is created; Part 18 added that nothing fires when one changes identity.
+Both gaps produced this filing: a repository lived for two days before
+any ledger heard of it, and two renames were caught only because a
+session's scope list happened to spell the new names. The Part 16
+mechanism — enumerate the account, diff against an id-keyed roster —
+would have caught all three events and told them apart. Still open.
+Still the longest-standing item here.
