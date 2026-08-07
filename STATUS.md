@@ -92,13 +92,20 @@ each repo's own STATUS.md where one exists.
   controlled. Four works are canon (three ignition songs plus Wire Skull
   Memory); six recordings are not named in any canon document and are
   labelled as such rather than promoted by being filed.
-  **Rights are split by a date.** A Suno Pro subscription ran to
-  2026-06-06; a purchase record shows a charge on 2026-05-07. Three May
-  recordings are confirmed Pro. Six recordings generated after 6 June
-  were made with no subscription, so free-tier terms apply and they are
-  very likely non-commercial. Two early-May recordings are **unresolved**
-  — the purchase view was filtered to 90 days, which cannot see whether
-  an earlier billing cycle existed.
+  **Rights are split by a date, and the date is now settled.** Added
+  2026-08-07: an order receipt for the 2026-05-07 charge reads "Init.
+  Subscription" — Apple's own label for a plan's first payment, not a
+  renewal — which fixes the Pro period at 2026-05-07 to 2026-06-06 without
+  relying on the earlier 90-day purchase-history window. Three May
+  recordings (Wire Skull Memory, Fermi's Silent Line, Safari Chains) are
+  confirmed Pro. Two earlier ones (Red Dust Axis, 2 May; the first
+  Shooting Star Girl take, 4 May) are confirmed free-tier, resolving the
+  prior open question. Six recordings generated after 6 June were made
+  with no subscription, so free-tier terms apply and they are
+  non-commercial. All ten rows are now settled; none remain open. A
+  further receipt shows the subscription renewed again on 2026-08-08,
+  so it is active once more as of this writing — not relevant to any of
+  the ten dated recordings, which all predate it.
   **One recording was removed the same day.** `look-what-you-made-me-do.mp3`
   shared its title with a 2017 Taylor Swift song; the maintainer listened
   and confirmed the audio relates to it. Removed from the tree because
@@ -171,11 +178,6 @@ each repo's own STATUS.md where one exists.
   string in a test, not the code). A full Clementine session
   with Ollama is still untested.
 - Which workflows produce measurable value? Untested.
-- Did the Suno Pro subscription begin on 2026-05-07, or merely renew
-  then? Added 2026-07-31. It decides whether Red Dust Axis (2 May) and
-  the first Shooting Star Girl take (4 May) were made on a paid plan or
-  the free tier, and so whether they may be sold. One check settles it:
-  the same Apple purchase history with the range widened past April.
 - teraustralis-final.html — no longer listed under Running (moved
   here 2026-07-24). Full six-repo search this session — filename and
   content-grep, including archive/, local-snapshot directories, and
