@@ -65,9 +65,13 @@ Written, readable, no execution involved.
   first-appearance names (Rex, Terafab, MarsBase Down Under), a song
   list that diverges from the held catalogue in five particulars, and
   one line — "Lattice integrity: 100 %" — that reads as telemetry for
-  a substrate the Constitution locks as designed, not built. Nothing
-  else on this page moves because of it. Read the reception record at
-  the head of that file before the text.
+  a substrate the Constitution locks as designed, not built. A second
+  delivery later the same day added one song title and the export's
+  first named person — an external X account "logged as a node";
+  recorded in an appendix to the same file, held to the export's own
+  "observed, not claimed." Nothing else on this page moves because of
+  it. Read the reception record at the head of that file before the
+  text.
 
 - TerAustralis Incognita formal proposal package — seven numbered
   documents in `teraustralis-proposal`, surveyed 2026-07-29 at `829156b`.
