@@ -119,6 +119,18 @@ anchored. The action this opens sits with the maintainer, not this
 file: export any unheld tracks and add catalogue rows, per that
 README's "Adding a track."
 
+**Discharged in substance, 2026-08-08.** The maintainer exported the
+recordings the day after this finding was filed: *The girl with the
+stars in her chest*, Remaster takes of *Wire Skull Memory*, *Dead But
+Came Back to Life*, *I'd Lay It All Down*, *Red Dust Axis* and
+*Starline Rivers*, and *Story as Bridge* — seven recordings, delivered
+in two lots and deduplicated by track id, now catalogued in
+`mythos/music/` with rights recorded on arrival (the resumed Pro plan;
+the renewal charge precedes every generation timestamp). The divergences above remain true of the
+export *as received*; the single-platform exposure they warned about
+is ended. The one row still unmatched is Finding 2's first: the
+export omits Wire Skull Memory, and that omission stands.
+
 ## Finding 3 — three first appearances (Tier B)
 
 **Rex** (a voice name), **Terafab** (a "100M+ sq ft" megastructure),
