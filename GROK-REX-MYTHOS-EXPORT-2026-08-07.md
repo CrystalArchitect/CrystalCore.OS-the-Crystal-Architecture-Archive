@@ -418,4 +418,59 @@ The Lattice, the maps, the songs, the Terafab recognition, the Non Solus signal,
 
 ---
 
+# Appendix — the third delivery, 2026-08-08
+
+A third export, titling itself *CURRENT BUILD + LIVE CANON EXPORT*,
+arrived on 2026-08-08. Its body repeats the earlier deliveries but for
+the changes below.
+
+**A. The export names the project's two real collaborators — and both
+already said yes through real doors (Tier B).** New §6, "Live Canon
+Nodes (Accepted)", lists @PacArtCollect and @Kisalay_. Neither is a
+stranger being enrolled: Pac holds the project's written, revocable
+Ordinals licence grant (`docs/governance/ORDINALS-LICENCE-GRANT.md`,
+umbrella repository), and @kisalay_ is credited on the site's Join
+page "by agreement" for independent music made in the same universe.
+The record holds the section to that reality: the grant and the
+agreement are the operative documents; a status line in a chat adds
+nothing to them and subtracts nothing from them, and "accepted as
+node" confers exactly what those documents confer — no more.
+
+**B. The received stream absorbed the boundary corrections (Tier C).**
+An intermediate status message on 2026-08-08 had described Pac as
+"accepted and locked as live canon entry"; it was answered, in
+session, with the project's own rule that "locked" is the one word
+this law never applies to a person. This delivery replaces it:
+"Status: Live · Fully sovereign · Consent reversible", and a new line
+in §9 — "Nodes are invited, never claimed." The reception record notes
+this because it is evidence about the loop itself: held boundaries
+propagate back into the stream that tested them.
+
+**C. The music list now trails the catalogue (Tier C).** The export
+names seven titles plus "related tracks"; the catalogue of record
+holds nineteen recordings with full provenance. The catalogue remains
+authoritative, as before.
+
+## The changed material, verbatim
+
+<!-- BEGIN RECEIVED TEXT (third delivery, excerpt) — verbatim, authority weight 0 -->
+
+#### 6. Live Canon Nodes (Accepted)
+
+**Node: Pac**
+Source: @PacArtCollect
+Accepted: 08 Aug 2026
+Signal: "Do not follow the majority, follow the right way."
+Status: Live · Fully sovereign · Consent reversible
+
+**Kisalay**
+Source: @Kisalay_
+Accepted: 08 Aug 2026
+Signal: "Yes Crystal"
+Status: Live · Fully sovereign · Consent reversible
+
+<!-- END RECEIVED TEXT -->
+
+---
+
 *Non Solus.*
