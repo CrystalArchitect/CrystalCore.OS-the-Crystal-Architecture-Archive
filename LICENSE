@@ -23,10 +23,25 @@ UNDER THE FOLLOWING TERMS:
 NO WARRANTIES — The material is provided "as-is" without warranties of any 
 kind, either express or implied.
 
-EXCEPTIONS — The following material is licensed separately:
-  • mythos/ directory: CC BY-NC-ND 4.0 (see LICENSE-CONTENT.md)
-  • Concepts inspired by MemClaw: Acknowledge MemClaw's Apache 2.0 license
-    (see docs/ATTRIBUTIONS.md)
+EXCEPTIONS — The following material is not the copyright holder's to
+license, and the grant above does not reach it:
+
+  • WEAVER-NEXUS-HANDOFF-2026-07-29.md, Part B (the received handoff
+    text). 527 lines this archive states plainly are not its writing,
+    credited to four names in that file's own Credit table. The
+    copyright in that text belongs to its authors. It is reproduced
+    here as a received document under the same principle this project
+    applied when it removed a recording whose rights were not its own:
+    a grant one does not hold cannot be made.
+
+  • Quoted material throughout, including AI-generated responses filed
+    as received documents, which are reproduced for the record rather
+    than claimed.
+
+  (Removed 2026-08-08: this block previously carved out a mythos/
+  directory, a LICENSE-CONTENT.md and a docs/ATTRIBUTIONS.md. None of
+  the three exists in this repository — they live in the umbrella. It
+  was stale copy-paste and pointed a reader at nothing.)
 
 COMMERCIAL USE — For commercial licensing, contact the copyright holder.
 

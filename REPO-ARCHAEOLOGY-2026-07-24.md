@@ -51,7 +51,7 @@ software now lives in `TerAustralis-Incognita-Code`.
 | When (as recorded) | Event |
 |---|---|
 | 2026-07-14 16:38 +1000 | `The-Crystal-Vision` first commit (`caeab7d`, "Initial commit") — the oldest commit in any of the six repos |
-| 2026-07-14 → 07-17 | 140 commits land in `The-Crystal-Vision`, including the only external actors seen anywhere: v0 (7), vercel[bot] (3), dependabot[bot] (2), Kevin Sullivan (1) |
+| 2026-07-14 → 07-17 | 140 commits land in `The-Crystal-Vision`, including the only external actors seen anywhere: v0 (7), vercel[bot] (3), dependabot[bot] (2), one external human author (1) |
 | 2026-07-17 06:45 −0800 | `crystal-vision` created (`0b03c6a`); content labeled "Grok Build v0.4.0" |
 | 2026-07-17 09:50 +1000 | `crystalcore` created (`35030f7`, "CrystalCore Seven Sisters pack") |
 | 2026-07-17 12:53 +1000 | Commit later marked by checkpoint tag `vision-safe-2026-07-17` (`b9fcd83`) |
@@ -112,7 +112,7 @@ software now lives in `TerAustralis-Incognita-Code`.
   snapshot root) — merged unrelated histories.
 - Last commit `8e8d42e`, 2026-07-17 23:39 −0800; nothing since.
 - Authors: Claude 71, Crystal Arena-Turner 39, CrystalArchitect 17,
-  v0 7, vercel[bot] 3, dependabot[bot] 2, Kevin Sullivan 1 — the only
+  v0 7, vercel[bot] 3, dependabot[bot] 2, one external human author 1 — the only
   repo with any external or bot authorship.
 - Content: SvelteKit codex site, `clementine/` companion app,
   `crystalcore-app/`, `local-snapshot-2026-07-17/` (incl. the
@@ -136,7 +136,7 @@ software now lives in `TerAustralis-Incognita-Code`.
 - Content: single-page static UI shell (`index.html`, `app.js`,
   `styles.css`), Vercel deploy metadata, "Grok Build v0.4.0" manifest.
 - README (Tier C): run instructions still point at a pre-git Windows
-  path (`C:\Users\cryst\.grok\downloads\TeraAustralis-Incognita\apps\crystal-interface`).
+  path (`C:\Users\<user>\.grok\downloads\TeraAustralis-Incognita\apps\crystal-interface`).
 - No tags on remote (Tier B).
 
 ---

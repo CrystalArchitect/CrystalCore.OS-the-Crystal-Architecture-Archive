@@ -111,11 +111,11 @@ Suggested reading order for a new contributor:
 This archive is a reconstruction; it is not the canon. The canon lives
 across six repositories, each owning a different slice of reality:
 
-| Repository | Visibility | Owns |
+| Repository | Visibility (as at 2026-07-24; see note below) | Owns |
 |---|---|---|
 | `TerAustralis-Incognita` | **Public** | The umbrella: governance, ADRs, architecture documentation, the mythos, research. No application code. |
-| `TerAustralis-Incognita-Code` | Private | The engine (`core/`) and the user-facing application (`vision/`). |
-| `CrystalCore.OS-the-Crystal-Architecture-Archive` | Private | This repository — the fleet-wide `STATUS.md` ledger and this knowledge base. |
+| `TerAustralis-Incognita-Code` | **Public** (since; see note) | The engine (`core/`) and the user-facing application (`vision/`). |
+| `CrystalCore.OS-the-Crystal-Architecture-Archive` | **Public** (since; see note) | This repository — the fleet-wide `STATUS.md` ledger and this knowledge base. |
 | `The-Crystal-Vision` | Private | Frozen provenance (tag `vision-safe-2026-07-17`): the codex site and the companion's ancestor code, including a complete bytecode-recovered rescue of a lost laptop's work. |
 | `crystalcore` | Private | Frozen provenance (tag `crystalcore-safe-2026-07-17`): the Seven Sisters Songline pack, direct ancestor of `TerAustralis-Incognita-Code`'s `core/crystal-core/`. |
 | `crystal-vision` | Private | Frozen provenance: the standalone interface-demo ancestor. |
@@ -123,6 +123,22 @@ across six repositories, each owning a different slice of reality:
 Full detail: `02-REPOSITORY-MAP.md`. When this archive cites a claim, it
 cites the repository and file it came from — go there to verify it
 independently.
+
+> **Visibility note (2026-08-08).** The column above was measured on
+> 2026-07-24 and has since gone stale in a way worth stating plainly,
+> because the second row used to tell a public reader that the page they
+> were reading was private. Both `TerAustralis-Incognita-Code` and this
+> archive are now public; `TerAustralis-Incognita`, `CrystalCore.OS` and
+> `teraustralis-proposal` are public too.
+>
+> A reader taking the "go there to verify it independently" instruction
+> literally should know the limit: several repositories this archive
+> cites in prose — `The-Crystal-Vision`, `crystalcore`, `crystal-vision`,
+> `teraustralis-incognita-v2`, `teraustralis-v2-presentation`,
+> `CrystalCore-Starlines-and-Dreamlines`, `the-library` — remain private.
+> Claims sourced to those cannot be checked from outside. None of them
+> are linked, so nothing 404s; but the invitation to verify does not
+> reach them, and saying so is better than letting a reader discover it.
 
 **A second knowledge base exists** (added 2026-07-24, later same day):
 `TerAustralis-Incognita/docs/` now also holds a 7-file, independently
