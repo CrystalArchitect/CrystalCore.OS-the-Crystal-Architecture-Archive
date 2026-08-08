@@ -123,13 +123,13 @@ each repo's own STATUS.md where one exists.
   further receipt shows the subscription renewed again on 2026-08-08,
   so it is active once more as of this writing — not relevant to any of
   the ten dated recordings, which all predate it. Added 2026-08-08:
-  **fifteen recordings now.** The maintainer exported the 2026-08-07
-  batch — four Suno "Remaster" takes and Story as Bridge — the day
-  after the Rex reception record flagged them as held nowhere the
-  maintainer controlled. All five were generated minutes after the
-  resumed plan's renewal charge and are catalogued as Pro; three
-  earlier files were renamed to carry their generation dates, per the
-  catalogue's own rule.
+  **seventeen recordings now.** The maintainer exported the 2026-08-07
+  batch — six Suno "Remaster" takes and Story as Bridge, delivered in
+  two lots and deduplicated by track id — the day after the Rex
+  reception record flagged the unheld titles. All seven were generated
+  within thirty-seven minutes of the resumed plan's renewal charge and
+  are catalogued as Pro; five earlier files were renamed to carry
+  their generation dates, per the catalogue's own rule.
   **One recording was removed the same day.** `look-what-you-made-me-do.mp3`
   shared its title with a 2017 Taylor Swift song; the maintainer listened
   and confirmed the audio relates to it. Removed from the tree because
