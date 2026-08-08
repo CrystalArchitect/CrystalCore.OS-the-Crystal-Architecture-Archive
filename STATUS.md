@@ -129,7 +129,14 @@ each repo's own STATUS.md where one exists.
   reception record flagged the unheld titles. All seven were generated
   within thirty-seven minutes of the resumed plan's renewal charge and
   are catalogued as Pro; five earlier files were renamed to carry
-  their generation dates, per the catalogue's own rule.
+  their generation dates, per the catalogue's own rule. Later on
+  2026-08-08: **nineteen recordings**, two further new works (Random
+  Topic, Ferry Slip) — and the exposure reversed. The maintainer
+  deleted the platform copies of the non-commercial tracks, so the
+  repository now holds the only copies of those recordings; the
+  catalogue carries a dated custody note, and a recorded open question
+  about whether paid-plan Remasters of free-tier originals carry
+  commercial rights.
   **One recording was removed the same day.** `look-what-you-made-me-do.mp3`
   shared its title with a 2017 Taylor Swift song; the maintainer listened
   and confirmed the audio relates to it. Removed from the tree because
