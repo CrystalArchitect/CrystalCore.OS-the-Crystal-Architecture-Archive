@@ -13,7 +13,7 @@ right and this archive has a bug — open a correction per
 |---|---|
 | What the system *is*, reconstructed from evidence | [`knowledge-base/00-INDEX.md`](knowledge-base/00-INDEX.md) |
 | What actually runs today, across every repository | [`STATUS.md`](STATUS.md) |
-| Which repository owns what, and why there are eleven | [`knowledge-base/02-REPOSITORY-MAP.md`](knowledge-base/02-REPOSITORY-MAP.md) |
+| Which repository owns what, and why there are seventeen | [`knowledge-base/02-REPOSITORY-MAP.md`](knowledge-base/02-REPOSITORY-MAP.md) |
 | Where each repository came from, in git evidence | [`REPO-ARCHAEOLOGY-2026-07-24.md`](REPO-ARCHAEOLOGY-2026-07-24.md) |
 | What is currently wrong, and how bad | [`FULL-REVIEW-2026-07-28.md`](FULL-REVIEW-2026-07-28.md) |
 | A portfolio-wide handoff by @architectweaver, and what checking it found | [`WEAVER-NEXUS-HANDOFF-2026-07-29.md`](WEAVER-NEXUS-HANDOFF-2026-07-29.md) |
@@ -31,7 +31,7 @@ specification.
 |---|---|
 | [`00-INDEX.md`](knowledge-base/00-INDEX.md) | Purpose, documentation rules, the four-question test |
 | [`01-SYSTEM-OVERVIEW.md`](knowledge-base/01-SYSTEM-OVERVIEW.md) | What the system is, in one pass |
-| [`02-REPOSITORY-MAP.md`](knowledge-base/02-REPOSITORY-MAP.md) | All eleven repositories and the seams between them |
+| [`02-REPOSITORY-MAP.md`](knowledge-base/02-REPOSITORY-MAP.md) | All seventeen repositories and the seams between them |
 | [`03-ARCHITECTURE.md`](knowledge-base/03-ARCHITECTURE.md) | Engine, application, and the dependency rule |
 | [`04-GOVERNANCE.md`](knowledge-base/04-GOVERNANCE.md) | Charters, boundaries, licensing, IP |
 | [`05-KNOWLEDGE-MODEL.md`](knowledge-base/05-KNOWLEDGE-MODEL.md) | How the project represents what it knows |
