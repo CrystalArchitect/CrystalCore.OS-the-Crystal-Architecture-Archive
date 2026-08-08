@@ -1,7 +1,22 @@
 # Repository Map
 
-The canonical map of all eleven repositories: what each owns, how they
+The canonical map of all seventeen repositories: what each owns, how they
 relate, and where the seams between them are.
+
+> **Second scope correction (2026-08-08, later the same day).** The count
+> immediately below — eleven — is also wrong. The portfolio holds
+> **seventeen**: six archived, eleven live, six of those public. Both the
+> earlier "twelve" and its correction to "eleven" were taken from a
+> GitHub *search* query, which under-reports; five repositories that had
+> existed since June and July were simply never returned. The
+> authoritative list is the account's own repositories page, and no count
+> in this knowledge base should come from a search result again. Recorded
+> in full in [`11-CORRECTIONS.md`](11-CORRECTIONS.md) Part 20, including
+> why a ledger that logs its catches but not its misses is advertising.
+>
+> The correction below stands as to *what happened* — two repositories
+> were deleted, found, rescued and re-archived — and is wrong only in its
+> arithmetic.
 
 > **Scope correction (2026-08-08).** The portfolio holds **eleven**, not
 > twelve. `CrystalCore-AERIS` and `CrystalCore.OS-Aeris-Vault12` were

@@ -4,6 +4,68 @@ Every documentation correction this reconstruction made or identified,
 in two sections: applied directly to the source file, and identified
 but left for a future pass.
 
+## Part 20 — Applied 2026-08-08 (the count in Part 19 was itself wrong)
+
+### "Eleven" was measured with a tool that under-reports
+
+- **`02-REPOSITORY-MAP.md`, `00-INDEX.md`, `README.md`, and Part 19 below**
+  — before: "eleven repositories," corrected hours earlier the same day
+  from "twelve." After: **seventeen**, of which six are archived and
+  eleven live; six are public.
+- **The method was the defect, not the arithmetic.** Part 19's count came
+  from a GitHub *search* query. The same query, run again the same
+  evening, returned eighteen. Seven of the extra rows were not new
+  repositories: five had existed since June and July and were simply not
+  returned the first time. GitHub's search index is eventually consistent
+  and can under-report; it is not an enumeration of an account.
+- **What this archive should have done, and now says plainly:** the
+  authoritative list of an account's repositories is the account's own
+  repositories page, not a search result. No count in this knowledge base
+  should be sourced from a search query again.
+- **Why it is recorded rather than quietly fixed.** Part 19 opens by
+  observing that this archive caught a real loss because a document
+  disagreed with reality. Within hours the same document asserted a
+  number the world did not match, from a tool that had already been
+  trusted too far. Both halves belong in the record; a ledger that logs
+  only the catches and not the misses is advertising, not a ledger.
+
+### The portfolio as measured 2026-08-08, late
+
+Seventeen repositories. Six archived and private: `CrystalCore`,
+`CrystalCore-AERIS`, `CrystalCore.OS-Aeris-Vault12`,
+`CrystalCore.OS-APP`, `CrystalcoreOS`, `TerAustralis-Incognita-`.
+Eleven live, of which six are public — `TerAustralis-Incognita`,
+`TerAustralis-Incognita-Code`, this archive, `teraustralis-proposal`,
+`CrystalCore.OS`, and `Clementine---Local-Soveriegn-Edge-AGI` — and five
+private: `TheCrystalVision`, `CrystalCore-Starlines-and-Dreamlines`,
+`teraustralis-incognita-v2`, `teraustralis-v2-presentation`,
+`the-library`. One repository, an empty `express-js-on-vercel` scaffold,
+was deleted the same evening.
+
+This count carries the caveat above: it was taken with the same class of
+tool that already proved unreliable once. It is recorded as a
+measurement with a known-weak instrument, not as a certainty.
+
+### A licence claim that had not been carried out
+
+- **`TerAustralis-Incognita/docs/adr/ADR-0013.md`** — accepted
+  2026-07-28, titled "retire Apache-2.0 and the unlicensed
+  repositories," and describing the risk in its own words: a reader who
+  finds Apache-2.0 "concludes they may fork."
+- That retirement was incomplete for eleven days. `TerAustralis-Incognita-`
+  — a repository-creation artifact holding one line of README and a full
+  Apache-2.0 licence, its name one character from the umbrella's — stayed
+  **public** until 2026-08-08, when it was made private and archived.
+  `CrystalCore.OS-APP` (MIT) and `CrystalcoreOS` (AGPL-3.0), both from
+  the differentiated model ADR-0010 rejected, likewise survived until
+  they were archived and made private the same evening.
+- As of this entry no public repository carries a licence other than
+  CC BY-NC-ND 4.0. GitHub reports those repositories as `NOASSERTION`,
+  which is its licence detector failing to recognise a Creative Commons
+  licence, not a missing one.
+- The ADR's stated outcome is now true. It became true on 2026-08-08,
+  not on 2026-07-28, and the eleven days between are the finding.
+
 ## Part 19 — Applied 2026-08-08 (two repositories deleted)
 
 ### The portfolio holds eleven, not twelve — and this archive found it

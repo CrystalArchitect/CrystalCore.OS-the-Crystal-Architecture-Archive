@@ -1,7 +1,7 @@
 # CrystalCore.OS Knowledge Base — Index
 
 > **Scope note (2026-07-28).** The reconstruction below covered six
-> repositories. The portfolio has eleven (2026-08-08; it was twelve until two were deleted); the others are recorded in
+> repositories. The portfolio has seventeen (2026-08-08, late; see 11-CORRECTIONS Part 20 — earlier counts of twelve and eleven were both wrong); the others are recorded in
 > `02-REPOSITORY-MAP.md` and `11-CORRECTIONS.md`. Everything else in this
 > knowledge base still describes the six it was built from.
 
@@ -139,6 +139,16 @@ independently.
 > Claims sourced to those cannot be checked from outside. None of them
 > are linked, so nothing 404s; but the invitation to verify does not
 > reach them, and saying so is better than letting a reader discover it.
+>
+> **Settled state (2026-08-08, late).** Six repositories are public and
+> checkable: `TerAustralis-Incognita`, `TerAustralis-Incognita-Code`,
+> this archive, `teraustralis-proposal`, `CrystalCore.OS`, and
+> `Clementine---Local-Soveriegn-Edge-AGI`. Six more are archived and
+> private, five live and private. The private ones stay unverifiable from
+> outside, and the limit above holds. See
+> [`11-CORRECTIONS.md`](11-CORRECTIONS.md) Part 20 for the full list, the
+> count's provenance, and why the count is given with a caveat rather
+> than as a certainty.
 
 **A second knowledge base exists** (added 2026-07-24, later same day):
 `TerAustralis-Incognita/docs/` now also holds a 7-file, independently
