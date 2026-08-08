@@ -4,6 +4,48 @@ Every documentation correction this reconstruction made or identified,
 in two sections: applied directly to the source file, and identified
 but left for a future pass.
 
+## Part 19 — Applied 2026-08-08 (two repositories deleted)
+
+### The portfolio holds eleven, not twelve — and this archive found it
+
+- **`knowledge-base/02-REPOSITORY-MAP.md`, `00-INDEX.md`, `README.md`** —
+  before: "all twelve repositories" in the present tense. After: eleven,
+  with a dated scope correction at the head of the map.
+  `CrystalCore-AERIS` and `CrystalCore.OS-Aeris-Vault12` were deleted from
+  the account in the week before 2026-08-08.
+- **How it was found.** Not by a backup check or a failing test. A routine
+  cross-check before publishing this archive listed eleven repositories
+  where the map claimed twelve. The disagreement between this document and
+  the account was the only signal there was — which is the clearest
+  argument for this archive existing that it has yet produced.
+- **What followed.** Both repositories were restored from GitHub's 90-day
+  window at the maintainer's direction the same day, their contents
+  rescued verbatim into
+  `TerAustralis-Incognita/archive/2026/rescued-2026-08-08/`, and then
+  deleted again. Twenty-six files recovered; fourteen existed in no other
+  repository, verified by hashing every rescued file against every file in
+  all eleven surviving ones.
+
+### This archive's account of vault12 was incomplete, and briefly the only one
+
+- **`knowledge-base/02-REPOSITORY-MAP.md`** — recorded
+  `CrystalCore.OS-Aeris-Vault12` as ten tracked files holding seven
+  specifications. It held **twenty**, including seven documents this
+  archive never recorded: `ETHICAL-RUNTIME-SPEC.md`,
+  `THEURGY-AELTHARION-BRIDGE.md`, `ORDINALS-COLLECTION.md`, four documents
+  under `docs/`, and a 372-line `southern-node-lfa-operational-log.md` —
+  the largest single document in the repository.
+- The entry's own Historical Notes already flagged that it was written
+  from a stale clone. That flag was correct, and its cost is now
+  measurable: for nine days this incomplete account was the only surviving
+  record of the repository. Had the restore window closed first, seven
+  documents would have been lost without this archive ever knowing they
+  existed.
+- **Left standing, not corrected:** the per-file detail of those entries.
+  Rewriting them from the rescued copy would make this archive a
+  description of the rescue rather than a record of what it knew and when.
+  The rescue folder holds the material; this correction records the gap.
+
 ## Part 0 — Applied 2026-07-28 (portfolio review pass)
 
 ### The archive covered 6 of 11 repositories

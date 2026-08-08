@@ -1,7 +1,7 @@
 # CrystalCore.OS Knowledge Base — Index
 
 > **Scope note (2026-07-28).** The reconstruction below covered six
-> repositories. The portfolio has twelve; the others are recorded in
+> repositories. The portfolio has eleven (2026-08-08; it was twelve until two were deleted); the others are recorded in
 > `02-REPOSITORY-MAP.md` and `11-CORRECTIONS.md`. Everything else in this
 > knowledge base still describes the six it was built from.
 

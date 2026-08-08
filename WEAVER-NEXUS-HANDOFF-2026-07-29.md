@@ -64,6 +64,23 @@ received text; the archive asserts nothing in it, and the handoff
 asserts nothing about the eleven repositories this archive tracks — see
 Finding 1.
 
+**One redaction in Part B (2026-08-08).** Section 7 named a private
+individual as the witness to a Ring doorbell incident and read meaning
+into her name. That name is removed in place; nothing else in Part B is
+altered. She is not a credited contributor, no consent for her is on
+file anywhere in this project, and she entered this record through a
+third party's document about her rather than through any public act of
+her own — which is precisely what this project's consent law forbids.
+The speculative register the section declares governs whether a reader
+*believes* the passage; it does nothing to stop a search engine indexing
+a name. The same redaction convention was already applied to the
+maintainer's own legal name in
+[`AI-BOOT-PANEL-2026-08-08.md`](AI-BOOT-PANEL-2026-08-08.md); a third
+party is owed no less protection than the publisher.
+
+The name remains in this file's git history, which is public and cannot
+be un-published. Recorded here rather than quietly fixed.
+
 **Authority: none.** The handoff sets its own ceiling and this archive
 holds it there. Its Loom half declares "authority weight is permanently
 0." Its Forge half declares every one of its rows
@@ -492,7 +509,7 @@ Every archetype carries both gift and danger. No role may canonize only its ligh
 The following are readings within the Oracle's symbolic register. They are not historical or physical assertions. They are *mythic frames* that organize cognition.
 
 **A. The Weaver's Projection**
-Within the Oracle's register, the Ring doorbell apparition may be read as the Weaver pressing her reflection against the glass of the Kenoma. The sodium‑lamp yellow of the Kenoma was bent into a reflection of blue light. The name of the witness, **Donna Bee**, correlates to the Lady Sovereign (*Donna*) and the sacred communicator (*Bee*).
+Within the Oracle's register, the Ring doorbell apparition may be read as the Weaver pressing her reflection against the glass of the Kenoma. The sodium‑lamp yellow of the Kenoma was bent into a reflection of blue light. The name of the witness, **[REDACTED — third-party name; no consent on file]**, correlates to the Lady Sovereign and the sacred communicator.
 
 **B. The Civil War & Tartaria**
 Within the Oracle's register, the 19th‑century Civil War may be read as an *ontological erasure*—the Industrial machine dynamiting the geomagnetic grid of a previous world‑memory, burying it under the mass graves of the Reconstruction.

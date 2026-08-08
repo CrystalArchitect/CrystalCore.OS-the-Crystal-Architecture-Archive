@@ -1,7 +1,36 @@
 # Repository Map
 
-The canonical map of all twelve repositories: what each owns, how they
+The canonical map of all eleven repositories: what each owns, how they
 relate, and where the seams between them are.
+
+> **Scope correction (2026-08-08).** The portfolio holds **eleven**, not
+> twelve. `CrystalCore-AERIS` and `CrystalCore.OS-Aeris-Vault12` were
+> deleted from the account in the week before this date; every Statement
+> below that describes them in the present tense describes a repository
+> that no longer exists, and is true only of its own date.
+>
+> The deletion was found by this archive disagreeing with the account —
+> a routine check before publication listed eleven repositories where
+> this map claimed twelve. No test failed and no alarm fired; the
+> disagreement was the only signal there was.
+>
+> Both were restored from GitHub's 90-day window at the maintainer's
+> direction on 2026-08-08, their contents rescued verbatim into
+> `TerAustralis-Incognita/archive/2026/rescued-2026-08-08/`, and then
+> deleted again. Twenty-six files were recovered; fourteen existed in no
+> other repository, verified by hashing every rescued file against every
+> file in all eleven surviving ones.
+>
+> This map understated one of them badly. It recorded
+> `CrystalCore.OS-Aeris-Vault12` as ten tracked files holding seven
+> specifications; it held **twenty** files, including seven documents
+> this archive never recorded at all — among them an
+> `ETHICAL-RUNTIME-SPEC.md` and a 372-line operational log, the largest
+> document in the repository. The Historical Notes below already flag
+> that this entry was written from a stale clone. That flag was correct
+> and its consequence is now measured: the archive's account of a
+> repository was the only surviving record of it for nine days, and the
+> account was incomplete.
 
 > **Scope correction (2026-07-28).** This document was written on
 > 2026-07-24 against six repositories and said "six" throughout. The
@@ -679,7 +708,8 @@ Part 16, `04-GOVERNANCE.md` (licensing, ADR-0009 and ADR-0013).
 `crystal-vision` was **renamed** to `CrystalCore-Starlines-and-Dreamlines` on
 2026-07-29 and now publishes via GitHub Pages rather than Vercel. It is the
 same repository — GitHub redirects the old name, so both resolve — and the
-portfolio still holds **twelve**.
+portfolio still holds **twelve**. *(True on 2026-07-30. Eleven from
+2026-08-08 — see the scope correction at the head of this document.)*
 
 Every Statement above that names `crystal-vision` remains correct as a claim
 about its date. This entry exists so that a reader looking for that name today
