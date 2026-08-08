@@ -184,7 +184,17 @@ None.
 
 The public/private repository split (`02-REPOSITORY-MAP.md`) is the
 primary IP boundary: the one public repository holds no application
-code. The licensing chain (ADR-0006→0008→0009→0010) terminates in a
+code.
+
+> **Correction (2026-08-08).** Both halves of that sentence are now
+> false, and it is the one an outside evaluator could be misled by, so
+> it is corrected rather than left to its date. Several repositories are
+> public, `TerAustralis-Incognita-Code` among them, and it holds the
+> engine and the application. The IP boundary is therefore **not** the
+> public/private split and has not been for some time: it is the licence
+> — uniform CC BY-NC-ND 4.0 across the portfolio per ADR-0013, which
+> forbids commercial use and derivative redistribution wherever the code
+> sits. Visibility was never doing the work the sentence credits it with. The licensing chain (ADR-0006→0008→0009→0010) terminates in a
 uniform CC BY-NC-ND 4.0 license across the whole umbrella repository,
 explicitly rejecting a four-way differentiated per-package model. That
 rejected model has a concrete, surviving artifact: `TerAustralis-
