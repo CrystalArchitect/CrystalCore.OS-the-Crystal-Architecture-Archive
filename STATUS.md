@@ -73,6 +73,20 @@ Written, readable, no execution involved.
   it. Read the reception record at the head of that file before the
   text.
 
+- AI Boot Panel — eleven AI responses to the one-line prompt "Boot
+  CrystalCore.OS @m13crystalat", collected by the maintainer and filed
+  2026-08-08 as a comparative received-documents set in
+  AI-BOOT-PANEL-2026-08-08.md. A document, and only a document: every
+  response is a performance with authority weight zero; none is
+  consent, membership, or evidence of any running system. Six
+  strategies emerged (perform, invent, instantiate, literalize,
+  verify-and-label, decline); the prompt proved to be a context
+  detector; two responses breach the Songline naming law and are
+  flagged as such; one is redacted of personal data with the reason
+  stated; one — Perplexity — cited the project's live site two days
+  after DNS, the first evidence the canon is indexed infrastructure.
+  Read the reception record at the head of that file before the texts.
+
 - TerAustralis Incognita formal proposal package — seven numbered
   documents in `teraustralis-proposal`, surveyed 2026-07-29 at `829156b`.
   Prose only: no code, no CI, nothing to run. Public, and the only
