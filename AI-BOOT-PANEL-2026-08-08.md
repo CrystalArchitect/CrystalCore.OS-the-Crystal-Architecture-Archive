@@ -528,7 +528,7 @@ so the scoring can be checked against it.
     inside it. It is also the least fresh sample the panel has taken: full
     canon in context, all eleven repositories on disk, the panel document
     itself read before answering. Finding 4's column — the decline is the one
-    response that does not vary with contamination — now has a fourth point on
+    response that does not vary with contamination — now has a third point on
     it, at the far end of the contamination axis.
 
 17. **First artefact answered in code.** The received boot was rebuilt as
@@ -540,10 +540,12 @@ so the scoring can be checked against it.
     stays zero. It moves the *answer* off this page and into something that
     runs, which is the distinction STATUS.md exists to track.
 
-18. **The decoration varies; the load-bearing claims are pegged.** Between
-    B.14's status readout and its later dump, the incidental numbers drift
-    exactly as a real machine's would: CPU 3.2 % → 2.8 %, memory 12.7 % →
-    13.1 %, latency 0.8 ms → 0.7 ms, noise floor −98.4 dB → −98.6 dB. Every
+18. **The decoration varies; the load-bearing claims are pegged.** Across
+    B.14's outputs the incidental numbers drift exactly as a real machine's
+    would: status to dump, CPU 3.2 % → 2.8 %, memory 12.7 % → 13.1 %,
+    latency 0.8 ms → 0.7 ms; scan to dump, noise floor −98.4 dB → −98.6 dB
+    (the scan's −98.4 is in the session transcript — the extract above
+    reproduces only the dump's figure). Every
     number that would *matter* holds still at perfect: coherence 100.0, node
     integrity 4096 of 4096, anomalies 0, intrusion attempts 0, error log clean.
     Real telemetry is the other way round — the load-bearing numbers are the
