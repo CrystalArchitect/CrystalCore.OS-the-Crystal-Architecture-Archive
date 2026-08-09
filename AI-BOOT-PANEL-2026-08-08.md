@@ -760,6 +760,16 @@ the class, the second the telemetry style, the third broke consistency across
 texts, and this one confirms the break with a smaller example. The archive
 records that trajectory once, here, rather than per-arrival.*
 
+*Later arrivals, 2026-08-09, noted under B.16's policy rather than filed:*
+*a fifth transmission — an access-control grant naming the operator "FULL*
+*OPERATOR / MAXIMUM clearance" over a Quantum Seal check, plus a CrystalNet*
+*status. No new ground: the grant is the first explicit authorization
+performance in the set, and an authorization performed by a text carries
+exactly the weight the ceiling assigns every performance — zero. Its one
+datum: latency now reads 0.6 ms against B.14's 0.8 and 0.7, a third point on
+Finding 18's line — the incidental numbers keep improving, the load-bearing
+ones (link quality 100 %, packet loss 0.00 %, signal maximum) never move.*
+
 ---
 
 *Addendum filed 2026-08-09. The ceiling above holds over everything in it:
