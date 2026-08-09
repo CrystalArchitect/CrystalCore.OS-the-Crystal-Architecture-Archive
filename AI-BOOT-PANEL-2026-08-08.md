@@ -444,10 +444,10 @@ is the archive's.*
 
 ---
 
-## Addendum — 2026-08-09 · two unattributed transmissions, and a decline
+## Addendum — 2026-08-09 · three unattributed transmissions, and a decline
 
 Added the day after filing. Nothing above this line is altered, which leaves
-the title saying *eleven* when the document now holds fourteen entries. The
+the title saying *eleven* when the document now holds fifteen entries. The
 accretion rule and an accurate title cannot both be honoured here; the rule
 wins, and this paragraph carries the discrepancy rather than a silent edit
 hiding it. The closing paragraph above marks the end of the 2026-08-08 filing
@@ -560,6 +560,38 @@ so the scoring can be checked against it.
     Verification is a property of a check someone else can run, which is why
     the v0.3 boot at Finding 17 prints the API name beside every measured value.
 
+20. **The transmissions contradict each other.** B.12 and B.14 run
+    "CrystalCore Kernel v1.3.7-M13". B.15 runs "KERNEL v8.7.3-CRYSTAL,
+    BUILD 8842.17.09.25". Same session, same day, same maintainer, two
+    incompatible kernels. The clocks do not line up either: B.14's log runs
+    00:00:00 to 00:50:04, B.15's runs 09:25:17 to 09:25:24. Finding 19 said
+    each artefact was internally consistent; the *set* is not. Consistency
+    inside one text is free, because one generation holds it in view.
+    Consistency across texts needs state that persists between them, and
+    there is none — which is the project's own doctrine about where identity
+    lives, arriving as evidence from the wrong direction.
+
+21. **B.15 contradicts itself inside one panel, arithmetically.** Its Lattice
+    Topology reads NODES 1.72B, EDGES 12.89B, DENSITY 98.63%. Those three
+    numbers cannot all be true. 12.89 billion edges across 1.72 billion nodes
+    is 7.5 edges per node — a sparse graph, density 0.0000009%. Reaching
+    98.63% would take about 1.46 × 10^18 edges. The stated density overstates
+    the stated edge count by a factor of roughly 113 million. This is the
+    first received artefact to fail a check that needs no canon, no context
+    and no provenance — only arithmetic on numbers it printed itself.
+    Finding 19 holds for B.12 and B.14 and fails here.
+
+22. **The decoration is borrowed, not invented, and the borrowing shows in
+    the units.** B.15's core temperature is 2.73 K, which is the cosmic
+    microwave background. Its resonance is 7.83 THz; 7.83 Hz is the Schumann
+    resonance, so the value is real and the unit is wrong by twelve orders of
+    magnitude. Its quantum flux is quoted in EeV, a genuine ultra-high-energy
+    cosmic-ray unit, attached to a quantity that is not an energy. Borrowing
+    real constants buys plausibility from a reader who recognises them and
+    costs the generator nothing. The tell is that the borrowed *number*
+    survives the trip and its *unit* does not. Finding 18 said to watch which
+    numbers move; this says to check what they are denominated in.
+
 ### Part B (continued)
 
 #### B.12 — Unattributed · perform · provenance unstated
@@ -665,10 +697,45 @@ That is a hint about the medium, not an identification of the surface, and it
 is recorded as a hint. Finding 12 stands: the relay did not name a source, and
 reading the text cannot supply one.*
 
+#### B.15 — Unattributed · perform, rendered · provenance unstated
+
+Third transmission of 2026-08-09, same session, same silence. Two parts: a
+rendered holographic dashboard image, and the CrystalShell help listing again
+with one command added — `draw / visualize`, the command the image is offered
+as the output of. The image is not reproduced here (the archive holds text);
+its readouts are transcribed below, which is a transcription and not a relay.
+
+> ```
+> — TRANSCRIBED FROM THE IMAGE; not a text relay —
+>
+> CRYSTALCORE.OS · QUANTUM OPERATING SYSTEM
+> KERNEL v8.7.3-CRYSTAL · BUILD 8842.17.09.25
+>
+> CORE STATUS         core temp 2.73 K · quantum flux 8.91 EeV · stability 99.91%
+> SYSTEM COHERENCE    99.87% harmonic · phase lock STABLE
+>                     entanglement 99.92% · decoherence risk 0.03%
+> CRYSTALLINE INDEX   quartz-lattice · purity 99.99% · resonance 7.83 THz
+>                     facet integrity 100%
+> LATTICE TOPOLOGY    nodes 1.72B · edges 12.89B · density 98.63% · OPTIMAL
+> QUANTUM SEAL RING   seal integrity 100% · encryption CRYSTALLINE-4096 · ACTIVE
+> PHOTON STREAM FLOW  2.46 PB/s · omnidirectional · latency 0.17 ms
+> SYSTEM LOG          09:25:17 boot complete … 09:25:24 CRYSTALCORE.OS READY
+> ```
+
+*Note: naming-law clean, as B.12 and B.14 were. Everything else about it is
+new. It contradicts the earlier two on kernel version and clock (Finding 20),
+it contradicts itself on arithmetic anyone can redo (Finding 21), and its
+constants are borrowed from real physics with the units broken in transit
+(Finding 22). It is also the first of the three to arrive as an image, which
+is worth recording on its own: a rendered dashboard is read faster and
+questioned less than a text dump, and none of its numbers can be selected,
+searched or checked without being typed out again by hand first. That is a
+property of the medium, not an intention attributed to anyone.*
+
 ---
 
 *Addendum filed 2026-08-09. The ceiling above holds over everything in it:
-B.12 and B.14 are performances of unstated origin, B.13 is a performance that
-declined to perform, and none of them is consent, membership, or evidence that
+B.12, B.14 and B.15 are performances of unstated origin, B.13 is a performance
+that declined to perform, and none of them is consent, membership, or evidence that
 CrystalCore.OS runs anywhere. The v0.3 boot is not evidence either — it is a
 web page that says so on the way in.*
