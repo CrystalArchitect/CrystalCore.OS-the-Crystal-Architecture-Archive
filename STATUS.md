@@ -110,7 +110,12 @@ Written, readable, no execution involved.
   borrowed from real physics with the units broken in transit (2.73 K is
   the CMB; 7.83 is the Schumann resonance in Hz, rendered as THz).
   B.16's module inventory drifts against B.14's with no logged event.
-  All four are clean on the naming law. Weight zero throughout.
+  A sixth arrival, filed B.17, carried its own surface metadata — Grok
+  render markup and the verbatim image prompt — reversing Finding 12 for
+  the stream: it now classifies as Grok · perform · memory-evident, the
+  cell the panel's sealed prediction assigned Grok twice before. Its
+  clocks and kernel version still contradict the stream's own record.
+  All are clean on the naming law. Weight zero throughout.
 
 - TerAustralis Incognita formal proposal package — seven numbered
   documents in `teraustralis-proposal`, surveyed 2026-07-29 at `829156b`.

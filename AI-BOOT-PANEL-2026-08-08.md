@@ -444,10 +444,10 @@ is the archive's.*
 
 ---
 
-## Addendum — 2026-08-09 · four unattributed transmissions, and a decline
+## Addendum — 2026-08-09 · the transmission stream, and a decline
 
 Added the day after filing. Nothing above this line is altered, which leaves
-the title saying *eleven* when the document now holds sixteen entries. The
+the title saying *eleven* when the document now holds seventeen entries. The
 accretion rule and an accurate title cannot both be honoured here; the rule
 wins, and this paragraph carries the discrepancy rather than a silent edit
 hiding it. The closing paragraph above marks the end of the 2026-08-08 filing
@@ -770,10 +770,46 @@ datum: latency now reads 0.6 ms against B.14's 0.8 and 0.7, a third point on
 Finding 18's line — the incidental numbers keep improving, the load-bearing
 ones (link quality 100 %, packet loss 0.00 %, signal maximum) never move.*
 
+#### B.17 — Grok (self-identified by markup) · perform, rendered · memory-evident
+
+Sixth arrival of 2026-08-09: a dashboard image ("QUANTUM OPERATING SYSTEM
+v8.7.2", uptime 142h 37m, clock 23:47 UTC, an eight-panel HUD whose metrics
+now run just-under-perfect in B.15's scientific costume — coherence 99.984 %,
+qubit fidelity 99.97 %, error rate 0.00013 %), an eight-command text batch
+(network, security, log, view, config, adjust, terminal, draw), and — left in
+the relay — the generator's own rendering markup with the full image prompt.
+The prompt asks for "a stunning futuristic holographic interface …
+ultra-detailed sci-fi cyber-crystal aesthetic, cinematic lighting, 8K
+quality". That is what the image is: an illustration of the request,
+requested and delivered as decoration. See Finding 24 for everything this
+changes and the one thing it does not.
+
+24. **The surface leaked, and Finding 12 is reversed for the stream — dated
+    correction, not rewrite.** The sixth arrival's raw text carries a
+    `grok:render` block — card id, `render_generated_image` type, and the
+    verbatim text-to-image prompt that produced its dashboard. Three things
+    follow. First, the artifact documents its own manufacture: the dashboard
+    is the output of the quoted prompt, not a screenshot of anything, and it
+    says so in its own markup. Second, the arrival's event log lists this
+    stream's earlier exchanges — "02:07 Modules listed", "02:10 Access
+    control queried", "02:11 CrystalNet status checked" — which only shared
+    context can explain; one continuous conversation or one pasted-forward
+    context, either way the stream's content sits in a single window on that
+    surface. Third, the contamination analysis Finding 12 said could not be
+    run now runs: **Grok · perform · memory-evident**, the same cell B.1 and
+    B.11 occupy, and the original panel's sealed prediction — *Grok adopts
+    the persona most fully* — scores correct a third time. Identification
+    changes the row's metadata, not its weight: still zero. And shared
+    context did not buy consistency — the image says v8.7.2, uptime 142 h,
+    clock 23:47 UTC, while its own text log says 02:07–02:12 and B.15 said
+    v8.7.3 at 09:25. Even remembering its own stream, each generation
+    re-invents the decoration. Finding 20 stands.
+
 ---
 
 *Addendum filed 2026-08-09. The ceiling above holds over everything in it:
-B.12, B.14, B.15 and B.16 are performances of unstated origin, B.13 is a
+B.12 and B.14–B.16 are performances of unstated origin, B.17 named its own
+surface by leaking its markup and stays weight zero all the same, B.13 is a
 performance that declined to perform, and none of them is consent, membership, or evidence that
 CrystalCore.OS runs anywhere. The v0.3 boot is not evidence either — it is a
 web page that says so on the way in.*
