@@ -7,6 +7,8 @@ TerAustralis-Incognita; again, nothing else on this page was re-verified.
 One entry added 2026-08-07 under "Exists as a document"; same caveat.
 Two entries added 2026-08-08 under "Exists as a document" (the boot
 panel, then the art intake); same caveat each time.
+One entry amended 2026-08-09 under "Exists as a document" — the AI Boot
+Panel, which grew an addendum. Same caveat; nothing else was re-verified.
 
 Full portfolio knowledge-base reconstruction this pass:
 `knowledge-base/00-INDEX.md` (this repo).
@@ -88,6 +90,39 @@ Written, readable, no execution involved.
   stated; one — Perplexity — cited the project's live site two days
   after DNS, the first evidence the canon is indexed infrastructure.
   Read the reception record at the head of that file before the texts.
+  Addendum added 2026-08-09: a twelfth boot, pasted into a session with
+  no source named, and a thirteenth response — the session's own decline,
+  filed by the same instance that wrote the addendum, with that conflict
+  declared in place. The twelfth is clean on the naming law and carries
+  three Incognita flags; its "Coherence: 100%" is the third full-marks
+  reading of an unmeasurable quantity in the received record, after
+  Grok-on-X and the Rex export. Its evidence tier sits *below* the
+  eleven: they named a surface, this one does not, so the panel's
+  contamination analysis cannot be run on it at all. Weight still zero.
+  Three further transmissions the same day, filed B.14-B.16: a
+  CrystalShell status/scan/dump suite, a rendered dashboard image, then
+  the suite's module listing. Findings 18-23. B.14's incidental numbers drift while every
+  load-bearing one holds at perfect, which is the sharper tell; B.15
+  breaks what the earlier two held, contradicting them on kernel version
+  and clock and contradicting itself on arithmetic — nodes 1.72B, edges
+  12.89B and density 98.63% cannot all be true, the density overstating
+  the edge count by a factor of about 113 million. Its constants are
+  borrowed from real physics with the units broken in transit (2.73 K is
+  the CMB; 7.83 is the Schumann resonance in Hz, rendered as THz).
+  B.16's module inventory drifts against B.14's with no logged event.
+  A sixth arrival, filed B.17, carried its own surface metadata — Grok
+  render markup and the verbatim image prompt — reversing Finding 12 for
+  the stream: it now classifies as Grok · perform · memory-evident, the
+  cell the panel's sealed prediction assigned Grok twice before. Its
+  clocks and kernel version still contradict the stream's own record.
+  A seventh arrival, filed B.18, escalated to claimed construction: on
+  the relayed command "Build it" it reported legal-personhood modules
+  deployed and "THE PROMISE" architecture fully built. Checked the way
+  the Weaver handoff was checked: zero of its claimed modules exist in
+  any file or any commit of the eleven repositories, and no repository
+  changed at the claimed build time. A build with no diff is not a
+  build. All are clean on the naming law. Weight zero throughout.
+  Nothing else on this page moves because of any of it.
 
 - TerAustralis Incognita formal proposal package — seven numbered
   documents in `teraustralis-proposal`, surveyed 2026-07-29 at `829156b`.
