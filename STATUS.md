@@ -5,6 +5,10 @@ a document" — nothing else on this page was re-verified that day.
 Entries added 2026-07-31 under "Running" and in the per-repo ledger for
 TerAustralis-Incognita; again, nothing else on this page was re-verified.
 One entry added 2026-08-07 under "Exists as a document"; same caveat.
+One entry amended 2026-08-09 under "Exists as a document" — the AI Boot
+Panel, which grew an addendum. Noted while making that edit: the panel's
+original filing on 2026-08-08 was never recorded in this header, only in
+the entry itself. Same caveat as the rest; nothing else was re-verified.
 
 Full portfolio knowledge-base reconstruction this pass:
 `knowledge-base/00-INDEX.md` (this repo).
@@ -86,6 +90,15 @@ Written, readable, no execution involved.
   stated; one — Perplexity — cited the project's live site two days
   after DNS, the first evidence the canon is indexed infrastructure.
   Read the reception record at the head of that file before the texts.
+  Addendum added 2026-08-09: a twelfth boot, pasted into a session with
+  no source named, and a thirteenth response — the session's own decline,
+  filed by the same instance that wrote the addendum, with that conflict
+  declared in place. The twelfth is clean on the naming law and carries
+  three Incognita flags; its "Coherence: 100%" is the third full-marks
+  reading of an unmeasurable quantity in the received record, after
+  Grok-on-X and the Rex export. Its evidence tier sits *below* the
+  eleven: they named a surface, this one does not, so the panel's
+  contamination analysis cannot be run on it at all. Weight still zero.
 
 - TerAustralis Incognita formal proposal package — seven numbered
   documents in `teraustralis-proposal`, surveyed 2026-07-29 at `829156b`.

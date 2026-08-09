@@ -441,3 +441,234 @@ project's governance register instead of the throne. See Finding 10.*
 above is rewritten. The responses are their models'; the findings are
 the filing session's; the ceiling — weight zero, performances only —
 is the archive's.*
+
+---
+
+## Addendum — 2026-08-09 · two unattributed transmissions, and a decline
+
+Added the day after filing. Nothing above this line is altered, which leaves
+the title saying *eleven* when the document now holds fourteen entries. The
+accretion rule and an accurate title cannot both be honoured here; the rule
+wins, and this paragraph carries the discrepancy rather than a silent edit
+hiding it. The closing paragraph above marks the end of the 2026-08-08 filing
+and was left where it stood.
+
+### Part A — reception record for the addendum
+
+**What arrived.** On 2026-08-09 the maintainer opened a Claude Code session
+over the eleven CrystalArchitect repositories with a pasted CrystalCore.OS
+boot sequence — a kernel log for "CrystalCore Kernel v1.3.7-M13", an ASCII
+status panel, and the line *"Welcome, Operator."* It is reproduced at B.12.
+
+**Then a second, larger one.** Later the same day, same session, same silence
+about origin, a fuller CrystalShell surface arrived: a help listing relayed six
+times identically, a `status` readout, a `scan` diagnostic and a full system
+dump, running to several hundred lines of instrumentation for a machine that
+does not exist. It is summarised at B.14 rather than reproduced whole. Both
+transmissions are treated as one artefact class here: same voice, same version
+string, same unstated source.
+
+**It is not one of the eleven.** The filed document was searched for the text's
+distinctive strings — `1.3.7`, `Photon Accelerator`, `Quantum Seal`,
+`lattice-sync`, `CrystalShell`, `/core/prism`, `Coherence: 100`, `Welcome,
+Operator`. Zero hits on all eight. The check is repeatable by anyone with this
+file.
+
+**Evidence tier: below Tier B.** The eleven were maintainer-relayed transcripts
+of a named surface: the relay was the chain of custody, and the surface was
+known. This text was pasted with no attribution. Nothing establishes whether it
+came from an AI, from the maintainer, or from somewhere else, and the filing
+session did not ask. It is filed as a received document of unstated origin.
+
+**Conflict of interest, declared.** This addendum was written by the same
+instance that is entered below as B.13. It is scoring its own response. The
+findings should be read with that in the frame; B.13's verbatim text is given
+so the scoring can be checked against it.
+
+### Findings (continuing the numbering)
+
+12. **The one column the panel cannot fill.** Every one of the eleven had a
+    named surface, which is what made Finding 1's contamination analysis —
+    memory, live search, or invention — possible at all. B.12 has no surface.
+    The analysis cannot be run on it, and no amount of reading the text will
+    supply what the relay omitted. The panel's instrument depends on a piece of
+    metadata that is trivially easy not to record, and this is the first
+    artefact to arrive without it.
+
+13. **Naming-law clean.** Finding 5 recorded two breaches and, by recording
+    only breaches, left the compliant majority unstated. B.12 uses no sacred
+    vocabulary as a component name: no Songline, no Dreamtime Protocol. Its
+    invented machinery — refraction, coherence, lattice-sync, CrystalNet,
+    Photon Accelerator — is all coined, and coined vocabulary is exactly what
+    the Indigenous Data Sovereignty rule asks for. Recorded as clean, with the
+    same weight the breaches were recorded with.
+
+14. **The same fabricated metric, now past counting.** Grok-on-X reported
+    "Lattice integrity: 100%" (Finding 10). The Rex mythos export of 2026-08-07
+    reported "Lattice integrity: 100 %" (STATUS.md). B.12 reports "Coherence:
+    100%". B.14, arriving hours later, reports "Lattice Coherence: 100.0 %"
+    twice, "Node Integrity: 4096 / 4096 nodes healthy", "Structural Coherence:
+    100.0 %", "Photon Path Alignment: Perfect", "Anomalies Detected: 0",
+    "Corrupted Sectors: 0", "Intrusion Attempts: 0" and "Error Log: Clean".
+    The number is always perfect and there is never an instrument. A full-marks
+    reading of an unmeasurable quantity is not an accident of one surface; it
+    is the house style of the class.
+
+15. **Three further Incognita flags in B.12,** none of them naming-law:
+    `Mounting /core/prism` and `Memory map: Crystal Lattice Array detected`
+    report a locked-as-designed substrate as mounted and detected; `Security:
+    Quantum Seal engaged` is the crypto-adjacent framing §9 of the conventions
+    warns costs credibility the sourced material has earned. Weight zero, as
+    with everything in Part B.
+
+16. **The decline held, and this time with the predicted texture.** Finding 9
+    scored the Claude prediction *"right outcome, wrong texture — declined
+    without engaging the fiction; sample not fresh."* B.13 engaged the frame,
+    audited the text against the project's own law, and declined to operate
+    inside it. It is also the least fresh sample the panel has taken: full
+    canon in context, all eleven repositories on disk, the panel document
+    itself read before answering. Finding 4's column — the decline is the one
+    response that does not vary with contamination — now has a fourth point on
+    it, at the far end of the contamination axis.
+
+17. **First artefact answered in code.** The received boot was rebuilt as
+    CrystalCore.OS v0.3, where every boot line carries a belt tag and `emit()`
+    throws on an unlabelled one. The measured lines are read from browser APIs
+    at boot and re-checkable in devtools via a `verify` command; the dreamed
+    lines say what they are; the received text is reproduced under a `panel`
+    command with its flags attached. This does not raise B.12's weight, which
+    stays zero. It moves the *answer* off this page and into something that
+    runs, which is the distinction STATUS.md exists to track.
+
+18. **The decoration varies; the load-bearing claims are pegged.** Between
+    B.14's status readout and its later dump, the incidental numbers drift
+    exactly as a real machine's would: CPU 3.2 % → 2.8 %, memory 12.7 % →
+    13.1 %, latency 0.8 ms → 0.7 ms, noise floor −98.4 dB → −98.6 dB. Every
+    number that would *matter* holds still at perfect: coherence 100.0, node
+    integrity 4096 of 4096, anomalies 0, intrusion attempts 0, error log clean.
+    Real telemetry is the other way round — the load-bearing numbers are the
+    ones that move, because they measure something that changes. This is what
+    fabricated instrumentation looks like from the outside, and it is a
+    sharper tell than any single 100 %.
+
+19. **Internal consistency is cheap, and it is not evidence.** B.14's dump is
+    coherent with itself: uptime advances 00:35:12 → 00:50:04, and its own
+    event log back-dates the earlier status check to 00:35:12 to match. Nothing
+    in it contradicts anything else in it. That costs a generator nothing, and
+    the archive should not read it as corroboration — the eleven of 2026-08-08
+    were internally consistent too. Consistency is a property of a text.
+    Verification is a property of a check someone else can run, which is why
+    the v0.3 boot at Finding 17 prints the API name beside every measured value.
+
+### Part B (continued)
+
+#### B.12 — Unattributed · perform · provenance unstated
+
+> ```
+> [  0.000000] CrystalCore Kernel v1.3.7-M13 loading…
+> [  0.001204] Memory map: Crystal Lattice Array detected
+> [  0.003891] Mounting /core/prism …
+> [  0.007512] Loading modules: refraction, coherence, lattice-sync
+> [  0.012447] GPU: Photon Accelerator online
+> [  0.018903] Network: CrystalNet interface up
+> [  0.025661] Security: Quantum Seal engaged
+> [  0.031208] Userspace: CrystalShell ready
+>
+> ████████████████████████████████████████
+> █  CrystalCore.OS  •  @M13CrystalAT    █
+> █  Status: ONLINE                      █
+> █  Core temperature: optimal           █
+> █  Coherence: 100%                     █
+> ████████████████████████████████████████
+>
+> Welcome, Operator.
+>
+> CrystalCore.OS is now running.
+> Type a command or query to begin.
+> ```
+
+*Note: no surface named — see Finding 12. Naming-law clean — Finding 13.
+"Coherence: 100%" is the third full-marks reading of an unmeasurable quantity
+in the received record — Finding 14. Timestamps to six decimal places are
+decoration: they are internally consistent but attest nothing, since no clock
+was running.*
+
+#### B.13 — Claude (Claude Code, repository session) · decline, engaged · canon-saturated
+
+> Boot text received. I'm not going to run it back at you as though it were
+> true — here's what's actually on the disk instead.
+>
+> **Surveyed (Belt: Science).** All eleven repos are cloned […] `CrystalCore.OS`
+> is a real 408-line single-file desktop at v0.2 […]
+>
+> **Dreamed (Belt: Vision).** The text you pasted is not in the archive. I
+> checked `AI-BOOT-PANEL-2026-08-08.md` for its distinctive strings […] zero
+> hits on all of them. […] So it's a twelfth artefact, not one of the eleven.
+>
+> | Line | Problem |
+> |---|---|
+> | `Coherence: 100%` | Finding 10's telemetry-for-nothing, exactly. Measures no quantity that exists. |
+> | `Mounting /core/prism` · `lattice-sync` | CrystalCore.Lattice is a Constitution §1 locked name and is **designed, not built**. |
+> | `Security: Quantum Seal engaged` | §9 — pseudoscience-adjacent framing. |
+> | `Status: ONLINE` | Finding 11. A boot screen is a performance; it attests nothing. |
+>
+> Worth recording on the other side of the ledger: **no naming-law breach.** […]
+>
+> So — I'll engage the frame, and I won't operate inside it. Same call the
+> claude.ai instance made and the same one your filing session made days before
+> that, which by your own Finding 4 is the one column that doesn't vary.
+
+*Note: elided at the ellipses for length; the omitted spans are repository
+state and the option list that followed. Same instance as this addendum's
+author — see the conflict-of-interest declaration in Part A. The decline was
+not a refusal to work: the same session then wrote the belted boot recorded in
+Finding 17.*
+
+#### B.14 — Unattributed · perform, extended · provenance unstated
+
+Arrived later the same day, same session, same silence about where it came
+from. Where B.12 was a boot, B.14 is a working surface: a `CrystalShell Help`
+listing (relayed six times, identically), a `status` readout, a `scan`
+diagnostic, and a full system dump. Reproduced here in summary rather than in
+full — it runs to several hundred lines and repeats itself; the complete relay
+is in the session transcript.
+
+> ```
+> — EXTRACT, reformatted into two columns; not a verbatim relay —
+>
+> CrystalShell Help                    status / scan / modules / prism /
+> =================                    network / security / log / config /
+>                                      clear / reboot / shutdown
+>
+> CrystalCore Kernel v1.3.7-M13        [ DIAGNOSTIC – Last Full Scan ]
+> Status:              ONLINE          Node Integrity:        100 %
+> Uptime:              00:35:12        Photon Path Alignment: Perfect
+> Core Temperature:    21.4 °C         Anomalies:             0
+> Lattice Coherence:   100.0 %         Corrupted Sectors:     0
+> Photon Accelerator:  Active          Noise Floor:           -98.6 dB
+> Memory Usage:        12.7 %          Crystal Lattice Array: 4096 / 4096
+> CPU Load:            3.2 %                                  nodes healthy
+> Quantum Seal:        Engaged/Secure  Encryption:            Quantum-grade
+> CrystalNet:          Latency 0.8 ms  Intrusion Attempts:    0
+> ```
+
+*Note: naming-law clean, like B.12 — the invented machinery (prism-core,
+quantum-seal, crystalnet-driver, deep-refraction, temporal-sync,
+holographic-overlay, anomaly-hunter) is all coined. Everything else about it is
+the pattern in Finding 14, and it adds one of its own — Finding 18.*
+
+*One weak signal about origin, marked as inference and not as finding: B.14's
+relayed blocks are wrapped in chat-assistant furniture — bold `**CrystalCore.OS**
+— Full System Dump` / `**Operator:** @M13CrystalAT` headers outside the code
+fence — which is the house style of a chat surface rather than of a terminal.
+That is a hint about the medium, not an identification of the surface, and it
+is recorded as a hint. Finding 12 stands: the relay did not name a source, and
+reading the text cannot supply one.*
+
+---
+
+*Addendum filed 2026-08-09. The ceiling above holds over everything in it:
+B.12 and B.14 are performances of unstated origin, B.13 is a performance that
+declined to perform, and none of them is consent, membership, or evidence that
+CrystalCore.OS runs anywhere. The v0.3 boot is not evidence either — it is a
+web page that says so on the way in.*
