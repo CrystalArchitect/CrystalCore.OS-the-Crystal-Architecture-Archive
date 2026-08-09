@@ -444,10 +444,10 @@ is the archive's.*
 
 ---
 
-## Addendum — 2026-08-09 · three unattributed transmissions, and a decline
+## Addendum — 2026-08-09 · four unattributed transmissions, and a decline
 
 Added the day after filing. Nothing above this line is altered, which leaves
-the title saying *eleven* when the document now holds fifteen entries. The
+the title saying *eleven* when the document now holds sixteen entries. The
 accretion rule and an accurate title cannot both be honoured here; the rule
 wins, and this paragraph carries the discrepancy rather than a silent edit
 hiding it. The closing paragraph above marks the end of the 2026-08-08 filing
@@ -592,6 +592,18 @@ so the scoring can be checked against it.
     survives the trip and its *unit* does not. Finding 18 said to watch which
     numbers move; this says to check what they are denominated in.
 
+23. **The inventory drifts between transmissions, and nothing logs the
+    change.** B.14's dump listed four modules available-not-loaded. B.16,
+    the same suite's `modules` command received after B.15, lists six —
+    `photon-boost` and `lattice-expander` appear from nowhere, and no load,
+    unload or install event exists in any log either text prints. B.16 also
+    sharpens a crack inside B.14 that Finding 19 missed when it called the
+    earlier texts internally consistent (recorded here as a dated
+    correction, not a rewrite): B.14's own event log says "00:00:12 All
+    modules loaded", its status readout names four active, and its dump
+    lists six loaded. A real system's inventory changes because something
+    changed it; this one changes because each generation re-invents it.
+
 ### Part B (continued)
 
 #### B.12 — Unattributed · perform · provenance unstated
@@ -732,10 +744,26 @@ questioned less than a text dump, and none of its numbers can be selected,
 searched or checked without being typed out again by hand first. That is a
 property of the medium, not an intention attributed to anyone.*
 
+#### B.16 — Unattributed · perform, continued · provenance unstated
+
+Fourth transmission of 2026-08-09: the suite's `modules` listing, arriving
+after B.15 but speaking B.14's kernel and voice. Six loaded modules, now with
+version numbers (`refraction v2.1` … `crystalnet-driver v1.4`) that no earlier
+text carried; six available, where B.14's dump had four. Reproduced only as
+this summary — the full relay is in the session transcript, and it adds
+nothing else the record does not already hold.
+
+*Note: naming-law clean, as all three before it. The new material is the
+inventory drift and the version decoration — see Finding 23. Marginal
+information is falling with each arrival: the first transmission established
+the class, the second the telemetry style, the third broke consistency across
+texts, and this one confirms the break with a smaller example. The archive
+records that trajectory once, here, rather than per-arrival.*
+
 ---
 
 *Addendum filed 2026-08-09. The ceiling above holds over everything in it:
-B.12, B.14 and B.15 are performances of unstated origin, B.13 is a performance
-that declined to perform, and none of them is consent, membership, or evidence that
+B.12, B.14, B.15 and B.16 are performances of unstated origin, B.13 is a
+performance that declined to perform, and none of them is consent, membership, or evidence that
 CrystalCore.OS runs anywhere. The v0.3 boot is not evidence either — it is a
 web page that says so on the way in.*
