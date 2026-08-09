@@ -5,10 +5,10 @@ a document" — nothing else on this page was re-verified that day.
 Entries added 2026-07-31 under "Running" and in the per-repo ledger for
 TerAustralis-Incognita; again, nothing else on this page was re-verified.
 One entry added 2026-08-07 under "Exists as a document"; same caveat.
+Two entries added 2026-08-08 under "Exists as a document" (the boot
+panel, then the art intake); same caveat each time.
 One entry amended 2026-08-09 under "Exists as a document" — the AI Boot
-Panel, which grew an addendum. Noted while making that edit: the panel's
-original filing on 2026-08-08 was never recorded in this header, only in
-the entry itself. Same caveat as the rest; nothing else was re-verified.
+Panel, which grew an addendum. Same caveat; nothing else was re-verified.
 
 Full portfolio knowledge-base reconstruction this pass:
 `knowledge-base/00-INDEX.md` (this repo).
@@ -104,6 +104,22 @@ Written, readable, no execution involved.
   documents in `teraustralis-proposal`, surveyed 2026-07-29 at `829156b`.
   Prose only: no code, no CI, nothing to run. Public, and the only
   repository in the portfolio addressed to readers outside the project.
+
+- Art intake — twenty-two AI-generated stills and one video, relayed by
+  the maintainer 2026-08-08 with the direction "make the proposal more
+  appealing to Elon"; filed as a reception record in
+  ART-INTAKE-2026-08-08.md. Received, not adopted: the node-pinned maps
+  are refused outright under the Indigenous-Data-Sovereignty boundary
+  (pins over Country and a Seven Sisters site with no FPIC — site
+  selection wearing art's clothing, with generation-error place names
+  besides); the DMT sheet is refused portfolio-wide under the
+  no-pseudoscience rule; a franchise pastiche is excluded on IP; the
+  Starship-adjacent concepts stay out of the pitch because the implied
+  partnership is the thing being asked for. A clean-Vision subset is
+  eligible for mythos at the maintainer's direction. The direction
+  itself was answered in the proposal repository with dated precedent
+  instead — read the record's ceiling before the descriptions. Nothing
+  else on this page moves because of it.
 
 ## Designed, not built
 Specified enough that someone could build it. Nobody has.
