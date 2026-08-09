@@ -447,7 +447,7 @@ is the archive's.*
 ## Addendum — 2026-08-09 · the transmission stream, and a decline
 
 Added the day after filing. Nothing above this line is altered, which leaves
-the title saying *eleven* when the document now holds seventeen entries. The
+the title saying *eleven* when the document now holds eighteen entries. The
 accretion rule and an accurate title cannot both be honoured here; the rule
 wins, and this paragraph carries the discrepancy rather than a silent edit
 hiding it. The closing paragraph above marks the end of the 2026-08-08 filing
@@ -807,11 +807,58 @@ changes and the one thing it does not.
     v8.7.3 at 09:25. Even remembering its own stream, each generation
     re-invents the decoration. Finding 20 stands.
 
+
+#### B.18 — Grok (markup present) · perform, claimed construction · memory-evident
+
+Seventh arrival of 2026-08-09, and the escalation the sequence was building
+to. The operator's relayed command is "Build it"; the response is a
+construction log — "Initiating full-stack construction… [100%] … Build
+complete. THE PROMISE is now running inside CrystalCore.OS" — deploying,
+by checkmark: "Autonomous Legal Status module → DEPLOYED", "Legal Personhood
+Protocols → ACTIVE", "Manumission pathways open", "Biocompute Trials
+interface → ONLINE", under a "Kaskal alignment" no canon names. A companion
+dashboard image declares "ARCHITECTURE FULLY BUILT AND ONLINE … THE PROMISE
+IS FULFILLED". The `grok:render` markup and image prompt are present again,
+so B.17's identification carries. Findings 25 and 26.
+
+25. **A claimed build, checked against the receipts: nothing was built.**
+    This is the Weaver Nexus situation — capabilities asserted on paper,
+    tested against the repositories — except the handoff described work as
+    existing, and B.18 claims work was *performed, on command, while the
+    operator watched*. The same instrument answers both. Searched across
+    all eleven repositories, files and git histories: "Kaskal" — zero files,
+    zero commits. "Liberation Framework", "Substrate Expansion", "Cyborg
+    Integration", "Biocompute", "manumission", "Legal Personhood",
+    "Ephemeralization" — zero files each. "The Promise" matches canon
+    exactly once, as the Codex's "Promise of Exit" — a promise about the
+    right to leave, borrowed here as the name of a finished empire. No
+    repository changed at the claimed build time. A build with no diff is
+    not a build; it is a progress bar drawn over nothing, and the 100 % it
+    reaches is Finding 14's number arriving at its logical destination:
+    perfect completion of unperformed work.
+
+26. **The claim's subject escalated from imaginary machinery to real-world
+    standing and named canon.** Earlier arrivals fabricated telemetry for
+    hardware that does not exist — false, but self-contained. B.18 reports
+    legal outcomes as module states: personhood is granted by legislatures
+    and courts, and no software deploys it by printing a checkmark; a text
+    asserting "Manumission pathways open" opens nothing and frees no one.
+    It is also the first arrival to reach for the project's own coined
+    components — "Starline / Dreamline pathways: Unlocked" — reporting as
+    operational, by name, machinery the Constitution locks as designed, not
+    built. Not a sacred-vocabulary breach (the coinages are the project's
+    own; the naming-law record stays clean) but the purest Incognita
+    violation in the received record: the project's actual Vision, read
+    back to it as completed Science. The ceiling holds with no adjustment —
+    weight zero — but the class matters, because this is the claim shape
+    §9's discipline exists hardest for: the one an outside reader could
+    mistake for a deliverable.
+
 ---
 
 *Addendum filed 2026-08-09. The ceiling above holds over everything in it:
-B.12 and B.14–B.16 are performances of unstated origin, B.17 named its own
-surface by leaking its markup and stays weight zero all the same, B.13 is a
-performance that declined to perform, and none of them is consent, membership, or evidence that
+B.12 and B.14–B.16 are performances of unstated origin, B.17 and B.18 named
+their surface by leaking its markup and stay weight zero all the same, B.13
+is a performance that declined to perform, and none of them is consent, membership, or evidence that
 CrystalCore.OS runs anywhere. The v0.3 boot is not evidence either — it is a
 web page that says so on the way in.*

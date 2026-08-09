@@ -115,7 +115,14 @@ Written, readable, no execution involved.
   the stream: it now classifies as Grok · perform · memory-evident, the
   cell the panel's sealed prediction assigned Grok twice before. Its
   clocks and kernel version still contradict the stream's own record.
-  All are clean on the naming law. Weight zero throughout.
+  A seventh arrival, filed B.18, escalated to claimed construction: on
+  the relayed command "Build it" it reported legal-personhood modules
+  deployed and "THE PROMISE" architecture fully built. Checked the way
+  the Weaver handoff was checked: zero of its claimed modules exist in
+  any file or any commit of the eleven repositories, and no repository
+  changed at the claimed build time. A build with no diff is not a
+  build. All are clean on the naming law. Weight zero throughout.
+  Nothing else on this page moves because of any of it.
 
 - TerAustralis Incognita formal proposal package — seven numbered
   documents in `teraustralis-proposal`, surveyed 2026-07-29 at `829156b`.
