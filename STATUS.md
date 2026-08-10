@@ -9,6 +9,9 @@ Two entries added 2026-08-08 under "Exists as a document" (the boot
 panel, then the art intake); same caveat each time.
 One entry amended 2026-08-09 under "Exists as a document" — the AI Boot
 Panel, which grew an addendum. Same caveat; nothing else was re-verified.
+The self-test entry under "Running" was re-verified 2026-08-10 by
+executing every suite — that line, and only that line, carries the
+newer date.
 
 Full portfolio knowledge-base reconstruction this pass:
 `knowledge-base/00-INDEX.md` (this repo).
@@ -19,9 +22,14 @@ the system.
 ## Running
 Executes, or can be opened and used by someone other than me.
 
-- Crystal Core self-tests (four suites, 51/51) and Lumina core tests
-  (16/16) — pass on a fresh clone of TerAustralis-Incognita-Code,
-  verified 2026-07-24. Detail in that repo's STATUS.md.
+- Crystal Core self-tests and the companion's tests — pass on a fresh
+  clone of TerAustralis-Incognita-Code, **re-verified 2026-08-10**:
+  137/137. Four core suites 74 (bus 7, services 4, rdp 31,
+  consent_transport 32), companion tests 47, consent gate self-test 13,
+  mesh stubs 3 (run from `core/`). Two further suites pass but are not
+  in that total: bus claims 16, convergence_lens 5 — 158 all told.
+  Superseded the 2026-07-24 reading of "four suites, 51/51"; the same
+  four now stand at 74. Detail in that repo's STATUS.md.
 - The two demo shells, the engine's own interface page, and the
   story-library prototype render in a headless browser, verified
   2026-07-24 — see the per-repo ledgers.
