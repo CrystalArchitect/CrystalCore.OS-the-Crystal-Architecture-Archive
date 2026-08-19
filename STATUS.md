@@ -1,23 +1,28 @@
 # STATUS
 
-Last updated: 2026-07-24. One entry added 2026-07-29 under "Exists as
-a document" — nothing else on this page was re-verified that day.
-Entries added 2026-07-31 under "Running" and in the per-repo ledger for
-TerAustralis-Incognita; again, nothing else on this page was re-verified.
-One entry added 2026-08-07 under "Exists as a document"; same caveat.
-Two entries added 2026-08-08 under "Exists as a document" (the boot
-panel, then the art intake); same caveat each time.
-One entry amended 2026-08-09 under "Exists as a document" — the AI Boot
-Panel, which grew an addendum. Same caveat; nothing else was re-verified.
-The self-test entry under "Running" was re-verified 2026-08-10 by
-executing every suite — that line, and only that line, carries the
-newer date.
+Last updated: 2026-08-20 — ink honesty + external peer, not a
+re-verification of every line below. Older paragraphs stay as written.
+**Suite counts in those paragraphs are stale.** Detail lives in each
+repo's own STATUS.md.
 
-Full portfolio knowledge-base reconstruction this pass:
-`knowledge-base/00-INDEX.md` (this repo).
+## 2026-08-20 (this cycle, measured)
 
-This file describes the state of the system, not the ambition of
-the system.
+- Constellation: 19 repositories under CrystalArchitect (6 public
+  living, 7 private living, 6 archived). Locked by umbrella ADR-0015
+  (merged PR #116/#117/#118 sequence; ADR-0015 itself is PR #118).
+- Midstream seat: Grok Build (ADR-0014, PR #116). Claude retained as
+  history.
+- Public faces checked this session: `www.teraustralis.com.au` 200;
+  apex 301 → www; `proposal.teraustralis.com.au` 200;
+  `crystalarchitect.github.io/Clementine-ai-companion/` **404**
+  (homepage field pointed at a Pages URL with no deploy workflow).
+- Code `consent_transport.selftest` **67/67** (PR #82). Guest-gate
+  `--mint-token` was already atomic; TokenStore/ConsentEngine now are.
+- SAT dedicated-repo split is not an open job: the SAT repo already
+  exists. ADR-0015 forbids a second.
+- External peer, not in the 19: `samuelsalmon3/SourceCode`
+  (umbrella ADR-0016, proposed). Recognition only. Not vendored. Not
+  a CrystalBridge guest until the maintainer mints.
 
 ## Running
 Executes, or can be opened and used by someone other than me.
